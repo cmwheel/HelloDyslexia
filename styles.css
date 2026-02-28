@@ -6991,3 +6991,281 @@ html, body {
     margin-bottom: 0;
   }
 }
+
+/* ============================================================
+   PARENTS PAGE — Mobile Polish v2
+   Bigger text, better spacing, animations, touch targets.
+   Scoped to .page--parents within mobile breakpoints.
+   ============================================================ */
+
+/* ── Entrance animation keyframes (GPU-accelerated) ────────── */
+@keyframes parents-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ── Animation base class ──────────────────────────────────── */
+.page--parents .animate-up,
+.page--parents .flagged-color-card,
+.page--parents .understand-card,
+.page--parents .path__step,
+.page--parents .deeper-checklist__item,
+.page--parents .situation-card {
+  will-change: transform, opacity;
+}
+
+.page--parents .animate-up.is-visible,
+.page--parents .flagged-color-card.is-visible,
+.page--parents .understand-card.is-visible,
+.page--parents .path__step.is-visible,
+.page--parents .deeper-checklist__item.is-visible,
+.page--parents .situation-card.is-visible {
+  animation: parents-fade-up 0.6s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Stagger children */
+.page--parents .is-visible:nth-child(1) { animation-delay: 0s; }
+.page--parents .is-visible:nth-child(2) { animation-delay: 0.08s; }
+.page--parents .is-visible:nth-child(3) { animation-delay: 0.16s; }
+.page--parents .is-visible:nth-child(4) { animation-delay: 0.24s; }
+
+/* ── Mobile: 640px and below ───────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* --- Hero --- */
+  .page--parents .parents-hero {
+    padding: calc(var(--nav-height) + 28px) 0 44px;
+  }
+
+  .page--parents .parents-hero .hero__display {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 100%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+  }
+
+  .page--parents .hero__trust {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  /* --- Section padding & headings --- */
+  .page--parents .section-padding {
+    padding: 64px 0;
+  }
+
+  .page--parents .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .page--parents .section-heading {
+    font-size: clamp(1.5rem, 5.5vw, 1.85rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .page--parents .section-subtext {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .page--parents .eyebrow {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+
+  .page--parents .section-closing {
+    font-size: 1rem;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+
+  /* --- Flagged color cards --- */
+  .page--parents .flagged-color-grid {
+    gap: 20px;
+  }
+
+  .page--parents .flagged-color-card {
+    padding: 24px 22px;
+    border-radius: 14px;
+  }
+
+  .page--parents .flagged-color-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .page--parents .flagged-color-card__list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 6px 0 6px 20px;
+  }
+
+  /* --- Outcomes cards --- */
+  .page--parents .understand__grid--outcomes {
+    gap: 20px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  /* --- Path timeline --- */
+  .page--parents .path__step {
+    padding: 18px 0;
+    gap: 18px;
+  }
+
+  .page--parents .path__number {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .page--parents .path__step-title {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .page--parents .path__step-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 20px;
+  }
+
+  /* --- Deeper checklist --- */
+  .page--parents .deeper-checklist {
+    gap: 18px;
+  }
+
+  .page--parents .deeper-checklist__item {
+    padding: 22px 20px;
+    gap: 16px;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+
+  .page--parents .deeper-checklist__icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .page--parents .deeper-checklist__title {
+    font-size: 1.02rem;
+    margin-bottom: 5px;
+  }
+
+  .page--parents .deeper-checklist__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* --- Situation cards --- */
+  .page--parents .situation-cards--parents {
+    gap: 18px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 26px 24px;
+    border-radius: 16px;
+    min-height: 44px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__title {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__link {
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .page--parents .parents-path__header .section-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* ── Extra-small: 390px and below ──────────────────────────── */
+@media (max-width: 390px) {
+  .page--parents .parents-hero .hero__display {
+    font-size: 2rem;
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .page--parents .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 22px 20px;
+  }
+
+  .page--parents .path__number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 18px;
+  }
+}
