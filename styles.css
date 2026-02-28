@@ -6950,3 +6950,44 @@ html, body {
     font-size: 1rem;
   }
 }
+
+/* ============================================================
+   MOBILE HERO REFINEMENT — Charlie feedback 2026-02-28
+   Stack words, full-bleed image, more visual impact
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* 1. Hero section: taller, more impact */
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 0;
+    min-height: 90vh;
+    overflow: visible;
+  }
+
+  /* 2. Title: each word on its own line, big and bold */
+  .hero-new__title {
+    font-size: clamp(2.6rem, 14vw, 3.4rem);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+
+  .hero-new__title span {
+    display: block;
+  }
+
+  /* 3. Hero image: full-bleed, edge-to-edge */
+  .hero-new__banner-wrap {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 20px;
+    width: calc(100% + 48px);
+  }
+
+  .hero-new__banner {
+    height: 280px;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
