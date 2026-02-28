@@ -1,4 +1,9 @@
 [build]
+  command = "echo 'Static site - no build needed'"
   publish = "."
 
-# No build command needed — static HTML/CSS/JS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
