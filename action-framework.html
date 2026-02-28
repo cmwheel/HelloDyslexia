@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30/60/90-Day Action Framework — Hello Dyslexia</title>
+  <meta name="description" content="A clear timeline: what to do in the first 30, 60, and 90 days after your child is flagged. By grade band (K–1, 2–3, 4–6)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="page--compact">
+
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero hero--centered">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">30 / 60 / 90</span>
+          <span class="hero__display-line hero__display-line--cyan">Day Framework</span>
+        </h1>
+        <p class="hero__subtitle">A clear timeline so you know what to do when. Pick your child&rsquo;s grade band, then follow the milestones.</p>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>Accountability &middot; Linked to guides</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="framework-main">
+  <div class="container container--narrow">
+    <p class="eyebrow">Your child&rsquo;s grade band</p>
+    <div class="tab-selector" id="gradeBandSelector">
+      <button class="tab-selector__card active" data-grade="k1" type="button">
+        <span class="tab-selector__label">K–1</span>
+      </button>
+      <button class="tab-selector__card" data-grade="23" type="button">
+        <span class="tab-selector__label">2–3</span>
+      </button>
+      <button class="tab-selector__card" data-grade="46" type="button">
+        <span class="tab-selector__label">4–6</span>
+      </button>
+    </div>
+
+    <div class="tab-panel active" data-grade="k1">
+      <div class="path__timeline path__timeline--three">
+        <div class="path__step">
+          <div class="path__number path__number--golden">30</div>
+          <div class="path__content">
+            <h3 class="path__step-title">First 30 days</h3>
+            <p class="path__step-body">Understand the screener results using our <a href="screener-guide.html">Screener Guide</a>. Schedule a meeting with the teacher. Document what you&rsquo;re seeing at home (e.g., difficulty with letter sounds, rhyming). Use <a href="signs-by-age.html">Signs by Age</a> to see what&rsquo;s typical for this age.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--cyan">60</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 60 days</h3>
+            <p class="path__step-body">If the school hasn&rsquo;t already, ask about MTSS placement and intervention. Request a formal evaluation if your child is well below benchmark on two or more subtests. Begin or reinforce structured literacy support. See <a href="school-pathways.html">School Pathways</a> and <a href="conversation-scripts.html">Conversation Scripts</a>.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--lcyan">90</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 90 days</h3>
+            <p class="path__step-body">Review progress data with the school. If response is insufficient, escalate (504 or IEP). Connect with outside resources if needed. By now, you should see your child as a whole person with a reading challenge and real cognitive strengths.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-grade="23">
+      <div class="path__timeline path__timeline--three">
+        <div class="path__step">
+          <div class="path__number path__number--golden">30</div>
+          <div class="path__content">
+            <h3 class="path__step-title">First 30 days</h3>
+            <p class="path__step-body">Understand the screener results with our <a href="screener-guide.html">Screener Guide</a>. Schedule a teacher meeting. Document what you see at home (e.g., avoiding reading, frustration with decoding). Check <a href="signs-by-age.html">Signs by Age</a> for grades 3–5.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--cyan">60</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 60 days</h3>
+            <p class="path__step-body">Request formal evaluation if appropriate. Understand MTSS tier and push for Tier 3 or evaluation if progress is slow. Ensure structured literacy is in place. Use <a href="school-pathways.html">School Pathways</a> and <a href="conversation-scripts.html">Conversation Scripts</a>.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--lcyan">90</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 90 days</h3>
+            <p class="path__step-body">Review progress and consider 504 or IEP if the school&rsquo;s response isn&rsquo;t enough. Look into outside tutoring if needed. Your child is more than their reading score&nbsp;&mdash; strengths matter as much as support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-grade="46">
+      <div class="path__timeline path__timeline--three">
+        <div class="path__step">
+          <div class="path__number path__number--golden">30</div>
+          <div class="path__content">
+            <h3 class="path__step-title">First 30 days</h3>
+            <p class="path__step-body">Get the full screener report and interpret it with our <a href="screener-guide.html">Screener Guide</a>. Meet with the teacher and/or interventionist. Document reading and writing behaviors at home. See <a href="signs-by-age.html">Signs by Age</a> for grades 6–12.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--cyan">60</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 60 days</h3>
+            <p class="path__step-body">Request evaluation for 504 or IEP if not already in place. Ensure accommodations (extended time, audiobooks, etc.) and/or intervention are in place. Use <a href="school-pathways.html">School Pathways</a> and <a href="conversation-scripts.html">Conversation Scripts</a> for the right language.</p>
+          </div>
+        </div>
+        <div class="path__step">
+          <div class="path__number path__number--lcyan">90</div>
+          <div class="path__content">
+            <h3 class="path__step-title">By 90 days</h3>
+            <p class="path__step-body">Review progress and adjust the plan. Consider an independent evaluation if the school&rsquo;s evaluation or plan doesn&rsquo;t fit. By now, you should see your child as a whole person with a reading challenge AND a cognitive advantage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strengths-callout" style="margin-top: 36px;">
+      <div class="strengths-callout__label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        90-day checkpoint
+      </div>
+      <p class="strengths-callout__text">By now, you should see your child as a whole person with a reading challenge AND a cognitive advantage. Keep advocating for support while celebrating their strengths.</p>
+    </div>
+
+    <div class="screener-actions" style="margin-top: 28px;">
+      <a href="#" class="btn btn--outline">Print fridge checklist (PDF coming soon)</a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta section-padding">
+  <div class="container">
+    <h2 class="final-cta__title">Need the right <span class="heading-accent">words?</span></h2>
+    <p class="final-cta__body">
+      Use our Conversation Scripts for exact language when you talk to the school.
+    </p>
+    <a href="conversation-scripts.html" class="btn btn--primary">Conversation Scripts &rarr;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — Hello Dyslexia</title>
+  <meta name="description" content="Learn about Hello Dyslexia's mission to empower children with dyslexia to embrace their unique minds as strengths." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ============================================================
+     1. FIXED NAV
+     ============================================================ -->
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     2. HERO
+     ============================================================ -->
+<section class="hero hero--centered">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--7" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--8" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--9" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--10" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--11" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--12" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">Our</span>
+          <span class="hero__display-line hero__display-line--cyan">Story</span>
+        </h1>
+        <div class="hero__actions">
+          <a href="#mission" class="btn btn--primary">Learn Our Mission &rarr;</a>
+        </div>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>501(c)(3) Registered Nonprofit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. OUR STORY
+     ============================================================ -->
+<section class="our-story section-padding" id="our-story">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="eyebrow">Our Story</p>
+      <h2 class="section-heading">Empowering Unique Minds</h2>
+    </div>
+
+    <div class="our-story__content">
+      <p class="our-story__text">
+        Hello Dyslexia is a California-based nonprofit founded by dyslexic entrepreneurs who understand firsthand the challenges and incredible strengths that come with different ways of thinking. We started this organization to empower children with dyslexia to embrace their unique minds as their greatest strength, not a limitation.
+      </p>
+      <p class="our-story__text">
+        Through evidence-based resources, personalized support plans, and a community that celebrates neurodiversity, we're helping families navigate dyslexia screening results with clarity, confidence, and hope. Every child deserves to thrive using the full potential of how their brilliant brain works.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. MISSION
+     ============================================================ -->
+<section class="mission section-padding" id="mission">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="eyebrow">Our Mission</p>
+      <h2 class="section-heading">Transforming How We See Dyslexia</h2>
+      <p class="section-subtext">
+        We're on a mission to change the narrative around dyslexia from deficit to difference.
+      </p>
+    </div>
+
+    <div class="mission__content">
+      <div class="mission__statement">
+        <h3 class="mission__title">Our Core Mission</h3>
+        <p class="mission__text">
+          To empower every child with dyslexia to recognize their unique cognitive strengths as superpowers, not weaknesses. We believe that when children understand how their brains work differently, they can unlock their full potential and thrive in a world that often doesn't accommodate neurodiversity.
+        </p>
+      </div>
+
+      <div class="mission__values">
+        <div class="mission__values-list">
+          <div class="mission__value-item">
+            <h3 class="mission__value-display">Evidence-Based</h3>
+            <p class="mission__value-desc">All our resources and recommendations are grounded in current research and best practices.</p>
+          </div>
+          <div class="mission__value-item">
+            <h3 class="mission__value-display">Inclusive</h3>
+            <p class="mission__value-desc">We serve all families regardless of background, language, or socioeconomic status.</p>
+          </div>
+          <div class="mission__value-item">
+            <h3 class="mission__value-display">Empowering</h3>
+            <p class="mission__value-desc">We focus on strengths and potential, not deficits and limitations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. CONTACT
+     ============================================================ -->
+<section class="contact section-padding" id="contact">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="section-heading">We'd Love to Hear From You</h2>
+      <p class="section-subtext">
+        Have questions about our work or want to get involved? We're here to help.
+      </p>
+    </div>
+
+    <div class="contact__content">
+      <div class="contact__info">
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">Email Us</h3>
+          <p class="contact__info-text">hello@hellodyslexia.org</p>
+        </div>
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">Based In</h3>
+          <p class="contact__info-text">California, USA</p>
+        </div>
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">Tax ID</h3>
+          <p class="contact__info-text">501(c)(3) Nonprofit</p>
+        </div>
+      </div>
+
+      <div class="contact__cta">
+        <a href="index.html#final-cta" class="btn btn--primary">Explore Our Resources &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+      </div>
+      <div class="footer__links-wrap">
+        <a href="index.html#understand">Resources</a>
+        <a href="our-story.html#mission">Our Mission</a>
+        <a href="our-story.html#contact">Contact</a>
+        <a href="donate.html">Donate</a>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <span>English</span>
+      <a href="#">Espanol</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

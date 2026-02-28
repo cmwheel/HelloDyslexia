@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Parents — Hello Dyslexia</title>
+  <meta name="description" content="Free, evidence-based resources to help parents understand dyslexia screening results, build an action plan, and support their child's strengths." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="page--parents">
+
+<!-- ============================================================
+     1. FIXED NAV
+     ============================================================ -->
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     A. HERO / EMOTIONAL ANCHOR
+     ============================================================ -->
+<section class="hero hero--centered parents-hero">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">For</span>
+          <span class="hero__display-line hero__display-line--cyan">Parents</span>
+        </h1>
+        <p class="hero__subtitle parents-hero__subtitle">If you&rsquo;re here because you&rsquo;re worried about your child&rsquo;s reading, you&rsquo;re already doing the right thing. Let&rsquo;s figure this out together.</p>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>501(c)(3) Registered Nonprofit · Free resources</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     B. WHAT DOES "FLAGGED" MEAN?
+     ============================================================ -->
+<section class="section-padding" id="what-flagged-means">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow animate-up">Understanding the Result</p>
+      <h2 class="section-heading animate-up">What does &ldquo;flagged&rdquo; <span class="heading-accent">mean?</span></h2>
+      <p class="section-subtext animate-up">
+        Screeners are early check-ins. They&rsquo;re designed to identify students who may need extra support. Here&rsquo;s what this result means&nbsp;&mdash; and what to do next.
+      </p>
+    </div>
+
+    <p class="section-subtext animate-up" style="text-align: center; margin-bottom: 2rem;">Most schools use color systems like yellow or red.</p>
+
+    <div class="flagged-color-grid">
+      <div class="flagged-color-card flagged-color-card--yellow">
+        <h3 class="flagged-color-card__title">
+          <span class="flagged-color-card__dot flagged-color-card__dot--yellow"></span>
+          Yellow usually means
+        </h3>
+        <ul class="flagged-color-card__list">
+          <li>Below benchmark</li>
+          <li>Extra support may be recommended</li>
+          <li>Progress should be monitored</li>
+        </ul>
+      </div>
+
+      <div class="flagged-color-card flagged-color-card--red">
+        <h3 class="flagged-color-card__title">
+          <span class="flagged-color-card__dot flagged-color-card__dot--red"></span>
+          Red usually means
+        </h3>
+        <ul class="flagged-color-card__list">
+          <li>Significantly below benchmark</li>
+          <li>Targeted intervention is needed</li>
+          <li>Follow-up should happen soon</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section-closing">A screener signals attention&nbsp;&mdash; not a label.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     C. WHAT COULD THIS MEAN?
+     ============================================================ -->
+<section class="section-padding" style="background: var(--blue-soft);" id="what-it-means">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow">Possible Outcomes</p>
+      <h2 class="section-heading">What could this <span class="heading-accent">mean?</span></h2>
+      <p class="section-subtext">Some children:</p>
+    </div>
+
+    <div class="understand__grid understand__grid--outcomes">
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+        </div>
+        <h3 class="understand-card__title">Catch up quickly</h3>
+        <p class="understand-card__body">With short-term, targeted support many children close the gap and read on level.</p>
+      </div>
+
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3 class="understand-card__title">Need structured intervention</h3>
+        <p class="understand-card__body">Some children benefit from a more structured, evidence-based reading intervention program.</p>
+      </div>
+
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 class="understand-card__title">May have a reading difference</h3>
+        <p class="understand-card__body">An underlying reading difference such as dyslexia may be present and worth exploring further.</p>
+      </div>
+    </div>
+
+    <p class="section-closing">Right now, the focus is simple: <strong>make sure your child gets the right support early.</strong></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     D. WHAT TO DO NEXT
+     ============================================================ -->
+<section class="path section-padding" id="what-to-do">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow">Take Action</p>
+      <h2 class="section-heading">What to do <span class="heading-accent">next.</span></h2>
+    </div>
+
+    <div class="path__timeline">
+      <div class="path__step">
+        <div class="path__number path__number--golden">1</div>
+        <div class="path__content">
+          <h3 class="path__step-title">Ask the teacher which specific skills were below benchmark</h3>
+          <p class="path__step-body">Was it phonemic awareness? Decoding? Fluency? Knowing which skills were flagged helps you understand exactly where your child needs support.</p>
+        </div>
+      </div>
+
+      <div class="path__step">
+        <div class="path__number path__number--cyan">2</div>
+        <div class="path__content">
+          <h3 class="path__step-title">Ask what intervention will be provided</h3>
+          <p class="path__step-body">How often will your child receive support? In what group size? Using what program? These details matter.</p>
+        </div>
+      </div>
+
+      <div class="path__step">
+        <div class="path__number path__number--coral">3</div>
+        <div class="path__content">
+          <h3 class="path__step-title">Ask how progress will be measured</h3>
+          <p class="path__step-body">You should know what data the school will use to track whether the intervention is working.</p>
+        </div>
+      </div>
+
+      <div class="path__step">
+        <div class="path__number path__number--lcyan">4</div>
+        <div class="path__content">
+          <h3 class="path__step-title">Put a check-in date on your calendar</h3>
+          <p class="path__step-body">Plan to revisit progress in 6&ndash;8 weeks. This gives the intervention time to work and gives you a concrete moment to reassess.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-closing">Early understanding and action leads to better outcomes.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     E. WHEN TO LOOK DEEPER
+     ============================================================ -->
+<section class="section-padding" style="background: var(--offwhite);" id="look-deeper">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow">Worth Watching</p>
+      <h2 class="section-heading">When to look <span class="heading-accent">deeper.</span></h2>
+      <p class="section-subtext">
+        It may be time to take a closer look if you&rsquo;re noticing any of the following:
+      </p>
+    </div>
+
+    <div class="deeper-checklist">
+      <div class="deeper-checklist__item">
+        <div class="deeper-checklist__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="deeper-checklist__text">
+          <h3 class="deeper-checklist__title">Dyslexia runs in the family</h3>
+          <p class="deeper-checklist__desc">Siblings, parents, or close relatives with reading difficulties or a dyslexia diagnosis.</p>
+        </div>
+      </div>
+
+      <div class="deeper-checklist__item">
+        <div class="deeper-checklist__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="deeper-checklist__text">
+          <h3 class="deeper-checklist__title">Sound-to-letter skills are hard</h3>
+          <p class="deeper-checklist__desc">Trouble hearing sounds in words or matching sounds to letters (phonemic awareness).</p>
+        </div>
+      </div>
+
+      <div class="deeper-checklist__item">
+        <div class="deeper-checklist__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="deeper-checklist__text">
+          <h3 class="deeper-checklist__title">Reading takes a lot of effort</h3>
+          <p class="deeper-checklist__desc">It&rsquo;s slow, tiring, or your child avoids reading whenever possible.</p>
+        </div>
+      </div>
+
+      <div class="deeper-checklist__item">
+        <div class="deeper-checklist__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="deeper-checklist__text">
+          <h3 class="deeper-checklist__title">Support isn&rsquo;t moving the needle</h3>
+          <p class="deeper-checklist__desc">Limited progress after 6&ndash;8 weeks of consistent intervention may signal something deeper.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     F. WHERE WOULD YOU LIKE TO GO NEXT?
+     ============================================================ -->
+<section class="parents-path section-padding" id="next-steps">
+  <div class="container">
+    <div class="section-header-center parents-path__header">
+      <p class="eyebrow">Your Next Step</p>
+      <h2 class="section-heading">Where would you like to <span class="heading-accent">go next?</span></h2>
+      <p class="section-subtext">
+        Choose the path that fits your situation right now:
+      </p>
+    </div>
+
+    <div class="situation-cards situation-cards--parents">
+      <a href="signs-by-age.html" class="situation-card situation-card--blue">
+        <div class="situation-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 class="situation-card__title">Does this look like dyslexia?</h3>
+        <p class="situation-card__desc">Learn the signs by age and understand what to watch for as your child grows.</p>
+        <span class="situation-card__link">Explore signs <span class="situation-card__arrow">&rarr;</span></span>
+      </a>
+
+      <a href="conversation-scripts.html" class="situation-card situation-card--cyan">
+        <div class="situation-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="situation-card__title">How to talk to the school</h3>
+        <p class="situation-card__desc">Scripts and strategies for productive conversations with teachers and administrators.</p>
+        <span class="situation-card__link">Get the scripts <span class="situation-card__arrow">&rarr;</span></span>
+      </a>
+
+      <a href="school-pathways.html" class="situation-card situation-card--gold">
+        <div class="situation-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+        </div>
+        <h3 class="situation-card__title">Understanding school interventions: MTSS, 504, IEP</h3>
+        <p class="situation-card__desc">What each pathway means, what your child gets, and how to navigate the process.</p>
+        <span class="situation-card__link">Learn the options <span class="situation-card__arrow">&rarr;</span></span>
+      </a>
+
+      <a href="#" class="situation-card situation-card--soft">
+        <div class="situation-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="situation-card__title">How to request a formal evaluation</h3>
+        <p class="situation-card__desc">Step-by-step guidance for requesting a formal evaluation through your school district.</p>
+        <span class="situation-card__link">Coming soon <span class="situation-card__arrow">&rarr;</span></span>
+        <span class="situation-card__badge">Coming Soon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

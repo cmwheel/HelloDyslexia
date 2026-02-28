@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signs of Dyslexia by Age — Hello Dyslexia</title>
+  <meta name="description" content="Scannable signs of dyslexia by age band: Pre-K, K–2, 3–5, 6–12. Includes both reading signs and strength signs at every age." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="page--compact">
+
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero hero--centered">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">Signs of Dyslexia</span>
+          <span class="hero__display-line hero__display-line--cyan">by Age</span>
+        </h1>
+        <p class="hero__subtitle">Scannable in 30 seconds. Pick your child&rsquo;s age band to see both what to watch for and the strengths that often go with it.</p>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>Evidence-based &middot; Free</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="signs-main">
+  <div class="container container--narrow">
+    <p class="eyebrow">Choose an age band</p>
+    <div class="tab-selector" id="ageBandSelector">
+      <button class="tab-selector__card active" data-tab="prek" type="button">
+        <span class="tab-selector__label">Pre-K</span>
+      </button>
+      <button class="tab-selector__card" data-tab="k2" type="button">
+        <span class="tab-selector__label">K–2</span>
+      </button>
+      <button class="tab-selector__card" data-tab="35" type="button">
+        <span class="tab-selector__label">3–5</span>
+      </button>
+      <button class="tab-selector__card" data-tab="612" type="button">
+        <span class="tab-selector__label">6–12</span>
+      </button>
+    </div>
+
+    <!-- Pre-K -->
+    <div class="tab-panel active" data-tab="prek">
+      <div class="signs-two-col">
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--struggle">Reading &amp; language signs</h3>
+          <ul class="signs-list signs-list--struggle">
+            <li class="signs-list__item">Late to talk or mix up sounds in words</li>
+            <li class="signs-list__item">Trouble learning nursery rhymes or rhyming games</li>
+            <li class="signs-list__item">Difficulty learning letter names or sounds</li>
+            <li class="signs-list__item">Family history of dyslexia or reading difficulty</li>
+          </ul>
+        </div>
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--strength">Strengths you might notice</h3>
+          <ul class="signs-list signs-list--strength">
+            <li class="signs-list__item">Strong verbal storytelling and imagination</li>
+            <li class="signs-list__item">Curiosity and big-picture thinking</li>
+            <li class="signs-list__item">Spatial play (building, puzzles, drawing)</li>
+            <li class="signs-list__item">Good at understanding when read to</li>
+          </ul>
+        </div>
+      </div>
+      <div class="strengths-callout">
+        <div class="strengths-callout__label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Strengths at this age
+        </div>
+        <p class="strengths-callout__text">Early signs of dyslexia are about how the brain processes sounds and symbols. They don&rsquo;t predict your child&rsquo;s creativity, problem-solving, or future success. Many dyslexic kids shine in hands-on and verbal learning.</p>
+      </div>
+    </div>
+
+    <!-- K–2 -->
+    <div class="tab-panel" data-tab="k2">
+      <div class="signs-two-col">
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--struggle">Reading &amp; language signs</h3>
+          <ul class="signs-list signs-list--struggle">
+            <li class="signs-list__item">Struggles with rhyming or recognizing words</li>
+            <li class="signs-list__item">Trouble learning the alphabet or letter sounds</li>
+            <li class="signs-list__item">Difficulty blending sounds into words</li>
+            <li class="signs-list__item">Slow to remember common words (the, is, and)</li>
+            <li class="signs-list__item">Avoids reading or gets frustrated when reading</li>
+          </ul>
+        </div>
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--strength">Strengths you might notice</h3>
+          <ul class="signs-list signs-list--strength">
+            <li class="signs-list__item">Vivid imagination and storytelling</li>
+            <li class="signs-list__item">Strong reasoning when discussing ideas</li>
+            <li class="signs-list__item">Good at building, designing, or visual tasks</li>
+            <li class="signs-list__item">Remembers stories and experiences in detail</li>
+          </ul>
+        </div>
+      </div>
+      <div class="strengths-callout">
+        <div class="strengths-callout__label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Strengths at this age
+        </div>
+        <p class="strengths-callout__text">K–2 is when many children are first flagged. The screener measures decoding. It does not measure your child&rsquo;s creativity, persistence, or ability to think in pictures and stories. Those strengths are real and valuable.</p>
+      </div>
+    </div>
+
+    <!-- 3–5 -->
+    <div class="tab-panel" data-tab="35">
+      <div class="signs-two-col">
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--struggle">Reading &amp; writing signs</h3>
+          <ul class="signs-list signs-list--struggle">
+            <li class="signs-list__item">Reads slowly and with much effort</li>
+            <li class="signs-list__item">Skips or guesses words; difficulty with multisyllabic words</li>
+            <li class="signs-list__item">Spelling doesn&rsquo;t match verbal ability</li>
+            <li class="signs-list__item">Trouble summarizing or remembering what was read</li>
+            <li class="signs-list__item">Avoids reading for pleasure</li>
+          </ul>
+        </div>
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--strength">Strengths you might notice</h3>
+          <ul class="signs-list signs-list--strength">
+            <li class="signs-list__item">Strong oral vocabulary and discussion</li>
+            <li class="signs-list__item">Creative and original ideas</li>
+            <li class="signs-list__item">Good at seeing patterns and connections</li>
+            <li class="signs-list__item">Excels in math reasoning, science, or art</li>
+          </ul>
+        </div>
+      </div>
+      <div class="strengths-callout">
+        <div class="strengths-callout__label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Strengths at this age
+        </div>
+        <p class="strengths-callout__text">By grades 3–5, the gap between decoding and comprehension can be obvious. So can the strengths: many dyslexic kids are the ones who ask the best questions, tell the best stories, or design the best projects.</p>
+      </div>
+    </div>
+
+    <!-- 6–12 -->
+    <div class="tab-panel" data-tab="612">
+      <div class="signs-two-col">
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--struggle">Reading &amp; writing signs</h3>
+          <ul class="signs-list signs-list--struggle">
+            <li class="signs-list__item">Reads below grade level; slow, labored reading</li>
+            <li class="signs-list__item">Spelling and writing lag behind ideas</li>
+            <li class="signs-list__item">Difficulty with note-taking and timed tests</li>
+            <li class="signs-list__item">May have been missed earlier; compensates with memory</li>
+          </ul>
+        </div>
+        <div class="signs-section">
+          <h3 class="signs-section__title signs-section__title--strength">Strengths you might notice</h3>
+          <ul class="signs-list signs-list--strength">
+            <li class="signs-list__item">Big-picture and systems thinking</li>
+            <li class="signs-list__item">Strong narrative and verbal skills</li>
+            <li class="signs-list__item">Creativity, innovation, and problem-solving</li>
+            <li class="signs-list__item">Resilience and persistence</li>
+          </ul>
+        </div>
+      </div>
+      <div class="strengths-callout">
+        <div class="strengths-callout__label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Strengths at this age
+        </div>
+        <p class="strengths-callout__text">In middle and high school, dyslexic thinkers often excel in discussion, projects, and real-world tasks. The goal isn&rsquo;t just to improve reading&nbsp;&mdash; it&rsquo;s to support reading while unlocking these strengths.</p>
+      </div>
+    </div>
+
+    <div class="screener-actions" style="margin-top: 32px;">
+      <a href="#" class="btn btn--outline">Print 1-pager (PDF coming soon)</a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta section-padding">
+  <div class="container">
+    <h2 class="final-cta__title">Next steps for <span class="heading-accent">you.</span></h2>
+    <p class="final-cta__body">
+      Pair this with the screener guide to understand your child&rsquo;s results, or explore school pathways when you&rsquo;re ready to take action.
+    </p>
+    <a href="screener-guide.html" class="btn btn--primary">Understanding Screening Results &rarr;</a>
+    <a href="school-pathways.html" class="btn btn--outline" style="margin-left: 12px;">School Pathways Guide &rarr;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

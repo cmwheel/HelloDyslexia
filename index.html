@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Dyslexia — Different Brains. Brilliant Futures.</title>
+  <meta name="description" content="Free, evidence-based resources to help you understand dyslexia, take confident next steps, and discover the strengths that come with thinking differently." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ============================================================
+     1. FIXED NAV
+     ============================================================ -->
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+
+      <a href="parents.html" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     2. HERO (Card-view layout)
+     ============================================================ -->
+<section class="hero-new">
+  <div class="container">
+    <div class="hero-new__top">
+      <div class="hero-new__text">
+        <h1 class="hero-new__title">
+          <span class="hero-new__title-black">Different</span> <span class="hero-new__title-blue">Brains.</span> <span class="hero-new__title-gold">Brilliant</span> <span class="hero-new__title-black">Futures.</span>
+        </h1>
+        <p class="hero-new__desc">
+          We help you identify dyslexia, understand what it means, know what to do next, and recognize dyslexic thinking as a unique strength.
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-new__banner-wrap">
+      <div class="hero-new__banner">
+        <img src="assets/hero-banner.jpg" alt="Families discovering their children's strengths" class="hero-new__bg-img hero-new__bg-img--default" />
+        <img src="assets/hero-banner2.jpg" alt="Teens and adults discovering their strengths" class="hero-new__bg-img hero-new__bg-img--teens" />
+        <img src="assets/hero-banner3.jpg" alt="Educators supporting dyslexic learners" class="hero-new__bg-img hero-new__bg-img--educators" />
+      </div>
+
+    </div>
+
+    <div class="entry-cards">
+      <a href="parents.html" class="entry-card entry-card--blue">
+        <span class="entry-card__label">Parents</span>
+        <h3 class="entry-card__title">My child was just flagged</h3>
+        <p class="entry-card__desc">Understand the screening, learn what to do next, and see why this is an opportunity.</p>
+        <span class="entry-card__link">Start here <span class="entry-card__arrow">&rarr;</span></span>
+      </a>
+      <div class="entry-card entry-card--cyan entry-card--coming-soon">
+        <span class="entry-card__label">Teens &amp; Adults</span>
+        <h3 class="entry-card__title">I think I might be dyslexic</h3>
+        <p class="entry-card__desc">It&rsquo;s never too late. Learn what dyslexia looks like in teens and adults, and what to do with that insight.</p>
+        <span class="entry-card__link entry-card__link--soon">Coming 2026</span>
+      </div>
+      <div class="entry-card entry-card--gold entry-card--coming-soon">
+        <span class="entry-card__label">Educators</span>
+        <h3 class="entry-card__title">I&rsquo;m supporting a student</h3>
+        <p class="entry-card__desc">Evidence-based tools to help teachers and professionals support dyslexic learners.</p>
+        <span class="entry-card__link entry-card__link--soon">Coming 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. REASSURANCE BAR
+     ============================================================ -->
+<section class="reassurance">
+  <div class="container">
+    <div class="reassurance__grid">
+      <div class="reassurance__item">
+        <div class="reassurance__icon reassurance__icon--gold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="reassurance__text">Free core resources</span>
+      </div>
+
+      <div class="reassurance__item">
+        <div class="reassurance__icon reassurance__icon--blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="reassurance__text">Evidence-based</span>
+      </div>
+
+      <div class="reassurance__item">
+        <div class="reassurance__icon reassurance__icon--blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <span class="reassurance__text">Private &amp; secure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. UNDERSTAND (3-card grid)
+     ============================================================ -->
+<section class="understand section-padding" id="understand">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="eyebrow">Understand</p>
+      <div class="understand__stat-accent">1 in 5</div>
+      <h2 class="section-heading">Dyslexia isn't what you think <span class="heading-accent">it is.</span></h2>
+    </div>
+
+    <div class="understand__grid">
+      <div class="understand-card understand-card--blue">
+        <span class="understand-card__num">01</span>
+        <h3 class="understand-card__title">It's incredibly common.</h3>
+        <p class="understand-card__body">
+          Up to 1 in 5 children have dyslexia. Your child is in extraordinary company&nbsp;&mdash; alongside entrepreneurs, artists, scientists, and leaders.
+        </p>
+      </div>
+
+      <div class="understand-card understand-card--cyan">
+        <span class="understand-card__num">02</span>
+        <h3 class="understand-card__title">It's not about intelligence.</h3>
+        <p class="understand-card__body">
+          Dyslexia is a difference in how the brain processes language, not a reflection of how smart your child is. Many gifted thinkers are dyslexic.
+        </p>
+      </div>
+
+      <div class="understand-card understand-card--gold">
+        <span class="understand-card__num">03</span>
+        <h3 class="understand-card__title">It comes with superpowers.</h3>
+        <p class="understand-card__body">
+          Big-picture thinking, creativity, spatial reasoning, and problem-solving&nbsp;&mdash; the dyslexic brain is wired for strengths that classrooms often overlook.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY THIS MATTERS NOW (Impact stats)
+     ============================================================ -->
+<section class="impact-banner">
+  <p class="impact-banner__heading">Why this matters now</p>
+  <div class="impact-banner__inner">
+    <div class="impact-banner__stat">
+      <span class="impact-banner__number impact-banner__number--blue">74%</span>
+      <span class="impact-banner__label">of children who struggle with reading in 3rd grade still struggle in 9th</span>
+    </div>
+    <div class="impact-banner__stat">
+      <span class="impact-banner__number impact-banner__number--cyan">95%</span>
+      <span class="impact-banner__label">of struggling readers can reach grade level with early, evidence-based support</span>
+    </div>
+    <div class="impact-banner__stat">
+      <span class="impact-banner__number impact-banner__number--gold">1&ndash;2 yrs</span>
+      <span class="impact-banner__label">is often all it takes to close the gap when the right support starts early</span>
+    </div>
+    <div class="impact-banner__stat">
+      <span class="impact-banner__number impact-banner__number--teal">Today</span>
+      <span class="impact-banner__label">the best time to act &mdash; early identification changes everything</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. PARENT PATHWAY CTA
+     ============================================================ -->
+<section class="path-cta section-padding" id="path">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow">Next Steps</p>
+      <h2 class="section-heading">Ready to take the next <span class="heading-accent">step?</span></h2>
+      <p class="section-subtext">
+        We&rsquo;ve built a clear, step-by-step guide to help you understand what&rsquo;s happening and what to do next.
+      </p>
+    </div>
+    <div class="path-cta__action">
+      <a href="parents.html" class="btn btn--primary">Go to the Parent Guide &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. DYSLEXIA + AI STRENGTHS
+     ============================================================ -->
+<section class="strengths-banner" id="strengths">
+  <div class="container">
+    <div class="strengths-banner__inner">
+      <div class="strengths-banner__text">
+        <p class="eyebrow eyebrow--light">Unlock Strengths</p>
+        <h2 class="strengths-banner__title">The skills that matter most? Dyslexic minds already have them.</h2>
+        <p class="strengths-banner__body">
+          As AI handles more routine work, what matters most are the human skills&nbsp;&mdash; seeing the big picture, thinking creatively, solving problems, and connecting ideas. Those are areas where many dyslexic thinkers naturally shine.
+        </p>
+      </div>
+      <div class="strengths-banner__grid">
+        <div class="strength-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>Big-picture thinking</span>
+        </div>
+        <div class="strength-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Pattern recognition</span>
+        </div>
+        <div class="strength-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Creative problem-solving</span>
+        </div>
+        <div class="strength-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <span>Spatial reasoning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. TRUST / ENDORSEMENTS BAR
+     ============================================================ -->
+<section class="trust">
+  <div class="container">
+    <p class="trust__heading">Built on research from leading institutions</p>
+    <div class="trust__logos">
+      <span class="trust__logo">International Dyslexia Association</span>
+      <span class="trust__logo">Decoding Dyslexia CA</span>
+      <span class="trust__logo">UCSF Dyslexia Center</span>
+      <span class="trust__logo">CA Dept of Education</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. FINAL CTA
+     ============================================================ -->
+<section class="final-cta section-padding" id="final-cta">
+  <div class="container">
+    <h2 class="final-cta__title">The next chapter starts <span class="heading-accent">now.</span></h2>
+    <p class="final-cta__body">
+      You don't need to have all the answers today. Start with one step&nbsp;&mdash; we'll walk beside you the rest of the way.
+    </p>
+    <a href="parents.html" class="btn btn--primary">Explore the Parent Guide &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     14. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+      </div>
+
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E3EEF8"/>
+      <stop offset="50%" style="stop-color:#E0F4F6"/>
+      <stop offset="100%" style="stop-color:#FEF6E0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <circle cx="180" cy="120" r="90" fill="#4DBEC9" opacity="0.12"/>
+  <circle cx="1020" cy="480" r="130" fill="#1257AD" opacity="0.08"/>
+  <circle cx="600" cy="80" r="60" fill="#F4D058" opacity="0.15"/>
+  <circle cx="900" cy="200" r="45" fill="#4DBEC9" opacity="0.1"/>
+  <circle cx="350" cy="450" r="70" fill="#F4D058" opacity="0.1"/>
+  <rect x="440" y="230" width="320" height="140" rx="16" fill="white" opacity="0.6"/>
+  <text x="600" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#6B7B8D">Hero Banner Image</text>
+  <text x="600" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9CA3AF">Replace with your featured image</text>
+  <path d="M580 255 l20-15 l20 15" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="588" y="255" width="24" height="18" rx="2" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <circle cx="596" cy="263" r="3" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+</svg>

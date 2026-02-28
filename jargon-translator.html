@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jargon Translator — Hello Dyslexia</title>
+  <meta name="description" content="Plain-English definitions for MTSS, 504, IEP, DIBELS, and every other acronym you'll hear from the school." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="page--compact">
+
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero hero--centered">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">Jargon</span>
+          <span class="hero__display-line hero__display-line--cyan">Translator</span>
+        </h1>
+        <p class="hero__subtitle">Every acronym you&rsquo;ll hear from the school, in one plain-English sentence. Search or scroll.</p>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>Plain language &middot; Link from every guide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="glossary">
+  <div class="container container--narrow">
+    <div class="glossary-search-wrap">
+      <label for="glossarySearch" class="visually-hidden">Search glossary</label>
+      <input type="search" id="glossarySearch" placeholder="Search terms (e.g. MTSS, 504, DIBELS)..." aria-label="Search glossary terms" autocomplete="off" />
+    </div>
+
+    <div class="glossary-list">
+      <div class="glossary-term">
+        <p class="glossary-term__name">504 (Section 504)</p>
+        <p class="glossary-term__def">A federal law that gives students with disabilities the right to accommodations so they can access the same education as their peers; a 504 plan is the written document that lists those accommodations.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">DIBELS</p>
+        <p class="glossary-term__def">Dynamic Indicators of Basic Early Literacy Skills&nbsp;&mdash; a short, one-on-one reading assessment used to screen for reading risk and track progress; often used in the mCLASS system.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">FAPE</p>
+        <p class="glossary-term__def">Free Appropriate Public Education&nbsp;&mdash; the right of every student with a disability to receive an education that meets their needs at no cost to the family.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">IEP</p>
+        <p class="glossary-term__def">Individualized Education Program&nbsp;&mdash; a legal document that describes the special education services, goals, and accommodations for a student who qualifies under IDEA.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">IDEA</p>
+        <p class="glossary-term__def">Individuals with Disabilities Education Act&nbsp;&mdash; the federal law that guarantees special education and related services to eligible students with disabilities.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">LRE</p>
+        <p class="glossary-term__def">Least Restrictive Environment&nbsp;&mdash; the legal requirement that students with disabilities learn alongside their peers in general education as much as possible, with support.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">mCLASS</p>
+        <p class="glossary-term__def">A widely used reading assessment and data system that includes DIBELS; teachers give brief one-on-one subtests to screen and monitor reading skills.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">MTSS</p>
+        <p class="glossary-term__def">Multi-Tiered System of Supports&nbsp;&mdash; a framework schools use to give increasingly intensive help (Tier 1 for everyone, Tier 2 small group, Tier 3 more intensive) before or alongside special education.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">NWF (Nonsense Word Fluency)</p>
+        <p class="glossary-term__def">A DIBELS subtest that measures whether a child can sound out made-up words; it shows how well they can apply letter-sound skills.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">OG (Orton–Gillingham)</p>
+        <p class="glossary-term__def">A structured, multisensory approach to teaching reading and spelling that is often recommended for students with dyslexia; many programs are based on OG principles.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">ORF (Oral Reading Fluency)</p>
+        <p class="glossary-term__def">A DIBELS subtest that measures how many words a child reads correctly per minute from a passage; it reflects both accuracy and speed.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">PSF (Phoneme Segmentation Fluency)</p>
+        <p class="glossary-term__def">A DIBELS subtest that measures whether a child can break a word into its individual sounds (e.g., &ldquo;cat&rdquo; → /k/ /a/ /t/).</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">RTI</p>
+        <p class="glossary-term__def">Response to Intervention&nbsp;&mdash; an older term for the idea of giving extra instruction and monitoring progress; often used interchangeably with MTSS.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">SLD</p>
+        <p class="glossary-term__def">Specific Learning Disability&nbsp;&mdash; a category under special education law; dyslexia is one type of SLD (often called SLD in reading).</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">SST</p>
+        <p class="glossary-term__def">Student Study Team (or Student Success Team)&nbsp;&mdash; a school team that meets to discuss a student&rsquo;s needs and plan interventions; it may recommend a formal evaluation.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">Structured literacy</p>
+        <p class="glossary-term__def">An approach to teaching reading that explicitly covers phonics, decoding, and language structure; evidence-based for students with dyslexia.</p>
+      </div>
+      <div class="glossary-term">
+        <p class="glossary-term__name">Tier 1 / Tier 2 / Tier 3</p>
+        <p class="glossary-term__def">Levels of support in MTSS: Tier 1 is instruction for all students; Tier 2 is extra small-group support; Tier 3 is more intensive, often one-on-one or very small group.</p>
+      </div>
+    </div>
+
+    <div class="screener-actions" style="margin-top: 28px;">
+      <a href="#" class="btn btn--outline">Print pocket reference (PDF coming soon)</a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta section-padding">
+  <div class="container">
+    <h2 class="final-cta__title">Use it in <span class="heading-accent">context.</span></h2>
+    <p class="final-cta__body">
+      We link to this page from the Screener Guide, School Pathways, and other resources whenever jargon appears.
+    </p>
+    <a href="screener-guide.html" class="btn btn--primary">Screener Guide &rarr;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

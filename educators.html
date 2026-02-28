@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Educators — Hello Dyslexia</title>
+  <meta name="description" content="Evidence-based resources for teachers, reading specialists, and school administrators supporting students with dyslexia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ============================================================
+     1. FIXED NAV
+     ============================================================ -->
+<div class="nav__overlay" id="navOverlay"></div>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo1.png" alt="Hello Dyslexia" class="nav__logo-img" />
+      <span class="nav__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+    </a>
+
+    <div class="nav__links" id="navLinks">
+      <div class="nav__dropdown">
+        <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          I&rsquo;m a&hellip;
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="parents.html" class="nav__dropdown-item">Parent</a>
+          <a href="adults.html" class="nav__dropdown-item">Teen / Adult</a>
+          <a href="educators.html" class="nav__dropdown-item">Educator</a>
+        </div>
+      </div>
+
+      <a href="index.html#research" class="nav__link">Resources</a>
+      <a href="about.html" class="nav__link">About</a>
+
+      <div class="nav__lang">
+        <a href="#" class="nav__lang-btn active">English</a>
+        <span class="nav__lang-divider">|</span>
+        <a href="#" class="nav__lang-btn">Espa&ntilde;ol</a>
+      </div>
+      <a href="donate.html" class="nav__donate" aria-label="Donate">
+        <svg class="nav__donate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate
+      </a>
+    </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     2. HERO
+     ============================================================ -->
+<section class="hero hero--centered">
+  <div class="hero__bg-pattern" aria-hidden="true">
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--1" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--2" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--3" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--4" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--5" />
+    <img src="assets/logo-small.png" alt="" class="hero__stamp hero__stamp--6" />
+  </div>
+  <div class="container hero__content-wrap">
+    <div class="hero__grid hero__grid--single">
+      <div class="hero__content">
+        <h1 class="hero__display">
+          <span class="hero__display-line hero__display-line--blue">For</span>
+          <span class="hero__display-line hero__display-line--cyan">Educators</span>
+        </h1>
+        <p class="hero__subtitle">Help every student with dyslexia reach their full potential in your classroom.</p>
+        <div class="hero__actions">
+          <a href="#classroom" class="btn btn--primary">Explore Classroom Tools &rarr;</a>
+        </div>
+        <div class="hero__trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>501(c)(3) Registered Nonprofit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. KEY FACTS
+     ============================================================ -->
+<section class="section-padding" id="key-facts" style="background: var(--blue-soft);">
+  <div class="container container--narrow">
+    <div class="section-header-center">
+      <p class="eyebrow">Key Facts</p>
+      <h2 class="section-heading">What educators need to <span class="heading-accent">know.</span></h2>
+      <p class="section-subtext">
+        Dyslexia is the most common learning difference&nbsp;&mdash; and early, informed intervention makes a lasting impact.
+      </p>
+    </div>
+
+    <div class="understand__grid">
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="understand-card__title">3&ndash;5 students per classroom</h3>
+        <p class="understand-card__body">
+          With 1 in 5 children having dyslexia, every classroom has students who need support&nbsp;&mdash; whether identified or not.
+        </p>
+      </div>
+
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="understand-card__title">California SB 114</h3>
+        <p class="understand-card__body">
+          California now requires universal dyslexia screening in grades K&ndash;2. Understanding the law helps you support students and communicate with families.
+        </p>
+      </div>
+
+      <div class="understand-card">
+        <div class="understand-card__icon understand-card__icon--gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 class="understand-card__title">Strengths-based approach</h3>
+        <p class="understand-card__body">
+          Dyslexic students often excel in creative thinking, problem-solving, and spatial reasoning. A strengths-based lens transforms outcomes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. CLASSROOM RESOURCES
+     ============================================================ -->
+<section class="research section-padding" id="classroom">
+  <div class="container">
+    <div class="section-header-center">
+      <p class="eyebrow">Classroom Tools</p>
+      <h2 class="section-heading">Resources for your <span class="heading-accent">practice.</span></h2>
+      <p class="section-subtext">
+        Evidence-based guides and strategies designed for teachers and school teams.
+      </p>
+    </div>
+
+    <div class="research__grid">
+      <a href="#" class="resource-card">
+        <div class="resource-card__image-wrapper">
+          <div class="placeholder-img resource-card__img">Screening</div>
+        </div>
+        <div class="resource-card__content">
+          <span class="resource-card__category resource-card__category--blue">Screening</span>
+          <h3 class="resource-card__title">After the Screening: Next Steps for Educators</h3>
+          <p class="resource-card__excerpt">How to interpret results, communicate with families, and build a response plan.</p>
+          <span class="resource-card__read-more">Read Guide &rarr;</span>
+        </div>
+      </a>
+
+      <a href="#" class="resource-card">
+        <div class="resource-card__image-wrapper">
+          <div class="placeholder-img resource-card__img">Accommodations</div>
+        </div>
+        <div class="resource-card__content">
+          <span class="resource-card__category resource-card__category--cyan">Classroom</span>
+          <h3 class="resource-card__title">Classroom Accommodations That Work</h3>
+          <p class="resource-card__excerpt">Practical strategies for supporting dyslexic learners without singling them out.</p>
+          <span class="resource-card__read-more">Read Guide &rarr;</span>
+        </div>
+      </a>
+
+      <a href="#" class="resource-card">
+        <div class="resource-card__image-wrapper">
+          <div class="placeholder-img resource-card__img">IEP / 504</div>
+        </div>
+        <div class="resource-card__content">
+          <span class="resource-card__category resource-card__category--gold">Policy</span>
+          <h3 class="resource-card__title">IEP and 504 Plans: An Educator's Guide</h3>
+          <p class="resource-card__excerpt">Understand the legal framework and how to collaborate with families on the right plan.</p>
+          <span class="resource-card__read-more">Read Guide &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. CTA
+     ============================================================ -->
+<section class="final-cta section-padding" id="educators-cta">
+  <div class="container">
+    <h2 class="final-cta__title">Every student deserves to <span class="heading-accent">thrive.</span></h2>
+    <p class="final-cta__body">
+      Partner with Hello Dyslexia to bring evidence-based resources to your school and community.
+    </p>
+    <a href="contact.html" class="btn btn--primary">Get In Touch &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo1.png" alt="Hello Dyslexia" class="footer__logo-img" loading="lazy" />
+        <span class="footer__logo-text"><span class="nav__logo-text--hello">Hello</span> <span class="nav__logo-text--dyslexia">Dyslexia</span></span>
+        <p class="footer__tagline">Free resources for families navigating dyslexia.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__links-col">
+          <p class="footer__col-heading">Pages</p>
+          <a href="parents.html">Parents</a>
+          <a href="adults.html">Teens &amp; Adults</a>
+          <a href="educators.html">Educators</a>
+          <a href="about.html">About</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__signup">
+          <p class="footer__col-heading">Stay Updated</p>
+          <form class="footer__signup-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="First name" class="footer__signup-input" aria-label="First name" required />
+            <input type="email" name="email" placeholder="Email address" class="footer__signup-input" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary footer__signup-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      Hello Dyslexia provides information and guidance. We are not a diagnostic, medical, or legal service.
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Hello Dyslexia. All rights reserved.</span>
+      <span class="footer__sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span class="footer__sep">|</span>
+      <a href="#" class="footer__lang-link">English</a>
+      <a href="#" class="footer__lang-link">Espa&ntilde;ol</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
