@@ -6762,3 +6762,191 @@ html, body {
     column-count: 1;
   }
 }
+
+/* ============================================================
+   iOS SAFE AREA — Dynamic Island / Notch support
+   ============================================================ */
+
+/*
+ * Brand stripe (body::before) sits at top:0 with viewport-fit=cover,
+ * so it fills behind the Dynamic Island / notch — the brand color shows
+ * through correctly.
+ *
+ * Nav sits at top:3px (below the 3px stripe). With safe area we push it
+ * down by env(safe-area-inset-top) so it clears the notch.
+ */
+.nav {
+  top: calc(3px + env(safe-area-inset-top));
+}
+
+/* Hero/page content: account for extra nav height from safe area */
+.hero-new,
+.page-header {
+  padding-top: calc(var(--nav-height) + env(safe-area-inset-top) + 28px);
+}
+
+/* Mobile nav drawer: account for safe area at top */
+@media (max-width: 960px) {
+  .nav__links {
+    padding-top: calc(88px + env(safe-area-inset-top));
+  }
+}
+
+/* Footer: home indicator clearance on iPhone */
+.footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ============================================================
+   MOBILE — Bigger elements, generous sizing
+   ============================================================ */
+@media (max-width: 640px) {
+  /* --- Headings --- */
+  .hero-new__title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .section-heading {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .section-subtext {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6.5vw, 1.9rem);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* --- Buttons & CTAs --- */
+  .btn {
+    padding: 16px 28px;
+    font-size: 1.05rem;
+    min-height: 52px;
+  }
+
+  .btn--sm {
+    padding: 13px 22px;
+    font-size: 0.95rem;
+    min-height: 48px;
+  }
+
+  .nav__donate {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+
+  /* --- Card text --- */
+  .entry-card__title {
+    font-size: 1.1rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .understand__card-title,
+  .research__card-title {
+    font-size: 1.1rem;
+  }
+
+  .understand__card-body,
+  .research__card-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* --- Section padding (more breathing room) --- */
+  .section-padding {
+    padding: 64px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  /* --- Impact banner stats --- */
+  .impact-banner__number {
+    font-size: 2.8rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.95rem;
+  }
+
+  /* --- Specialist / assessment CTAs --- */
+  .specialist-banner__title,
+  .assessment-banner__title {
+    font-size: 1.5rem;
+  }
+
+  .specialist-banner__body,
+  .assessment-banner__body {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* --- Footer nav links --- */
+  .footer__links-col a {
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* --- Final CTA --- */
+  .final-cta__title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .final-cta__body {
+    font-size: 1rem;
+  }
+
+  /* --- Search card --- */
+  .hero-new__search-card {
+    padding: 24px 20px;
+  }
+
+  .hero-new__search-label {
+    font-size: 1rem;
+  }
+
+  /* --- Nav toggle tap target --- */
+  .nav__toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* --- Strength items --- */
+  .strength-item {
+    padding: 18px 14px;
+    min-height: 80px;
+  }
+
+  .strength-item span {
+    font-size: 0.85rem;
+  }
+
+  /* --- Reassurance items --- */
+  .reassurance__label {
+    font-size: 0.9rem;
+  }
+
+  /* --- Mission values --- */
+  .mission__value-display {
+    font-size: 2.6rem;
+  }
+
+  .mission__value-label {
+    font-size: 1rem;
+  }
+}
