@@ -3362,130 +3362,88 @@ ul { list-style: none; }
 /* Gold trace: two lines split from bottom-left, meet at top-right */
 .situation-card--gold-trace {
   position: relative;
-  border: 2px solid rgba(212, 160, 23, 0.15);
-  overflow: visible;
-}
-
-/* Line 1: bottom-left → up left side → across top → top-right */
-.situation-card--gold-trace::before,
-.situation-card--gold-trace::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  border-radius: inherit;
+  border: 2px solid rgba(212, 160, 23, 0.12);
+  overflow: hidden;
 }
 
 .situation-card--gold-trace::before {
-  /* Draws left + top edges */
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 2px solid #D4A017;
-  border-top: 2px solid #D4A017;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  filter: drop-shadow(0 0 4px rgba(212, 160, 23, 0.5));
-  animation: gold-trace-path1 2.5s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--gold-wave-angle, 0deg),
+    transparent 0deg,
+    transparent 260deg,
+    rgba(212, 160, 23, 0.08) 290deg,
+    rgba(212, 160, 23, 0.5) 330deg,
+    #D4A017 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: gold-wave-rotate 3s linear infinite;
+  pointer-events: none;
 }
 
-/* Line 2: bottom-left → across bottom → up right side → top-right */
 .situation-card--gold-trace::after {
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-right: 2px solid #D4A017;
-  border-bottom: 2px solid #D4A017;
-  border-left: 2px solid transparent;
-  border-top: 2px solid transparent;
-  filter: drop-shadow(0 0 4px rgba(212, 160, 23, 0.5));
-  animation: gold-trace-path2 2.5s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--gold-wave-angle, 0deg),
+    transparent 0deg,
+    transparent 260deg,
+    rgba(212, 160, 23, 0) 290deg,
+    rgba(212, 160, 23, 0.25) 340deg,
+    rgba(212, 160, 23, 0.4) 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: gold-wave-rotate 3s linear infinite;
+  filter: blur(6px);
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-/* Path 1: grow height (left edge) then width (top edge) */
-@keyframes gold-trace-path1 {
-  0% {
-    width: 0;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  /* Grow up the left side */
-  50% {
-    width: 0;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-  /* Grow across the top */
-  90% {
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-  95% {
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
+@property --gold-wave-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-/* Path 2: grow width (bottom edge) then height (right edge) */
-@keyframes gold-trace-path2 {
-  0% {
-    width: 0;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  /* Grow across the bottom */
-  50% {
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-  /* Grow up the right side */
-  90% {
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-  95% {
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
+@keyframes gold-wave-rotate {
+  to { --gold-wave-angle: 360deg; }
 }
 
-.situation-card--gold-trace:hover::before,
+.situation-card--gold-trace:hover::before {
+  background: conic-gradient(
+    from var(--gold-wave-angle, 0deg),
+    transparent 0deg,
+    transparent 240deg,
+    rgba(212, 160, 23, 0.15) 280deg,
+    rgba(212, 160, 23, 0.7) 330deg,
+    #D4A017 360deg
+  );
+}
+
 .situation-card--gold-trace:hover::after {
-  filter: drop-shadow(0 0 8px rgba(212, 160, 23, 0.7));
+  opacity: 0.9;
+  filter: blur(8px);
 }
 
 .situation-card__badge {
