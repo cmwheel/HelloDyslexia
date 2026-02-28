@@ -625,6 +625,17 @@ ul { list-style: none; }
   text-align: left;
 }
 
+/* Reassurance beat — warm, calm message between hero and entry cards */
+.hero-new__reassurance {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  max-width: 600px;
+  margin: 16px auto 28px;
+  padding: 0 16px;
+}
+
 .hero-new__notch-badge {
   position: absolute;
   top: 20px;
