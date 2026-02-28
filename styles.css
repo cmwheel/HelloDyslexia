@@ -5130,3 +5130,482 @@ ul { list-style: none; }
 .hero-new__title-gold {
   color: #E8B930;
 }
+
+/* ============================================================
+   MOBILE RESPONSIVENESS AUDIT FIXES — Feb 2026
+   Targets: 375px (iPhone SE), 390px (iPhone 14), 768px (iPad)
+   ============================================================ */
+
+/* ── Prevent horizontal scroll globally ───────────────────── */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ── Testimonials: missing mobile breakpoint ──────────────── */
+@media (max-width: 960px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Audience doors: missing mobile breakpoint ────────────── */
+@media (max-width: 768px) {
+  .audience-doors {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .audience-door {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Screener selector: 4-col too tight on mobile ─────────── */
+@media (max-width: 640px) {
+  .screener-selector {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .screener-selector__card {
+    padding: 14px 10px;
+  }
+
+  .screener-selector__name {
+    font-size: 0.78rem;
+  }
+
+  .screener-detail__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Nav: improve mobile touch targets + overflow ─────────── */
+@media (max-width: 960px) {
+  .nav__links {
+    gap: 20px;
+    padding: 88px 24px 32px;
+  }
+
+  .nav__link {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__lang {
+    height: 44px;
+  }
+
+  .nav__lang-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .nav__donate {
+    height: 44px;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* ── Nav logo: prevent overflow on small screens ──────────── */
+@media (max-width: 375px) {
+  .nav__logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav__logo-img {
+    height: 52px;
+  }
+}
+
+/* ── Hero: tighter on very small screens ──────────────────── */
+@media (max-width: 375px) {
+  .hero-new__title {
+    font-size: 1.75rem;
+  }
+
+  .hero-new__desc {
+    font-size: 0.95rem;
+  }
+
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+  }
+
+  .hero-new__banner {
+    height: 180px;
+    border-radius: 12px;
+  }
+}
+
+/* ── Entry cards: improve touch targets + text on mobile ──── */
+@media (max-width: 640px) {
+  .entry-card {
+    padding: 16px 20px;
+  }
+
+  .entry-card__title {
+    font-size: 1rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.85rem;
+  }
+
+  .entry-card__link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Impact banner: fix text size on small screens ────────── */
+@media (max-width: 375px) {
+  .impact-banner__number {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .impact-banner__label {
+    font-size: 0.75rem;
+  }
+
+  .impact-banner__heading {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Specialist banner: fix search + visual on mobile ─────── */
+@media (max-width: 640px) {
+  .specialist-banner__visual {
+    min-height: 200px;
+  }
+
+  .specialist-banner__title {
+    font-size: 1.5rem;
+  }
+
+  .specialist-banner__body {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Assessment banner: improve btn touch target ──────────── */
+@media (max-width: 640px) {
+  .assessment-banner__btn {
+    min-height: 48px;
+  }
+}
+
+/* ── Contact info: ensure single-col stacking ─────────────── */
+@media (max-width: 480px) {
+  .contact__info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Footer: fix column layout on small screens ──────────── */
+@media (max-width: 640px) {
+  .footer__links-col {
+    column-count: 1;
+  }
+
+  .footer__nav {
+    gap: 24px;
+  }
+
+  .footer__signup-form {
+    gap: 8px;
+  }
+}
+
+/* ── Buttons: ensure minimum touch target size (44px) ─────── */
+@media (max-width: 640px) {
+  .btn {
+    min-height: 44px;
+    padding: 0 24px;
+    font-size: 0.88rem;
+  }
+
+  .btn--outline {
+    min-height: 44px;
+    padding: 0 20px;
+  }
+}
+
+/* ── Section headings: clamp tighter on small screens ─────── */
+@media (max-width: 375px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-subtext {
+    font-size: 0.88rem;
+  }
+
+  .final-cta__title {
+    font-size: 1.5rem;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Hero (centered variant): fix padding on mobile ───────── */
+@media (max-width: 640px) {
+  .hero--centered {
+    padding: calc(var(--nav-height) + 24px) 0 32px;
+  }
+
+  .hero__display {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.92rem;
+  }
+}
+
+/* ── Flagged color grid: already handled at 640px ─────────── */
+
+/* ── Deeper checklist: tighter padding on mobile ──────────── */
+@media (max-width: 375px) {
+  .deeper-checklist__item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .deeper-checklist__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .deeper-checklist__title {
+    font-size: 0.92rem;
+  }
+
+  .deeper-checklist__desc {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Myth/fact cards: improve readability on mobile ───────── */
+@media (max-width: 640px) {
+  .myth-fact-card {
+    padding: 20px;
+  }
+
+  .myth-fact-card__myth {
+    font-size: 0.98rem;
+  }
+
+  .myth-fact-card__fact {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Script prep grid: already handled at 640px ──────────── */
+
+/* ── Glossary search: full width on mobile ────────────────── */
+@media (max-width: 640px) {
+  .glossary-search-wrap input {
+    max-width: 100%;
+  }
+
+  .glossary-term {
+    padding: 16px 18px;
+  }
+
+  .glossary-term__name {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── FAQ accordion: improve touch targets ─────────────────── */
+@media (max-width: 640px) {
+  .faq-accordion__trigger {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    min-height: 48px;
+  }
+
+  .faq-accordion__body {
+    padding: 0 18px 16px;
+  }
+
+  .faq-accordion__body-inner {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Situation cards: improve spacing on very small ───────── */
+@media (max-width: 375px) {
+  .situation-card {
+    padding: 18px;
+  }
+
+  .situation-card__title {
+    font-size: 0.92rem;
+  }
+
+  .situation-card__desc {
+    font-size: 0.8rem;
+  }
+
+  .situation-card__link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── Strengths banner: fix grid on narrow screens ─────────── */
+@media (max-width: 375px) {
+  .strengths-banner__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .strength-item {
+    padding: 16px 14px;
+  }
+
+  .strength-item span {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Trust logos: wrap cleanly on mobile ──────────────────── */
+@media (max-width: 640px) {
+  .trust__logo {
+    font-size: 0.72rem;
+    padding: 8px 16px;
+  }
+
+  .trust__heading {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Email signup: already handled at 640px ──────────────── */
+
+/* ── Identity grid: already handled at 640px ─────────────── */
+
+/* ── Donate page: fix amount buttons wrapping ────────────── */
+@media (max-width: 640px) {
+  .donate-amounts {
+    justify-content: center;
+  }
+
+  .donate-amount-btn {
+    flex: 1 1 calc(33% - 10px);
+    min-width: 80px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    min-height: 44px;
+  }
+
+  .donate-form-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ── Conversation scripts: improve readability ───────────── */
+@media (max-width: 640px) {
+  .script-scenario__context {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+
+  .script-scenario__opening {
+    padding: 16px 18px;
+  }
+
+  .script-scenario__opening-text {
+    font-size: 0.95rem;
+    padding-left: 14px;
+  }
+
+  .script-scenario__escalation {
+    padding: 14px 18px;
+  }
+
+  .script-scenario__next {
+    padding: 14px 18px;
+  }
+
+  .script-scenario__next-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+  }
+}
+
+/* ── Contact form: improve touch targets ─────────────────── */
+@media (max-width: 640px) {
+  .contact-form__input,
+  .contact-form__select,
+  .contact-form__textarea {
+    min-height: 48px;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ── Prevent iOS auto-zoom on input focus ─────────────────── */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* ── Pathway detail: ensure readable on mobile ───────────── */
+@media (max-width: 640px) {
+  .pathway-detail {
+    gap: 20px;
+  }
+}
+
+/* ── Tab selector: improve for small screens ─────────────── */
+@media (max-width: 375px) {
+  .tab-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tab-selector__card {
+    padding: 14px 12px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .tab-selector__card .tab-selector__label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Signs two-col: already handled at 640px ─────────────── */
+
+/* ── Compact page adjustments ────────────────────────────── */
+@media (max-width: 375px) {
+  .page--compact .section-heading {
+    font-size: 1.35rem;
+  }
+
+  .page--compact .understand-card {
+    padding: 22px 18px;
+  }
+}
