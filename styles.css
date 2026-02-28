@@ -3352,29 +3352,64 @@ ul { list-style: none; }
 .situation-card:hover .situation-card__arrow { transform: translateX(4px); }
 .situation-card:hover .situation-card__link  { gap: 8px; }
 
-/* Priority card — animated gradient border */
+/* Gold trace — single point of light tracing the card perimeter */
 @property --border-angle {
   syntax: "<angle>";
   inherits: false;
   initial-value: 0turn;
 }
 
-.situation-card--priority {
+.situation-card--gold-trace {
   --border-angle: 0turn;
-  border: 1px solid transparent;
-  background:
-    linear-gradient(var(--white), var(--white)) padding-box,
-    conic-gradient(from var(--border-angle), rgba(27,58,92,0.06) 0%, rgba(77,190,201,0.35) 25%, rgba(27,58,92,0.15) 50%, rgba(212,160,23,0.3) 75%, rgba(27,58,92,0.06) 100%) border-box;
-  animation: border-spin 6s linear infinite;
+  position: relative;
+  border: 2px solid rgba(212, 160, 23, 0.15);
+  overflow: hidden;
+  animation: gold-spin 4s linear infinite;
 }
 
-.situation-card--priority:hover {
+.situation-card--gold-trace::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
   background:
-    linear-gradient(var(--white), var(--white)) padding-box,
-    conic-gradient(from var(--border-angle), rgba(27,58,92,0.1) 0%, rgba(77,190,201,0.5) 25%, rgba(27,58,92,0.25) 50%, rgba(212,160,23,0.45) 75%, rgba(27,58,92,0.1) 100%) border-box;
+    conic-gradient(
+      from var(--border-angle),
+      transparent 0%,
+      transparent 80%,
+      #D4A017 90%,
+      #f5d76e 95%,
+      #D4A017 97%,
+      transparent 100%
+    );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: gold-spin 4s linear infinite;
+  pointer-events: none;
 }
 
-@keyframes border-spin {
+.situation-card--gold-trace:hover::before {
+  background:
+    conic-gradient(
+      from var(--border-angle),
+      transparent 0%,
+      transparent 70%,
+      #D4A017 85%,
+      #f5d76e 92%,
+      #D4A017 97%,
+      transparent 100%
+    );
+  filter: drop-shadow(0 0 6px rgba(212, 160, 23, 0.6));
+}
+
+@keyframes gold-spin {
   to { --border-angle: 1turn; }
 }
 
