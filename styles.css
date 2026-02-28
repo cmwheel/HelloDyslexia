@@ -5272,20 +5272,7 @@ html, body {
   }
 }
 
-/* ── Impact banner: fix text size on small screens ────────── */
-@media (max-width: 375px) {
-  .impact-banner__number {
-    font-size: clamp(1.5rem, 8vw, 2rem);
-  }
-
-  .impact-banner__label {
-    font-size: 0.75rem;
-  }
-
-  .impact-banner__heading {
-    font-size: 0.72rem;
-  }
-}
+/* ── Impact banner: 375px handled by root-cause block ────── */
 
 /* ── Specialist banner: fix search + visual on mobile ─────── */
 @media (max-width: 640px) {
@@ -6236,15 +6223,15 @@ html, body {
   }
 
   .footer__links-col a {
-    font-size: 0.85rem;
-    padding: 5px 0;
-    min-height: 36px;
+    font-size: 0.88rem;
+    padding: 6px 0;
+    min-height: 44px;
     display: flex;
     align-items: center;
   }
 
   .footer__col-heading {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     margin-bottom: 8px;
     column-span: all;
   }
@@ -6479,30 +6466,40 @@ html, body {
     font-size: 0.88rem;
   }
 
-  /* ── 6. IMPACT BANNER: 2×2 grid, no overlap ───────────── */
+  /* ── 6. IMPACT BANNER: single column for readability ────── */
   .impact-banner {
-    padding: 32px 16px;
+    padding: 32px 20px;
   }
 
   .impact-banner__heading {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     margin-bottom: 18px;
     padding: 0;
   }
 
   .impact-banner__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 14px;
+    grid-template-columns: 1fr;
+    gap: 24px;
     padding: 0;
   }
 
+  .impact-banner__stat {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-direction: row;
+  }
+
   .impact-banner__number {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    min-width: 70px;
   }
 
   .impact-banner__label {
-    font-size: 0.72rem;
-    max-width: 150px;
+    font-size: 0.82rem;
+    max-width: none;
+    line-height: 1.45;
   }
 
   /* ── 7. IDENTITY: Single column, visual separation ─────── */
@@ -6737,12 +6734,12 @@ html, body {
   }
 
   .impact-banner__number {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
+    min-width: 60px;
   }
 
   .impact-banner__label {
-    font-size: 0.68rem;
-    max-width: 130px;
+    font-size: 0.78rem;
   }
 
   .identity__col {
