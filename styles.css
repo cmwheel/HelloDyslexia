@@ -3359,58 +3359,133 @@ ul { list-style: none; }
   initial-value: 0turn;
 }
 
+/* Gold trace: two lines split from bottom-left, meet at top-right */
 .situation-card--gold-trace {
-  --border-angle: 0turn;
   position: relative;
   border: 2px solid rgba(212, 160, 23, 0.15);
-  overflow: hidden;
-  animation: gold-spin 4s linear infinite;
+  overflow: visible;
+}
+
+/* Line 1: bottom-left → up left side → across top → top-right */
+.situation-card--gold-trace::before,
+.situation-card--gold-trace::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 .situation-card--gold-trace::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  padding: 2px;
-  background:
-    conic-gradient(
-      from var(--border-angle),
-      transparent 0%,
-      transparent 80%,
-      #D4A017 90%,
-      #f5d76e 95%,
-      #D4A017 97%,
-      transparent 100%
-    );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  animation: gold-spin 4s linear infinite;
-  pointer-events: none;
+  /* Draws left + top edges */
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 2px solid #D4A017;
+  border-top: 2px solid #D4A017;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  filter: drop-shadow(0 0 4px rgba(212, 160, 23, 0.5));
+  animation: gold-trace-path1 2.5s ease-in-out infinite;
 }
 
-.situation-card--gold-trace:hover::before {
-  background:
-    conic-gradient(
-      from var(--border-angle),
-      transparent 0%,
-      transparent 70%,
-      #D4A017 85%,
-      #f5d76e 92%,
-      #D4A017 97%,
-      transparent 100%
-    );
-  filter: drop-shadow(0 0 6px rgba(212, 160, 23, 0.6));
+/* Line 2: bottom-left → across bottom → up right side → top-right */
+.situation-card--gold-trace::after {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 2px solid #D4A017;
+  border-bottom: 2px solid #D4A017;
+  border-left: 2px solid transparent;
+  border-top: 2px solid transparent;
+  filter: drop-shadow(0 0 4px rgba(212, 160, 23, 0.5));
+  animation: gold-trace-path2 2.5s ease-in-out infinite;
 }
 
-@keyframes gold-spin {
-  to { --border-angle: 1turn; }
+/* Path 1: grow height (left edge) then width (top edge) */
+@keyframes gold-trace-path1 {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  /* Grow up the left side */
+  50% {
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  /* Grow across the top */
+  90% {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  95% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+/* Path 2: grow width (bottom edge) then height (right edge) */
+@keyframes gold-trace-path2 {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  /* Grow across the bottom */
+  50% {
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  /* Grow up the right side */
+  90% {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+  95% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.situation-card--gold-trace:hover::before,
+.situation-card--gold-trace:hover::after {
+  filter: drop-shadow(0 0 8px rgba(212, 160, 23, 0.7));
 }
 
 .situation-card__badge {
