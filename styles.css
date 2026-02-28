@@ -3352,70 +3352,14 @@ ul { list-style: none; }
 .situation-card:hover .situation-card__arrow { transform: translateX(4px); }
 .situation-card:hover .situation-card__link  { gap: 8px; }
 
-/* Gold trace — single point of light tracing the card perimeter */
-@property --border-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0turn;
+/* Gold glow pulse — subtle breathing border on the formal evaluation card */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(212, 160, 23, 0.3); }
+  50%       { box-shadow: 0 0 20px rgba(212, 160, 23, 0.6); }
 }
 
-/* Gold trace: two lines split from bottom-left, meet at top-right */
 .situation-card--gold-trace {
-  position: relative;
-  overflow: visible;
-  border: 2px solid transparent;
-  z-index: 0;
-}
-
-/* Rotating gradient layer behind the card */
-.situation-card--gold-trace::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  z-index: -2;
-  border-radius: inherit;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 200deg,
-    rgba(212, 160, 23, 0.3) 240deg,
-    rgba(212, 160, 23, 0.8) 290deg,
-    #D4A017 320deg,
-    rgba(212, 160, 23, 0.8) 340deg,
-    rgba(212, 160, 23, 0.3) 350deg,
-    transparent 360deg
-  );
-  animation: gold-wave-spin 3s linear infinite;
-}
-
-/* Inner fill to mask the center, leaving only the border visible */
-.situation-card--gold-trace::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  z-index: -1;
-  border-radius: inherit;
-  background: #FFFFFF;
-}
-
-@keyframes gold-wave-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.situation-card--gold-trace:hover::before {
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 160deg,
-    rgba(212, 160, 23, 0.4) 210deg,
-    rgba(212, 160, 23, 0.9) 280deg,
-    #D4A017 320deg,
-    rgba(212, 160, 23, 0.9) 340deg,
-    rgba(212, 160, 23, 0.4) 355deg,
-    transparent 360deg
-  );
-  filter: drop-shadow(0 0 12px rgba(212, 160, 23, 0.5));
+  animation: glow-pulse 3s ease-in-out infinite;
 }
 
 .situation-card__badge {
