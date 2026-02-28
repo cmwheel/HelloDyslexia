@@ -5112,3 +5112,11 @@ ul { list-style: none; }
   color: var(--text-body);
   margin: 0;
 }
+
+/* Hero title accent colors — brighter for contrast against dark text */
+.hero-new__title-blue {
+  color: #2B6CB0;
+}
+.hero-new__title-gold {
+  color: #E8B930;
+}
