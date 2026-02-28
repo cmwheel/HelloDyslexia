@@ -3352,6 +3352,32 @@ ul { list-style: none; }
 .situation-card:hover .situation-card__arrow { transform: translateX(4px); }
 .situation-card:hover .situation-card__link  { gap: 8px; }
 
+/* Priority card — animated gradient border */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0turn;
+}
+
+.situation-card--priority {
+  --border-angle: 0turn;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    conic-gradient(from var(--border-angle), rgba(27,58,92,0.06) 0%, rgba(77,190,201,0.35) 25%, rgba(27,58,92,0.15) 50%, rgba(212,160,23,0.3) 75%, rgba(27,58,92,0.06) 100%) border-box;
+  animation: border-spin 6s linear infinite;
+}
+
+.situation-card--priority:hover {
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    conic-gradient(from var(--border-angle), rgba(27,58,92,0.1) 0%, rgba(77,190,201,0.5) 25%, rgba(27,58,92,0.25) 50%, rgba(212,160,23,0.45) 75%, rgba(27,58,92,0.1) 100%) border-box;
+}
+
+@keyframes border-spin {
+  to { --border-angle: 1turn; }
+}
+
 .situation-card__badge {
   display: inline-block;
   font-size: 0.72rem;
