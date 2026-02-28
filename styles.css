@@ -5609,3 +5609,712 @@ html, body {
     padding: 22px 18px;
   }
 }
+
+/* ============================================================
+   MOBILE RECONFIGURATION — Landing, Parents, Footer
+   Charlie feedback round 2 — 2026-02-28
+   ============================================================ */
+
+/* ── LANDING PAGE: Complete mobile reconfiguration ─────────── */
+
+/* Hero section: proper mobile stacking */
+@media (max-width: 640px) {
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 0;
+  }
+
+  .hero-new__top {
+    margin-bottom: 16px;
+  }
+
+  .hero-new__text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .hero-new__title {
+    font-size: 1.85rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-align: center;
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-new__desc {
+    flex: none;
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Banner image: compact on mobile */
+  .hero-new__banner-wrap {
+    margin-top: 12px;
+  }
+
+  .hero-new__banner {
+    height: 200px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  /* Reassurance message below banner */
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 14px auto 20px;
+    padding: 0 8px;
+    max-width: 100%;
+  }
+
+  /* Entry cards: full-width stacked with breathing room */
+  .entry-cards {
+    grid-template-columns: 1fr;
+    margin-top: -32px;
+    gap: 0;
+    border-radius: 16px;
+    box-shadow:
+      0 2px 4px rgba(27, 58, 92, 0.04),
+      0 8px 20px rgba(27, 58, 92, 0.06);
+  }
+
+  .entry-card {
+    padding: 20px 20px 18px;
+  }
+
+  .entry-card:first-child {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .entry-card:last-child {
+    border-radius: 0 0 16px 16px;
+  }
+
+  .entry-card__label {
+    font-size: 0.72rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .entry-card__link {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    min-height: 40px;
+  }
+}
+
+/* Reassurance bar: compact horizontal on mobile */
+@media (max-width: 640px) {
+  .reassurance {
+    padding: 32px 0 28px;
+  }
+
+  .reassurance__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  .reassurance__item {
+    gap: 6px;
+  }
+
+  .reassurance__icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+  }
+
+  .reassurance__icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .reassurance__text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Understand section: single column, tighter cards */
+@media (max-width: 640px) {
+  .understand .section-header-center {
+    margin-bottom: 8px;
+  }
+
+  .understand__stat-accent {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+  }
+
+  .understand-card {
+    padding: 24px 20px;
+  }
+
+  .understand-card__num {
+    margin-bottom: 12px;
+  }
+
+  .understand-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .understand-card__body {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* Impact banner: 2x2 grid on mobile */
+@media (max-width: 640px) {
+  .impact-banner {
+    padding: 32px 16px;
+  }
+
+  .impact-banner__heading {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+
+  .impact-banner__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    padding: 0 8px;
+  }
+
+  .impact-banner__number {
+    font-size: 1.6rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    max-width: 160px;
+  }
+}
+
+/* Identity grid: single column */
+@media (max-width: 640px) {
+  .identity__grid {
+    gap: 20px;
+  }
+
+  .identity__col {
+    padding: 24px 20px;
+  }
+
+  .identity__col-title {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .identity__item {
+    font-size: 0.88rem;
+    gap: 8px;
+  }
+
+  .identity__item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .identity__list {
+    gap: 12px;
+  }
+}
+
+/* Path CTA: tighter */
+@media (max-width: 640px) {
+  .path-cta .section-header-center {
+    margin-bottom: 0;
+  }
+
+  .path-cta .section-subtext {
+    font-size: 0.9rem;
+  }
+
+  .path-cta__action {
+    margin-top: 24px;
+  }
+
+  .path-cta__action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Strengths banner: better mobile layout */
+@media (max-width: 640px) {
+  .strengths-banner {
+    padding: 48px 0;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .strengths-banner__body {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .strengths-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .strength-item {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .strength-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .strength-item span {
+    font-size: 0.82rem;
+  }
+}
+
+/* Trust bar */
+@media (max-width: 640px) {
+  .trust {
+    padding: 32px 0;
+  }
+
+  .trust__heading {
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+  }
+
+  .trust__logos {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .trust__logo {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Final CTA */
+@media (max-width: 640px) {
+  .final-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .final-cta__title {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+  }
+}
+
+/* ── 375px fine-tuning ─────────────────────────────────────── */
+@media (max-width: 390px) {
+  .hero-new__title {
+    font-size: 1.65rem;
+  }
+
+  .hero-new__desc {
+    font-size: 0.88rem;
+  }
+
+  .hero-new__banner {
+    height: 170px;
+    border-radius: 12px;
+  }
+
+  .entry-card {
+    padding: 16px 16px 14px;
+  }
+
+  .entry-card__title {
+    font-size: 0.98rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.82rem;
+  }
+
+  .impact-banner__number {
+    font-size: 1.4rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.7rem;
+  }
+
+  .identity__col {
+    padding: 20px 16px;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.25rem;
+  }
+
+  .strength-item {
+    padding: 14px 10px;
+  }
+
+  .strength-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .strength-item span {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ── PARENTS PAGE: Refinement pass ─────────────────────────── */
+@media (max-width: 640px) {
+  /* Hero polish */
+  .parents-hero {
+    padding-bottom: 36px;
+  }
+
+  .parents-hero .hero__display {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .parents-hero__subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .hero__trust {
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .hero__trust svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Flagged color cards: tighter spacing */
+  .flagged-color-grid {
+    gap: 16px;
+  }
+
+  .flagged-color-card {
+    padding: 20px 18px;
+  }
+
+  .flagged-color-card__title {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .flagged-color-card__list li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* Section closings: tighter */
+  .section-closing {
+    font-size: 0.9rem;
+    margin-top: 24px;
+  }
+
+  /* Outcomes grid: single col already, tighter cards */
+  .understand__grid--outcomes .understand-card {
+    padding: 22px 18px;
+  }
+
+  .understand__grid--outcomes .understand-card__icon {
+    margin-bottom: 10px;
+  }
+
+  /* Path timeline: tighter step spacing */
+  .path__step {
+    padding: 14px 0;
+    gap: 16px;
+  }
+
+  .path__number {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .path__step-title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .path__step-body {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .path__timeline::before {
+    left: 17px;
+  }
+
+  /* Deeper checklist: polish */
+  .deeper-checklist__item {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .deeper-checklist__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .deeper-checklist__title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .deeper-checklist__desc {
+    font-size: 0.85rem;
+  }
+
+  /* Situation cards: clean stacking */
+  .situation-cards--parents {
+    gap: 16px;
+  }
+
+  .situation-card {
+    padding: 22px 20px;
+  }
+
+  .situation-card__icon {
+    margin-bottom: 8px;
+  }
+
+  .situation-card__title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .situation-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .situation-card__link {
+    font-size: 0.85rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section headers: tighter spacing */
+  .parents-path__header {
+    margin-bottom: 8px;
+  }
+
+  .parents-path__header .section-subtext {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .parents-hero .hero__display {
+    font-size: 1.75rem;
+  }
+
+  .parents-hero__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .situation-card {
+    padding: 18px 16px;
+  }
+
+  .situation-card__title {
+    font-size: 0.92rem;
+  }
+
+  .path__number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .path__timeline::before {
+    left: 15px;
+  }
+}
+
+
+/* ── FOOTER: Mobile refinement (all pages) ─────────────────── */
+@media (max-width: 640px) {
+  .footer__inner {
+    padding: 28px 0 16px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 28px;
+    padding-bottom: 20px;
+  }
+
+  /* Brand block: stack logo + text cleanly */
+  .footer__brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer__logo-img {
+    height: 32px;
+  }
+
+  .footer__logo-text {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .footer__tagline {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    max-width: 100%;
+    margin-top: 4px;
+  }
+
+  .footer__social {
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .footer__social a {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Nav columns: single column, full width */
+  .footer__nav {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__links-col {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .footer__links-col a {
+    font-size: 0.85rem;
+    padding: 5px 0;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__col-heading {
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+    column-span: all;
+  }
+
+  /* Signup form: full width, comfortable inputs */
+  .footer__signup {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .footer__signup-form {
+    gap: 8px;
+  }
+
+  .footer__signup-input {
+    height: 44px;
+    font-size: 16px; /* prevents iOS zoom */
+    border-radius: 12px;
+    padding: 0 14px;
+  }
+
+  .footer__signup-btn {
+    height: 44px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  /* Disclaimer */
+  .footer__disclaimer {
+    font-size: 0.75rem;
+    padding: 16px 0;
+    line-height: 1.5;
+  }
+
+  /* Bottom bar: stack vertically */
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 14px;
+    font-size: 0.75rem;
+  }
+
+  .footer__bottom a {
+    font-size: 0.75rem;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer__sep {
+    display: none;
+  }
+
+  .footer__lang-link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer__links-col {
+    column-count: 1;
+  }
+
+  .footer__logo-img {
+    height: 28px;
+  }
+
+  .footer__logo-text {
+    font-size: 0.92rem;
+  }
+}
