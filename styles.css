@@ -6318,3 +6318,450 @@ html, body {
     font-size: 0.92rem;
   }
 }
+
+/* ============================================================
+   MOBILE ROOT-CAUSE FIXES — 375px audit
+   2026-02-28 — Structural fixes, not just CSS overrides
+   This block is AUTHORITATIVE for mobile layout at ≤640px.
+   It resolves overlap, z-index, and flow issues caused by
+   negative margins, absolute positioning, and conflicting
+   earlier media queries.
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* ── 1. HERO: Clean vertical flow ──────────────────────── */
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 12px);
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .hero-new__top {
+    margin-bottom: 12px;
+  }
+
+  .hero-new__text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero-new__title {
+    flex: none;
+    width: 100%;
+    font-size: 1.85rem;
+    line-height: 1.08;
+    text-align: center;
+  }
+
+  .hero-new__desc {
+    flex: none;
+    max-width: 100%;
+    font-size: 0.92rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-new__banner-wrap {
+    margin-top: 10px;
+  }
+
+  .hero-new__banner {
+    height: 200px;
+    border-radius: 16px;
+  }
+
+  /* ── 2. REASSURANCE TEXT: Clear space below banner ─────── */
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 16px auto 24px;
+    padding: 0 4px;
+    max-width: 100%;
+  }
+
+  /* ── 3. ENTRY CARDS: THE BIG FIX ───────────────────────── 
+     Root cause: margin-top: -100px (desktop) / -32px (mobile)
+     pulls cards into the reassurance text above.
+     Fix: Remove negative margin entirely on mobile. Cards sit
+     in normal flow below the reassurance text. Each card is
+     a clean stacked block with no overlap.
+  */
+  .entry-cards {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: 16px;
+    overflow: hidden;              /* clips child corners cleanly */
+    background: rgba(27, 58, 92, 0.06);
+    box-shadow: 0 2px 12px rgba(27, 58, 92, 0.08);
+    position: relative;
+    z-index: 1;                    /* no need for z-index: 10 on mobile */
+  }
+
+  .entry-card {
+    padding: 18px 20px 16px;
+    border-radius: 0;             /* parent overflow:hidden handles corners */
+  }
+
+  .entry-card:first-child {
+    border-radius: 0;             /* parent handles it */
+  }
+
+  .entry-card:last-child {
+    border-radius: 0;
+  }
+
+  .entry-card__title {
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .entry-card__link {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    min-height: 40px;
+  }
+
+  /* ── 4. REASSURANCE BAR: Compact row ───────────────────── */
+  .reassurance {
+    padding: 28px 0 24px;
+  }
+
+  .reassurance__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .reassurance__text {
+    font-size: 0.75rem;
+  }
+
+  .reassurance__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* ── 5. UNDERSTAND: Single column, clean spacing ───────── */
+  .understand {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .understand__stat-accent {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+  }
+
+  .understand__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .understand-card {
+    padding: 22px 20px;
+  }
+
+  .understand-card__title {
+    font-size: 1.02rem;
+  }
+
+  .understand-card__body {
+    font-size: 0.88rem;
+  }
+
+  /* ── 6. IMPACT BANNER: 2×2 grid, no overlap ───────────── */
+  .impact-banner {
+    padding: 32px 16px;
+  }
+
+  .impact-banner__heading {
+    font-size: 0.72rem;
+    margin-bottom: 18px;
+    padding: 0;
+  }
+
+  .impact-banner__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 14px;
+    padding: 0;
+  }
+
+  .impact-banner__number {
+    font-size: 1.5rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.72rem;
+    max-width: 150px;
+  }
+
+  /* ── 7. IDENTITY: Single column, visual separation ─────── */
+  .identity {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .identity__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .identity__col {
+    padding: 22px 18px;
+  }
+
+  .identity__col-title {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .identity__item {
+    font-size: 0.88rem;
+  }
+
+  .identity__list {
+    gap: 10px;
+  }
+
+  /* ── 8. PATH CTA: Full-width button ────────────────────── */
+  .path-cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .path-cta__action {
+    margin-top: 20px;
+  }
+
+  .path-cta__action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── 9. STRENGTHS BANNER: Stacked, 2×2 grid items ─────── */
+  .strengths-banner {
+    padding: 44px 0;
+  }
+
+  .strengths-banner__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .strengths-banner__text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .strengths-banner__body {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+
+  .strengths-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .strength-item {
+    padding: 16px 12px;
+    border-radius: 12px;
+    gap: 10px;
+  }
+
+  .strength-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .strength-item span {
+    font-size: 0.82rem;
+  }
+
+  /* ── 10. TRUST BAR: Compact ────────────────────────────── */
+  .trust {
+    padding: 32px 0;
+  }
+
+  .trust__heading {
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+  }
+
+  .trust__logos {
+    gap: 8px;
+  }
+
+  .trust__logo {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+  }
+
+  /* ── 11. FINAL CTA: Clean close ────────────────────────── */
+  .final-cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .final-cta__title {
+    font-size: 1.45rem;
+    line-height: 1.15;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+  }
+
+  .final-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── 12. FOOTER: Clean stacking ────────────────────────── */
+  .footer__inner {
+    padding: 28px 0 16px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 20px;
+  }
+
+  .footer__brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer__logo-img {
+    height: 32px;
+  }
+
+  .footer__logo-text {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .footer__tagline {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__links-col {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .footer__links-col a {
+    font-size: 0.85rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__signup {
+    width: 100%;
+  }
+
+  .footer__signup-input {
+    height: 44px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .footer__signup-btn {
+    height: 44px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .footer__disclaimer {
+    font-size: 0.75rem;
+    padding: 14px 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 12px;
+    font-size: 0.75rem;
+  }
+
+  .footer__sep {
+    display: none;
+  }
+}
+
+/* ── 375px and below: fine-tune sizes ──────────────────────── */
+@media (max-width: 390px) {
+  .hero-new__title {
+    font-size: 1.6rem;
+  }
+
+  .hero-new__banner {
+    height: 170px;
+    border-radius: 12px;
+  }
+
+  .entry-card {
+    padding: 16px 16px 14px;
+  }
+
+  .entry-card__title {
+    font-size: 0.95rem;
+  }
+
+  .impact-banner__number {
+    font-size: 1.35rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.68rem;
+    max-width: 130px;
+  }
+
+  .identity__col {
+    padding: 18px 14px;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.2rem;
+  }
+
+  .strength-item {
+    padding: 14px 10px;
+  }
+
+  .strength-item span {
+    font-size: 0.78rem;
+  }
+
+  .footer__links-col {
+    column-count: 1;
+  }
+}
