@@ -5130,3 +5130,424 @@ ul { list-style: none; }
 .hero-new__title-gold {
   color: #E8B930;
 }
+
+/* ============================================================
+   PARENTS PAGE — Mobile Redesign
+   2026-02-28 — Bigger text, better spacing, smoother animations,
+   proper touch targets, polished mobile experience
+   ============================================================ */
+
+/* ── Spring easing variable ──────────────────────────────── */
+:root {
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* ── Entrance animations (GPU-accelerated) ───────────────── */
+@keyframes parents-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes parents-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Staggered card entrance for parents page */
+.page--parents .flagged-color-card,
+.page--parents .understand-card,
+.page--parents .deeper-checklist__item,
+.page--parents .situation-card,
+.page--parents .path__step {
+  will-change: transform, opacity;
+}
+
+/* ── Tablet (≤960px) — Parents page ──────────────────────── */
+@media (max-width: 960px) {
+  .page--parents .section-padding {
+    padding: 80px 0;
+  }
+
+  .page--parents .parents-hero {
+    padding-bottom: 40px;
+  }
+
+  .page--parents .parents-hero .hero__display {
+    font-size: clamp(2.2rem, 5.5vw, 3rem);
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  /* Outcome cards: 3-col → 1-col on tablet for readability */
+  .page--parents .understand__grid--outcomes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Situation cards */
+  .page--parents .situation-cards--parents {
+    gap: 20px;
+  }
+
+  /* Path timeline */
+  .page--parents .path__step {
+    gap: 20px;
+  }
+}
+
+/* ── Mobile (≤640px) — Parents page full redesign ────────── */
+@media (max-width: 640px) {
+
+  /* --- Global mobile: parents page --- */
+  .page--parents .container {
+    padding: 0 24px;
+  }
+
+  .page--parents .section-padding {
+    padding: 72px 0;
+  }
+
+  .page--parents .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+
+  .page--parents .section-heading {
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .page--parents .section-subtext {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .page--parents .section-closing {
+    font-size: 1rem;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+
+  /* --- A. HERO --- */
+  .page--parents .parents-hero {
+    padding: calc(var(--nav-height) + 20px) 0 48px;
+  }
+
+  .page--parents .parents-hero .hero__display {
+    font-size: clamp(2.4rem, 10vw, 3rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .page--parents .hero__trust {
+    font-size: 0.85rem;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page--parents .hero__trust svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* --- B. FLAGGED SECTION --- */
+  .page--parents .flagged-color-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .page--parents .flagged-color-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+    animation: parents-fade-up 0.6s var(--ease-spring) both;
+  }
+
+  .page--parents .flagged-color-card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .page--parents .flagged-color-card__title {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+  }
+
+  .page--parents .flagged-color-card__list li {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 22px;
+  }
+
+  /* --- C. OUTCOMES SECTION --- */
+  .page--parents .understand__grid--outcomes {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+    animation: parents-fade-up 0.6s var(--ease-spring) both;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card:nth-child(1) { animation-delay: 0s; }
+  .page--parents .understand__grid--outcomes .understand-card:nth-child(2) { animation-delay: 0.08s; }
+  .page--parents .understand__grid--outcomes .understand-card:nth-child(3) { animation-delay: 0.16s; }
+
+  .page--parents .understand__grid--outcomes .understand-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__body {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* --- D. PATH TIMELINE --- */
+  .page--parents .path__timeline {
+    gap: 0;
+  }
+
+  .page--parents .path__step {
+    padding: 20px 0;
+    gap: 20px;
+    animation: parents-fade-up 0.6s var(--ease-spring) both;
+  }
+
+  .page--parents .path__step:nth-child(1) { animation-delay: 0s; }
+  .page--parents .path__step:nth-child(2) { animation-delay: 0.08s; }
+  .page--parents .path__step:nth-child(3) { animation-delay: 0.16s; }
+  .page--parents .path__step:nth-child(4) { animation-delay: 0.24s; }
+
+  .page--parents .path__number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 21px;
+  }
+
+  .page--parents .path__step-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .path__step-body {
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  /* --- E. DEEPER CHECKLIST --- */
+  .page--parents .deeper-checklist {
+    gap: 16px;
+  }
+
+  .page--parents .deeper-checklist__item {
+    padding: 24px 20px;
+    gap: 18px;
+    border-radius: 20px;
+    animation: parents-fade-up 0.6s var(--ease-spring) both;
+  }
+
+  .page--parents .deeper-checklist__item:nth-child(1) { animation-delay: 0s; }
+  .page--parents .deeper-checklist__item:nth-child(2) { animation-delay: 0.08s; }
+  .page--parents .deeper-checklist__item:nth-child(3) { animation-delay: 0.16s; }
+  .page--parents .deeper-checklist__item:nth-child(4) { animation-delay: 0.24s; }
+
+  .page--parents .deeper-checklist__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  .page--parents .deeper-checklist__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .page--parents .deeper-checklist__title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .page--parents .deeper-checklist__desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* --- F. SITUATION CARDS (Next Steps) --- */
+  .page--parents .situation-cards--parents {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 28px 24px 24px;
+    border-radius: 20px;
+    width: 100%;
+    animation: parents-fade-up 0.6s var(--ease-spring) both;
+    transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+  }
+
+  .page--parents .situation-cards--parents .situation-card:nth-child(1) { animation-delay: 0s; }
+  .page--parents .situation-cards--parents .situation-card:nth-child(2) { animation-delay: 0.08s; }
+  .page--parents .situation-cards--parents .situation-card:nth-child(3) { animation-delay: 0.16s; }
+  .page--parents .situation-cards--parents .situation-card:nth-child(4) { animation-delay: 0.24s; }
+
+  .page--parents .situation-cards--parents .situation-card__icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__link {
+    font-size: 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  /* --- BUTTONS: 44px min touch targets --- */
+  .page--parents .btn {
+    min-height: 52px;
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  /* --- Parents path header --- */
+  .page--parents .parents-path__header .section-heading {
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+  }
+
+  .page--parents .parents-path__header .section-subtext {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+
+  /* --- Smooth hover/active states for touch --- */
+  .page--parents .situation-card:active {
+    transform: scale(0.98);
+  }
+
+  .page--parents .deeper-checklist__item:active {
+    transform: scale(0.98);
+  }
+
+  .page--parents .flagged-color-card {
+    transition: transform 0.2s var(--ease-spring);
+  }
+
+  /* --- Footer links: proper touch targets --- */
+  .page--parents .footer__links-col a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .page--parents .footer__social a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .page--parents .footer__signup-input {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .page--parents .footer__signup-btn {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+}
+
+/* ── 375px fine-tuning — Parents page ────────────────────── */
+@media (max-width: 390px) {
+  .page--parents .parents-hero .hero__display {
+    font-size: clamp(2.1rem, 9vw, 2.6rem);
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .page--parents .section-heading {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 24px 20px 20px;
+  }
+
+  .page--parents .path__number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 19px;
+  }
+}
