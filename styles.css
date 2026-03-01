@@ -7443,3 +7443,291 @@ html, body {
     min-height: 44px;
   }
 }
+
+/* ============================================================
+   FORMAL EVALUATION PAGE — Mobile UX
+   Same principles as parents page: 44px touch targets,
+   app-like typography, better spacing, edge-to-edge.
+   Scoped to .page--compact within mobile breakpoints.
+   ============================================================ */
+
+/* ── Entrance animation (reuse parents keyframes) ────────── */
+.page--compact .animate-up,
+.page--compact .path__step,
+.page--compact .deeper-checklist__item,
+.page--compact .understand-card,
+.page--compact .faq-accordion__item,
+.page--compact .situation-card {
+  will-change: transform, opacity;
+}
+
+.page--compact .animate-up.is-visible,
+.page--compact .path__step.is-visible,
+.page--compact .deeper-checklist__item.is-visible,
+.page--compact .understand-card.is-visible,
+.page--compact .faq-accordion__item.is-visible,
+.page--compact .situation-card.is-visible {
+  animation: parents-fade-up 0.6s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+.page--compact .is-visible:nth-child(1) { animation-delay: 0s; }
+.page--compact .is-visible:nth-child(2) { animation-delay: 0.08s; }
+.page--compact .is-visible:nth-child(3) { animation-delay: 0.16s; }
+.page--compact .is-visible:nth-child(4) { animation-delay: 0.24s; }
+
+/* ── Mobile: 640px and below ─────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* --- Hero --- */
+  .page--compact .hero--centered {
+    padding: calc(var(--nav-height) + 28px) 0 44px;
+  }
+
+  .page--compact .hero__display {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+
+  .page--compact .hero__subtitle {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 100%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+  }
+
+  .page--compact .hero__trust {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  /* --- Section padding & headings --- */
+  .page--compact .section-padding {
+    padding: 64px 0;
+  }
+
+  .page--compact .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .page--compact .section-heading {
+    font-size: clamp(1.5rem, 5.5vw, 1.85rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .page--compact .section-subtext {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .page--compact .eyebrow {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+
+  .page--compact .section-closing {
+    font-size: 1rem;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+
+  /* --- Path timeline --- */
+  .page--compact .path__step {
+    padding: 18px 0;
+    gap: 18px;
+  }
+
+  .page--compact .path__number {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .page--compact .path__step-title {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .page--compact .path__step-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .page--compact .path__timeline::before {
+    left: 20px;
+  }
+
+  /* --- Accordion items (bigger touch targets) --- */
+  .page--compact .faq-accordion {
+    gap: 12px;
+  }
+
+  .page--compact .faq-accordion__trigger {
+    padding: 18px 20px;
+    font-size: 1.02rem;
+    min-height: 56px;
+    gap: 14px;
+    border-radius: 14px;
+  }
+
+  .page--compact .faq-accordion__trigger span {
+    line-height: 1.4;
+  }
+
+  .page--compact .faq-accordion__trigger svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .page--compact .faq-accordion__body-inner {
+    padding: 16px 20px 20px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .page--compact .faq-accordion__body-inner li {
+    padding: 4px 0;
+    line-height: 1.6;
+  }
+
+  /* --- Understand / outcome cards (private eval section) --- */
+  .page--compact .understand__grid--outcomes {
+    gap: 20px;
+  }
+
+  .page--compact .understand__grid--outcomes .understand-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  .page--compact .understand__grid--outcomes .understand-card__title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .page--compact .understand__grid--outcomes .understand-card__body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .page--compact .understand__grid--outcomes .understand-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  /* --- Deeper checklist (evaluation areas) --- */
+  .page--compact .deeper-checklist {
+    gap: 18px;
+  }
+
+  .page--compact .deeper-checklist__item {
+    padding: 22px 20px;
+    gap: 16px;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+
+  .page--compact .deeper-checklist__icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .page--compact .deeper-checklist__title {
+    font-size: 1.02rem;
+    margin-bottom: 5px;
+  }
+
+  .page--compact .deeper-checklist__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* --- Situation cards (provider directories) --- */
+  .page--compact .situation-cards--parents {
+    gap: 18px;
+  }
+
+  .page--compact .situation-cards--parents .situation-card {
+    padding: 26px 24px;
+    border-radius: 16px;
+    min-height: 44px;
+  }
+
+  .page--compact .situation-cards--parents .situation-card__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .page--compact .situation-cards--parents .situation-card__title {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .page--compact .situation-cards--parents .situation-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .page--compact .situation-cards--parents .situation-card__link {
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  /* --- Sample letter section refinement --- */
+  .page--compact .faq-accordion__body-inner[style*="white-space"] {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 20px;
+  }
+}
+
+/* ── Extra-small: 390px and below ────────────────────────── */
+@media (max-width: 390px) {
+  .page--compact .hero__display {
+    font-size: 2rem;
+  }
+
+  .page--compact .hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .page--compact .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .page--compact .situation-cards--parents .situation-card {
+    padding: 22px 20px;
+  }
+
+  .page--compact .path__number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .page--compact .path__timeline::before {
+    left: 18px;
+  }
+
+  .page--compact .faq-accordion__trigger {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    min-height: 52px;
+  }
+}

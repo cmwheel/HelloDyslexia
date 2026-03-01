@@ -105,7 +105,7 @@
     '.understand-card, .path__step, .impact-banner__stat, .reassurance__item, .assessment-banner, .resource-card, .specialist-banner, .entry-card, .strength-item, .situation-card, .is-isnot-card, .strengths-callout, .screener-selector__card, .tab-selector__card, .faq-accordion__item, .myth-fact-card, .glossary-term, .flagged-color-card, .deeper-checklist__item'
   );
 
-  var isParentsPage = document.body.classList.contains('page--parents');
+  var isParentsPage = document.body.classList.contains('page--parents') || document.body.classList.contains('page--compact');
   var animEasing = isParentsPage
     ? 'opacity 0.6s cubic-bezier(0.32, 0.72, 0, 1), transform 0.6s cubic-bezier(0.32, 0.72, 0, 1)'
     : 'opacity 0.5s ease, transform 0.5s ease';
