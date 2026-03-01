@@ -282,4 +282,35 @@
     });
   }
 
+  /* ── Entry cards carousel dots (mobile) ───────────────── */
+  var entryCardsEl = document.querySelector('.entry-cards');
+  var dotsContainer = document.getElementById('entryCardsDots');
+  if (entryCardsEl && dotsContainer) {
+    var cards = entryCardsEl.querySelectorAll('.entry-card');
+    cards.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'entry-cards-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to card ' + (i + 1));
+      dot.addEventListener('click', function () {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    var dots = dotsContainer.querySelectorAll('.entry-cards-dot');
+    var scrollTimer;
+    entryCardsEl.addEventListener('scroll', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function () {
+        var scrollLeft = entryCardsEl.scrollLeft;
+        var cardWidth = cards[0].offsetWidth + 14;
+        var activeIndex = Math.round(scrollLeft / cardWidth);
+        activeIndex = Math.max(0, Math.min(activeIndex, cards.length - 1));
+        dots.forEach(function (d, i) {
+          d.classList.toggle('active', i === activeIndex);
+        });
+      }, 50);
+    }, { passive: true });
+  }
+
 })();
