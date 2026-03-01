@@ -5130,3 +5130,2142 @@ ul { list-style: none; }
 .hero-new__title-gold {
   color: #E8B930;
 }
+
+/* ============================================================
+   MOBILE RESPONSIVENESS AUDIT FIXES — Feb 2026
+   Targets: 375px (iPhone SE), 390px (iPhone 14), 768px (iPad)
+   ============================================================ */
+
+/* ── Prevent horizontal scroll globally ───────────────────── */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ── Testimonials: missing mobile breakpoint ──────────────── */
+@media (max-width: 960px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Audience doors: missing mobile breakpoint ────────────── */
+@media (max-width: 768px) {
+  .audience-doors {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .audience-door {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Screener selector: 4-col too tight on mobile ─────────── */
+@media (max-width: 640px) {
+  .screener-selector {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .screener-selector__card {
+    padding: 14px 10px;
+  }
+
+  .screener-selector__name {
+    font-size: 0.78rem;
+  }
+
+  .screener-detail__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Nav: improve mobile touch targets + overflow ─────────── */
+@media (max-width: 960px) {
+  .nav__links {
+    gap: 20px;
+    padding: 88px 24px 32px;
+  }
+
+  .nav__link {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__lang {
+    height: 44px;
+  }
+
+  .nav__lang-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .nav__donate {
+    height: 44px;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* ── Nav logo: prevent overflow on small screens ──────────── */
+@media (max-width: 375px) {
+  .nav__logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav__logo-img {
+    height: 52px;
+  }
+}
+
+/* ── Hero: tighter on very small screens ──────────────────── */
+@media (max-width: 375px) {
+  .hero-new__title {
+    font-size: 1.75rem;
+  }
+
+  .hero-new__desc {
+    font-size: 0.95rem;
+  }
+
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+  }
+
+  .hero-new__banner {
+    height: 180px;
+    border-radius: 12px;
+  }
+}
+
+/* ── Entry cards: improve touch targets + text on mobile ──── */
+@media (max-width: 640px) {
+  .entry-card {
+    padding: 16px 20px;
+  }
+
+  .entry-card__title {
+    font-size: 1rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.85rem;
+  }
+
+  .entry-card__link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Impact banner: 375px handled by root-cause block ────── */
+
+/* ── Specialist banner: fix search + visual on mobile ─────── */
+@media (max-width: 640px) {
+  .specialist-banner__visual {
+    min-height: 200px;
+  }
+
+  .specialist-banner__title {
+    font-size: 1.5rem;
+  }
+
+  .specialist-banner__body {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Assessment banner: improve btn touch target ──────────── */
+@media (max-width: 640px) {
+  .assessment-banner__btn {
+    min-height: 48px;
+  }
+}
+
+/* ── Contact info: ensure single-col stacking ─────────────── */
+@media (max-width: 480px) {
+  .contact__info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Footer: fix column layout on small screens ──────────── */
+@media (max-width: 640px) {
+  .footer__links-col {
+    column-count: 1;
+  }
+
+  .footer__nav {
+    gap: 24px;
+  }
+
+  .footer__signup-form {
+    gap: 8px;
+  }
+}
+
+/* ── Buttons: ensure minimum touch target size (44px) ─────── */
+@media (max-width: 640px) {
+  .btn {
+    min-height: 44px;
+    padding: 0 24px;
+    font-size: 0.88rem;
+  }
+
+  .btn--outline {
+    min-height: 44px;
+    padding: 0 20px;
+  }
+}
+
+/* ── Section headings: clamp tighter on small screens ─────── */
+@media (max-width: 375px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-subtext {
+    font-size: 0.88rem;
+  }
+
+  .final-cta__title {
+    font-size: 1.5rem;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Hero (centered variant): fix padding on mobile ───────── */
+@media (max-width: 640px) {
+  .hero--centered {
+    padding: calc(var(--nav-height) + 24px) 0 32px;
+  }
+
+  .hero__display {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.92rem;
+  }
+}
+
+/* ── Flagged color grid: already handled at 640px ─────────── */
+
+/* ── Deeper checklist: tighter padding on mobile ──────────── */
+@media (max-width: 375px) {
+  .deeper-checklist__item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .deeper-checklist__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .deeper-checklist__title {
+    font-size: 0.92rem;
+  }
+
+  .deeper-checklist__desc {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Myth/fact cards: improve readability on mobile ───────── */
+@media (max-width: 640px) {
+  .myth-fact-card {
+    padding: 20px;
+  }
+
+  .myth-fact-card__myth {
+    font-size: 0.98rem;
+  }
+
+  .myth-fact-card__fact {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Script prep grid: already handled at 640px ──────────── */
+
+/* ── Glossary search: full width on mobile ────────────────── */
+@media (max-width: 640px) {
+  .glossary-search-wrap input {
+    max-width: 100%;
+  }
+
+  .glossary-term {
+    padding: 16px 18px;
+  }
+
+  .glossary-term__name {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── FAQ accordion: improve touch targets ─────────────────── */
+@media (max-width: 640px) {
+  .faq-accordion__trigger {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    min-height: 48px;
+  }
+
+  .faq-accordion__body {
+    padding: 0 18px 16px;
+  }
+
+  .faq-accordion__body-inner {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Situation cards: improve spacing on very small ───────── */
+@media (max-width: 375px) {
+  .situation-card {
+    padding: 18px;
+  }
+
+  .situation-card__title {
+    font-size: 0.92rem;
+  }
+
+  .situation-card__desc {
+    font-size: 0.8rem;
+  }
+
+  .situation-card__link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── Strengths banner: fix grid on narrow screens ─────────── */
+@media (max-width: 375px) {
+  .strengths-banner__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .strength-item {
+    padding: 16px 14px;
+  }
+
+  .strength-item span {
+    font-size: 0.88rem;
+  }
+}
+
+/* ── Trust logos: wrap cleanly on mobile ──────────────────── */
+@media (max-width: 640px) {
+  .trust__logo {
+    font-size: 0.72rem;
+    padding: 8px 16px;
+  }
+
+  .trust__heading {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Email signup: already handled at 640px ──────────────── */
+
+/* ── Identity grid: already handled at 640px ─────────────── */
+
+/* ── Donate page: fix amount buttons wrapping ────────────── */
+@media (max-width: 640px) {
+  .donate-amounts {
+    justify-content: center;
+  }
+
+  .donate-amount-btn {
+    flex: 1 1 calc(33% - 10px);
+    min-width: 80px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    min-height: 44px;
+  }
+
+  .donate-form-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ── Conversation scripts: improve readability ───────────── */
+@media (max-width: 640px) {
+  .script-scenario__context {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+
+  .script-scenario__opening {
+    padding: 16px 18px;
+  }
+
+  .script-scenario__opening-text {
+    font-size: 0.95rem;
+    padding-left: 14px;
+  }
+
+  .script-scenario__escalation {
+    padding: 14px 18px;
+  }
+
+  .script-scenario__next {
+    padding: 14px 18px;
+  }
+
+  .script-scenario__next-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+  }
+}
+
+/* ── Contact form: improve touch targets ─────────────────── */
+@media (max-width: 640px) {
+  .contact-form__input,
+  .contact-form__select,
+  .contact-form__textarea {
+    min-height: 48px;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ── Prevent iOS auto-zoom on input focus ─────────────────── */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* ── Pathway detail: ensure readable on mobile ───────────── */
+@media (max-width: 640px) {
+  .pathway-detail {
+    gap: 20px;
+  }
+}
+
+/* ── Tab selector: improve for small screens ─────────────── */
+@media (max-width: 375px) {
+  .tab-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tab-selector__card {
+    padding: 14px 12px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .tab-selector__card .tab-selector__label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Signs two-col: already handled at 640px ─────────────── */
+
+/* ── Compact page adjustments ────────────────────────────── */
+@media (max-width: 375px) {
+  .page--compact .section-heading {
+    font-size: 1.35rem;
+  }
+
+  .page--compact .understand-card {
+    padding: 22px 18px;
+  }
+}
+
+/* ============================================================
+   MOBILE RECONFIGURATION — Landing, Parents, Footer
+   Charlie feedback round 2 — 2026-02-28
+   ============================================================ */
+
+/* ── LANDING PAGE: Complete mobile reconfiguration ─────────── */
+
+/* Hero section: proper mobile stacking */
+@media (max-width: 640px) {
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 0;
+  }
+
+  .hero-new__top {
+    margin-bottom: 16px;
+  }
+
+  .hero-new__text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .hero-new__title {
+    font-size: 1.85rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-align: center;
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-new__desc {
+    flex: none;
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Banner image: compact on mobile */
+  .hero-new__banner-wrap {
+    margin-top: 12px;
+  }
+
+  .hero-new__banner {
+    height: 200px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  /* Reassurance message below banner */
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 14px auto 20px;
+    padding: 0 8px;
+    max-width: 100%;
+  }
+
+  /* Entry cards: full-width stacked with breathing room */
+  .entry-cards {
+    grid-template-columns: 1fr;
+    margin-top: -32px;
+    gap: 0;
+    border-radius: 16px;
+    box-shadow:
+      0 2px 4px rgba(27, 58, 92, 0.04),
+      0 8px 20px rgba(27, 58, 92, 0.06);
+  }
+
+  .entry-card {
+    padding: 20px 20px 18px;
+  }
+
+  .entry-card:first-child {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .entry-card:last-child {
+    border-radius: 0 0 16px 16px;
+  }
+
+  .entry-card__label {
+    font-size: 0.72rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .entry-card__link {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    min-height: 40px;
+  }
+}
+
+/* Reassurance bar: compact horizontal on mobile */
+@media (max-width: 640px) {
+  .reassurance {
+    padding: 32px 0 28px;
+  }
+
+  .reassurance__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  .reassurance__item {
+    gap: 6px;
+  }
+
+  .reassurance__icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+  }
+
+  .reassurance__icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .reassurance__text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Understand section: single column, tighter cards */
+@media (max-width: 640px) {
+  .understand .section-header-center {
+    margin-bottom: 8px;
+  }
+
+  .understand__stat-accent {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+  }
+
+  .understand-card {
+    padding: 24px 20px;
+  }
+
+  .understand-card__num {
+    margin-bottom: 12px;
+  }
+
+  .understand-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .understand-card__body {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* Impact banner: 2x2 grid on mobile */
+@media (max-width: 640px) {
+  .impact-banner {
+    padding: 32px 16px;
+  }
+
+  .impact-banner__heading {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+
+  .impact-banner__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    padding: 0 8px;
+  }
+
+  .impact-banner__number {
+    font-size: 1.6rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    max-width: 160px;
+  }
+}
+
+/* Identity grid: single column */
+@media (max-width: 640px) {
+  .identity__grid {
+    gap: 20px;
+  }
+
+  .identity__col {
+    padding: 24px 20px;
+  }
+
+  .identity__col-title {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .identity__item {
+    font-size: 0.88rem;
+    gap: 8px;
+  }
+
+  .identity__item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .identity__list {
+    gap: 12px;
+  }
+}
+
+/* Path CTA: tighter */
+@media (max-width: 640px) {
+  .path-cta .section-header-center {
+    margin-bottom: 0;
+  }
+
+  .path-cta .section-subtext {
+    font-size: 0.9rem;
+  }
+
+  .path-cta__action {
+    margin-top: 24px;
+  }
+
+  .path-cta__action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Strengths banner: better mobile layout */
+@media (max-width: 640px) {
+  .strengths-banner {
+    padding: 48px 0;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .strengths-banner__body {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .strengths-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .strength-item {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .strength-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .strength-item span {
+    font-size: 0.82rem;
+  }
+}
+
+/* Trust bar */
+@media (max-width: 640px) {
+  .trust {
+    padding: 32px 0;
+  }
+
+  .trust__heading {
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+  }
+
+  .trust__logos {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .trust__logo {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Final CTA */
+@media (max-width: 640px) {
+  .final-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .final-cta__title {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+  }
+}
+
+/* ── 375px fine-tuning ─────────────────────────────────────── */
+@media (max-width: 390px) {
+  .hero-new__title {
+    font-size: 1.65rem;
+  }
+
+  .hero-new__desc {
+    font-size: 0.88rem;
+  }
+
+  .hero-new__banner {
+    height: 170px;
+    border-radius: 12px;
+  }
+
+  .entry-card {
+    padding: 16px 16px 14px;
+  }
+
+  .entry-card__title {
+    font-size: 0.98rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.82rem;
+  }
+
+  .impact-banner__number {
+    font-size: 1.4rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.7rem;
+  }
+
+  .identity__col {
+    padding: 20px 16px;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.25rem;
+  }
+
+  .strength-item {
+    padding: 14px 10px;
+  }
+
+  .strength-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .strength-item span {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ── PARENTS PAGE: Refinement pass ─────────────────────────── */
+@media (max-width: 640px) {
+  /* Hero polish */
+  .parents-hero {
+    padding-bottom: 36px;
+  }
+
+  .parents-hero .hero__display {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .parents-hero__subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .hero__trust {
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .hero__trust svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Flagged color cards: tighter spacing */
+  .flagged-color-grid {
+    gap: 16px;
+  }
+
+  .flagged-color-card {
+    padding: 20px 18px;
+  }
+
+  .flagged-color-card__title {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .flagged-color-card__list li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* Section closings: tighter */
+  .section-closing {
+    font-size: 0.9rem;
+    margin-top: 24px;
+  }
+
+  /* Outcomes grid: single col already, tighter cards */
+  .understand__grid--outcomes .understand-card {
+    padding: 22px 18px;
+  }
+
+  .understand__grid--outcomes .understand-card__icon {
+    margin-bottom: 10px;
+  }
+
+  /* Path timeline: tighter step spacing */
+  .path__step {
+    padding: 14px 0;
+    gap: 16px;
+  }
+
+  .path__number {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .path__step-title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .path__step-body {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .path__timeline::before {
+    left: 17px;
+  }
+
+  /* Deeper checklist: polish */
+  .deeper-checklist__item {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .deeper-checklist__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .deeper-checklist__title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .deeper-checklist__desc {
+    font-size: 0.85rem;
+  }
+
+  /* Situation cards: clean stacking */
+  .situation-cards--parents {
+    gap: 16px;
+  }
+
+  .situation-card {
+    padding: 22px 20px;
+  }
+
+  .situation-card__icon {
+    margin-bottom: 8px;
+  }
+
+  .situation-card__title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .situation-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .situation-card__link {
+    font-size: 0.85rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Section headers: tighter spacing */
+  .parents-path__header {
+    margin-bottom: 8px;
+  }
+
+  .parents-path__header .section-subtext {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .parents-hero .hero__display {
+    font-size: 1.75rem;
+  }
+
+  .parents-hero__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .situation-card {
+    padding: 18px 16px;
+  }
+
+  .situation-card__title {
+    font-size: 0.92rem;
+  }
+
+  .path__number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .path__timeline::before {
+    left: 15px;
+  }
+}
+
+
+/* ── FOOTER: Mobile refinement (all pages) ─────────────────── */
+@media (max-width: 640px) {
+  .footer__inner {
+    padding: 28px 0 16px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 28px;
+    padding-bottom: 20px;
+  }
+
+  /* Brand block: stack logo + text cleanly */
+  .footer__brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer__logo-img {
+    height: 32px;
+  }
+
+  .footer__logo-text {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .footer__tagline {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    max-width: 100%;
+    margin-top: 4px;
+  }
+
+  .footer__social {
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .footer__social a {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Nav columns: single column, full width */
+  .footer__nav {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__links-col {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .footer__links-col a {
+    font-size: 0.88rem;
+    padding: 6px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__col-heading {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    column-span: all;
+  }
+
+  /* Signup form: full width, comfortable inputs */
+  .footer__signup {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .footer__signup-form {
+    gap: 8px;
+  }
+
+  .footer__signup-input {
+    height: 44px;
+    font-size: 16px; /* prevents iOS zoom */
+    border-radius: 12px;
+    padding: 0 14px;
+  }
+
+  .footer__signup-btn {
+    height: 44px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  /* Disclaimer */
+  .footer__disclaimer {
+    font-size: 0.75rem;
+    padding: 16px 0;
+    line-height: 1.5;
+  }
+
+  /* Bottom bar: stack vertically */
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 14px;
+    font-size: 0.75rem;
+  }
+
+  .footer__bottom a {
+    font-size: 0.75rem;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer__sep {
+    display: none;
+  }
+
+  .footer__lang-link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer__links-col {
+    column-count: 1;
+  }
+
+  .footer__logo-img {
+    height: 28px;
+  }
+
+  .footer__logo-text {
+    font-size: 0.92rem;
+  }
+}
+
+/* ============================================================
+   MOBILE ROOT-CAUSE FIXES — 375px audit
+   2026-02-28 — Structural fixes, not just CSS overrides
+   This block is AUTHORITATIVE for mobile layout at ≤640px.
+   It resolves overlap, z-index, and flow issues caused by
+   negative margins, absolute positioning, and conflicting
+   earlier media queries.
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* ── 1. HERO: Clean vertical flow ──────────────────────── */
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 12px);
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .hero-new__top {
+    margin-bottom: 12px;
+  }
+
+  .hero-new__text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero-new__title {
+    flex: none;
+    width: 100%;
+    font-size: 1.85rem;
+    line-height: 1.08;
+    text-align: center;
+  }
+
+  .hero-new__desc {
+    flex: none;
+    max-width: 100%;
+    font-size: 0.92rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-new__banner-wrap {
+    margin-top: 10px;
+  }
+
+  .hero-new__banner {
+    height: 200px;
+    border-radius: 16px;
+  }
+
+  /* ── 2. REASSURANCE TEXT: Clear space below banner ─────── */
+  .hero-new__reassurance {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 16px auto 24px;
+    padding: 0 4px;
+    max-width: 100%;
+  }
+
+  /* ── 3. ENTRY CARDS: THE BIG FIX ───────────────────────── 
+     Root cause: margin-top: -100px (desktop) / -32px (mobile)
+     pulls cards into the reassurance text above.
+     Fix: Remove negative margin entirely on mobile. Cards sit
+     in normal flow below the reassurance text. Each card is
+     a clean stacked block with no overlap.
+  */
+  .entry-cards {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: 16px;
+    overflow: hidden;              /* clips child corners cleanly */
+    background: rgba(27, 58, 92, 0.06);
+    box-shadow: 0 2px 12px rgba(27, 58, 92, 0.08);
+    position: relative;
+    z-index: 1;                    /* no need for z-index: 10 on mobile */
+  }
+
+  .entry-card {
+    padding: 18px 20px 16px;
+    border-radius: 0;             /* parent overflow:hidden handles corners */
+  }
+
+  .entry-card:first-child {
+    border-radius: 0;             /* parent handles it */
+  }
+
+  .entry-card:last-child {
+    border-radius: 0;
+  }
+
+  .entry-card__title {
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+
+  .entry-card__desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .entry-card__link {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    min-height: 40px;
+  }
+
+  /* ── 4. REASSURANCE BAR: Compact row ───────────────────── */
+  .reassurance {
+    padding: 28px 0 24px;
+  }
+
+  .reassurance__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .reassurance__text {
+    font-size: 0.75rem;
+  }
+
+  .reassurance__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* ── 5. UNDERSTAND: Single column, clean spacing ───────── */
+  .understand {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .understand__stat-accent {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+  }
+
+  .understand__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .understand-card {
+    padding: 22px 20px;
+  }
+
+  .understand-card__title {
+    font-size: 1.02rem;
+  }
+
+  .understand-card__body {
+    font-size: 0.88rem;
+  }
+
+  /* ── 6. IMPACT BANNER: single column for readability ────── */
+  .impact-banner {
+    padding: 32px 20px;
+  }
+
+  .impact-banner__heading {
+    font-size: 0.75rem;
+    margin-bottom: 18px;
+    padding: 0;
+  }
+
+  .impact-banner__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .impact-banner__stat {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-direction: row;
+  }
+
+  .impact-banner__number {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    min-width: 70px;
+  }
+
+  .impact-banner__label {
+    font-size: 0.82rem;
+    max-width: none;
+    line-height: 1.45;
+  }
+
+  /* ── 7. IDENTITY: Single column, visual separation ─────── */
+  .identity {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .identity__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .identity__col {
+    padding: 22px 18px;
+  }
+
+  .identity__col-title {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .identity__item {
+    font-size: 0.88rem;
+  }
+
+  .identity__list {
+    gap: 10px;
+  }
+
+  /* ── 8. PATH CTA: Full-width button ────────────────────── */
+  .path-cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .path-cta__action {
+    margin-top: 20px;
+  }
+
+  .path-cta__action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── 9. STRENGTHS BANNER: Stacked, 2×2 grid items ─────── */
+  .strengths-banner {
+    padding: 44px 0;
+  }
+
+  .strengths-banner__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .strengths-banner__text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .strengths-banner__body {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+
+  .strengths-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .strength-item {
+    padding: 16px 12px;
+    border-radius: 12px;
+    gap: 10px;
+  }
+
+  .strength-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .strength-item span {
+    font-size: 0.82rem;
+  }
+
+  /* ── 10. TRUST BAR: Compact ────────────────────────────── */
+  .trust {
+    padding: 32px 0;
+  }
+
+  .trust__heading {
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+  }
+
+  .trust__logos {
+    gap: 8px;
+  }
+
+  .trust__logo {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+  }
+
+  /* ── 11. FINAL CTA: Clean close ────────────────────────── */
+  .final-cta {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .final-cta__title {
+    font-size: 1.45rem;
+    line-height: 1.15;
+  }
+
+  .final-cta__body {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+  }
+
+  .final-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── 12. FOOTER: Clean stacking ────────────────────────── */
+  .footer__inner {
+    padding: 28px 0 16px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 20px;
+  }
+
+  .footer__brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer__logo-img {
+    height: 32px;
+  }
+
+  .footer__logo-text {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .footer__tagline {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__links-col {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .footer__links-col a {
+    font-size: 0.85rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__signup {
+    width: 100%;
+  }
+
+  .footer__signup-input {
+    height: 44px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .footer__signup-btn {
+    height: 44px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .footer__disclaimer {
+    font-size: 0.75rem;
+    padding: 14px 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 12px;
+    font-size: 0.75rem;
+  }
+
+  .footer__sep {
+    display: none;
+  }
+}
+
+/* ── 375px and below: fine-tune sizes ──────────────────────── */
+@media (max-width: 390px) {
+  .hero-new__title {
+    font-size: 1.6rem;
+  }
+
+  .hero-new__banner {
+    height: 170px;
+    border-radius: 12px;
+  }
+
+  .entry-card {
+    padding: 16px 16px 14px;
+  }
+
+  .entry-card__title {
+    font-size: 0.95rem;
+  }
+
+  .impact-banner__number {
+    font-size: 1.4rem;
+    min-width: 60px;
+  }
+
+  .impact-banner__label {
+    font-size: 0.78rem;
+  }
+
+  .identity__col {
+    padding: 18px 14px;
+  }
+
+  .strengths-banner__title {
+    font-size: 1.2rem;
+  }
+
+  .strength-item {
+    padding: 14px 10px;
+  }
+
+  .strength-item span {
+    font-size: 0.78rem;
+  }
+
+  .footer__links-col {
+    column-count: 1;
+  }
+}
+
+/* ============================================================
+   iOS SAFE AREA — Dynamic Island / Notch support
+   ============================================================ */
+
+/*
+ * Brand stripe (body::before) sits at top:0 with viewport-fit=cover,
+ * so it fills behind the Dynamic Island / notch — the brand color shows
+ * through correctly.
+ *
+ * Nav sits at top:3px (below the 3px stripe). With safe area we push it
+ * down by env(safe-area-inset-top) so it clears the notch.
+ */
+.nav {
+  top: calc(3px + env(safe-area-inset-top));
+}
+
+/* Hero/page content: account for extra nav height from safe area */
+.hero-new,
+.page-header {
+  padding-top: calc(var(--nav-height) + env(safe-area-inset-top) + 28px);
+}
+
+/* Mobile nav drawer: account for safe area at top */
+@media (max-width: 960px) {
+  .nav__links {
+    padding-top: calc(88px + env(safe-area-inset-top));
+  }
+}
+
+/* Footer: home indicator clearance on iPhone */
+.footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ============================================================
+   MOBILE — Bigger elements, generous sizing
+   ============================================================ */
+@media (max-width: 640px) {
+  /* --- Headings --- */
+  .hero-new__title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .section-heading {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .section-subtext {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6.5vw, 1.9rem);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* --- Buttons & CTAs --- */
+  .btn {
+    padding: 16px 28px;
+    font-size: 1.05rem;
+    min-height: 52px;
+  }
+
+  .btn--sm {
+    padding: 13px 22px;
+    font-size: 0.95rem;
+    min-height: 48px;
+  }
+
+  .nav__donate {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+
+  /* --- Card text --- */
+  .entry-card__title {
+    font-size: 1.1rem;
+  }
+
+  .entry-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .understand__card-title,
+  .research__card-title {
+    font-size: 1.1rem;
+  }
+
+  .understand__card-body,
+  .research__card-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* --- Section padding (more breathing room) --- */
+  .section-padding {
+    padding: 64px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  /* --- Impact banner stats --- */
+  .impact-banner__number {
+    font-size: 2.8rem;
+  }
+
+  .impact-banner__label {
+    font-size: 0.95rem;
+  }
+
+  /* --- Specialist / assessment CTAs --- */
+  .specialist-banner__title,
+  .assessment-banner__title {
+    font-size: 1.5rem;
+  }
+
+  .specialist-banner__body,
+  .assessment-banner__body {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* --- Footer nav links --- */
+  .footer__links-col a {
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* --- Final CTA --- */
+  .final-cta__title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .final-cta__body {
+    font-size: 1rem;
+  }
+
+  /* --- Search card --- */
+  .hero-new__search-card {
+    padding: 24px 20px;
+  }
+
+  .hero-new__search-label {
+    font-size: 1rem;
+  }
+
+  /* --- Nav toggle tap target --- */
+  .nav__toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* --- Strength items --- */
+  .strength-item {
+    padding: 18px 14px;
+    min-height: 80px;
+  }
+
+  .strength-item span {
+    font-size: 0.85rem;
+  }
+
+  /* --- Reassurance items --- */
+  .reassurance__label {
+    font-size: 0.9rem;
+  }
+
+  /* --- Mission values --- */
+  .mission__value-display {
+    font-size: 2.6rem;
+  }
+
+  .mission__value-label {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   MOBILE HERO REFINEMENT — Charlie feedback 2026-02-28
+   Stack words, full-bleed image, more visual impact
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* 1. Hero section: taller, more impact */
+  .hero-new {
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 0;
+    min-height: 90vh;
+    overflow: visible;
+  }
+
+  /* 2. Title: each word on its own line, big and bold */
+  .hero-new__title {
+    font-size: clamp(2.6rem, 14vw, 3.4rem);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+
+  .hero-new__title span {
+    display: block;
+  }
+
+  /* 3. Hero image: full-bleed, edge-to-edge */
+  .hero-new__banner-wrap {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 20px;
+    width: calc(100% + 48px);
+  }
+
+  .hero-new__banner {
+    height: 280px;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* ============================================================
+   PARENTS PAGE — Mobile Polish v2
+   Bigger text, better spacing, animations, touch targets.
+   Scoped to .page--parents within mobile breakpoints.
+   ============================================================ */
+
+/* ── Entrance animation keyframes (GPU-accelerated) ────────── */
+@keyframes parents-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ── Animation base class ──────────────────────────────────── */
+.page--parents .animate-up,
+.page--parents .flagged-color-card,
+.page--parents .understand-card,
+.page--parents .path__step,
+.page--parents .deeper-checklist__item,
+.page--parents .situation-card {
+  will-change: transform, opacity;
+}
+
+.page--parents .animate-up.is-visible,
+.page--parents .flagged-color-card.is-visible,
+.page--parents .understand-card.is-visible,
+.page--parents .path__step.is-visible,
+.page--parents .deeper-checklist__item.is-visible,
+.page--parents .situation-card.is-visible {
+  animation: parents-fade-up 0.6s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Stagger children */
+.page--parents .is-visible:nth-child(1) { animation-delay: 0s; }
+.page--parents .is-visible:nth-child(2) { animation-delay: 0.08s; }
+.page--parents .is-visible:nth-child(3) { animation-delay: 0.16s; }
+.page--parents .is-visible:nth-child(4) { animation-delay: 0.24s; }
+
+/* ── Mobile: 640px and below ───────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* --- Hero --- */
+  .page--parents .parents-hero {
+    padding: calc(var(--nav-height) + 28px) 0 44px;
+  }
+
+  .page--parents .parents-hero .hero__display {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 100%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+  }
+
+  .page--parents .hero__trust {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  /* --- Section padding & headings --- */
+  .page--parents .section-padding {
+    padding: 64px 0;
+  }
+
+  .page--parents .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .page--parents .section-heading {
+    font-size: clamp(1.5rem, 5.5vw, 1.85rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .page--parents .section-subtext {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .page--parents .eyebrow {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+
+  .page--parents .section-closing {
+    font-size: 1rem;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+
+  /* --- Flagged color cards --- */
+  .page--parents .flagged-color-grid {
+    gap: 20px;
+  }
+
+  .page--parents .flagged-color-card {
+    padding: 24px 22px;
+    border-radius: 14px;
+  }
+
+  .page--parents .flagged-color-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .page--parents .flagged-color-card__list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 6px 0 6px 20px;
+  }
+
+  /* --- Outcomes cards --- */
+  .page--parents .understand__grid--outcomes {
+    gap: 20px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .page--parents .understand__grid--outcomes .understand-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  /* --- Path timeline --- */
+  .page--parents .path__step {
+    padding: 18px 0;
+    gap: 18px;
+  }
+
+  .page--parents .path__number {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .page--parents .path__step-title {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .page--parents .path__step-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 20px;
+  }
+
+  /* --- Deeper checklist --- */
+  .page--parents .deeper-checklist {
+    gap: 18px;
+  }
+
+  .page--parents .deeper-checklist__item {
+    padding: 22px 20px;
+    gap: 16px;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+
+  .page--parents .deeper-checklist__icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .page--parents .deeper-checklist__title {
+    font-size: 1.02rem;
+    margin-bottom: 5px;
+  }
+
+  .page--parents .deeper-checklist__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* --- Situation cards --- */
+  .page--parents .situation-cards--parents {
+    gap: 18px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 26px 24px;
+    border-radius: 16px;
+    min-height: 44px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__title {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__link {
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .page--parents .parents-path__header .section-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* ── Extra-small: 390px and below ──────────────────────────── */
+@media (max-width: 390px) {
+  .page--parents .parents-hero .hero__display {
+    font-size: 2rem;
+  }
+
+  .page--parents .parents-hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .page--parents .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 22px 20px;
+  }
+
+  .page--parents .path__number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .page--parents .path__timeline::before {
+    left: 18px;
+  }
+}
