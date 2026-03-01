@@ -7269,3 +7269,177 @@ html, body {
     left: 18px;
   }
 }
+
+/* ============================================================
+   MOBILE UX OVERHAUL — 2026-02-28
+   1. Hero banner gradient fade on bottom half
+   2. Entry cards → horizontal scroll-snap carousel
+   3. Impact stats → numbers above, bigger
+   4. App-like mobile feel
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+  /* ── 1. HERO BANNER: Gradient fade on bottom half ──────── */
+  .hero-new__banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 254, 251, 0.15) 25%,
+      rgba(255, 254, 251, 0.5) 55%,
+      rgba(255, 254, 251, 0.85) 80%,
+      var(--offwhite) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* ── 2. ENTRY CARDS: Horizontal scroll-snap carousel ───── */
+  .entry-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px !important;
+    margin-top: 0;
+    padding: 4px 4px 16px;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .entry-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .entry-card {
+    flex: 0 0 82%;
+    min-width: 0;
+    scroll-snap-align: center;
+    border-radius: 16px !important;
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(27, 58, 92, 0.08);
+    border: 1px solid var(--card-border);
+    padding: 22px 22px 20px !important;
+  }
+
+  .entry-card:first-child {
+    margin-left: 4px;
+  }
+
+  .entry-card:last-child {
+    margin-right: 4px;
+  }
+
+  .entry-card__title {
+    font-size: 1.12rem !important;
+  }
+
+  .entry-card__desc {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .entry-card__link {
+    font-size: 0.88rem !important;
+    min-height: 44px !important;
+    padding: 8px 18px !important;
+  }
+
+  /* Carousel dot indicators */
+  .entry-cards-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 0 0;
+  }
+
+  .entry-cards-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--card-border);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+
+  .entry-cards-dot.active {
+    background: var(--deep-blue);
+    transform: scale(1.3);
+  }
+
+  /* ── 3. IMPACT STATS: Numbers above, bigger ────────────── */
+  .impact-banner {
+    padding: 40px 20px !important;
+  }
+
+  .impact-banner__inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 !important;
+  }
+
+  .impact-banner__stat {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 6px !important;
+  }
+
+  .impact-banner__number {
+    font-size: 3rem !important;
+    min-width: auto !important;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .impact-banner__label {
+    font-size: 0.9rem !important;
+    max-width: 260px !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Divider between stats */
+  .impact-banner__stat + .impact-banner__stat {
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* ── 4. APP-LIKE MOBILE FEEL ───────────────────────────── */
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3 {
+    letter-spacing: -0.025em;
+  }
+
+  .entry-card__link,
+  .btn,
+  .nav__link,
+  .footer__links-col a,
+  .situation-card__link {
+    min-height: 44px;
+  }
+}
