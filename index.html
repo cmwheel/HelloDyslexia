@@ -75,14 +75,26 @@
 
     <div class="hero-new__banner-wrap">
       <div class="hero-new__banner">
-        <img src="assets/hero-banner.jpg" alt="Families discovering their children's strengths" class="hero-new__bg-img hero-new__bg-img--default" />
-        <img src="assets/hero-banner2.jpg" alt="Teens and adults discovering their strengths" class="hero-new__bg-img hero-new__bg-img--teens" />
-        <img src="assets/hero-banner3.jpg" alt="Educators supporting dyslexic learners" class="hero-new__bg-img hero-new__bg-img--educators" />
+        <img src="assets/hero-banner.jpg"
+             srcset="assets/hero-banner.jpg 1200w, assets/hero-banner.jpg 600w"
+             sizes="(max-width: 640px) 100vw, (max-width: 960px) 100vw, 1140px"
+             alt="Families discovering their children's strengths"
+             class="hero-new__bg-img hero-new__bg-img--default" />
+        <img src="assets/hero-banner2.jpg"
+             srcset="assets/hero-banner2.jpg 1200w, assets/hero-banner2.jpg 600w"
+             sizes="(max-width: 640px) 100vw, (max-width: 960px) 100vw, 1140px"
+             alt="Teens and adults discovering their strengths"
+             class="hero-new__bg-img hero-new__bg-img--teens" />
+        <img src="assets/hero-banner3.jpg"
+             srcset="assets/hero-banner3.jpg 1200w, assets/hero-banner3.jpg 600w"
+             sizes="(max-width: 640px) 100vw, (max-width: 960px) 100vw, 1140px"
+             alt="Educators supporting dyslexic learners"
+             class="hero-new__bg-img hero-new__bg-img--educators" />
       </div>
 
     </div>
 
-    <div class="entry-cards">
+    <div class="entry-cards" id="entryCardsCarousel">
       <a href="parents.html" class="entry-card entry-card--blue">
         <span class="entry-card__label">Parents</span>
         <h3 class="entry-card__title">My child was just flagged</h3>
@@ -101,6 +113,11 @@
         <p class="entry-card__desc">Evidence-based tools to help teachers and professionals support dyslexic learners.</p>
         <span class="entry-card__link entry-card__link--soon">Coming 2026</span>
       </div>
+    </div>
+    <div class="entry-cards-dots" id="entryCardsDots">
+      <button class="entry-cards-dot entry-cards-dot--blue active" aria-label="Parents card"></button>
+      <button class="entry-cards-dot entry-cards-dot--cyan" aria-label="Teens &amp; Adults card"></button>
+      <button class="entry-cards-dot entry-cards-dot--gold" aria-label="Educators card"></button>
     </div>
   </div>
 </section>
@@ -196,6 +213,12 @@
       <span class="impact-banner__number impact-banner__number--teal">Today</span>
       <span class="impact-banner__label">the best time to act &mdash; early identification changes everything</span>
     </div>
+  </div>
+  <div class="impact-banner__dots" id="impactDots">
+    <button class="impact-banner__dot active" aria-label="Stat 1"></button>
+    <button class="impact-banner__dot" aria-label="Stat 2"></button>
+    <button class="impact-banner__dot" aria-label="Stat 3"></button>
+    <button class="impact-banner__dot" aria-label="Stat 4"></button>
   </div>
 </section>
 
@@ -330,6 +353,48 @@
   </div>
 </footer>
 
+<!-- Bottom sheet for "I'm a..." on mobile -->
+<div class="bottom-sheet-overlay" id="bottomSheetOverlay"></div>
+<div class="bottom-sheet" id="bottomSheet">
+  <div class="bottom-sheet__handle"></div>
+  <p class="bottom-sheet__title">I&rsquo;m a&hellip;</p>
+  <a href="parents.html" class="bottom-sheet__item">
+    <span class="bottom-sheet__item-icon bottom-sheet__item-icon--blue">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </span>
+    <span class="bottom-sheet__item-text">
+      <span class="bottom-sheet__item-label">Parent</span>
+      <span class="bottom-sheet__item-desc">My child was just flagged for dyslexia</span>
+    </span>
+    <svg class="bottom-sheet__item-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="adults.html" class="bottom-sheet__item">
+    <span class="bottom-sheet__item-icon bottom-sheet__item-icon--cyan">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </span>
+    <span class="bottom-sheet__item-text">
+      <span class="bottom-sheet__item-label">Teen / Adult</span>
+      <span class="bottom-sheet__item-desc">I think I might be dyslexic</span>
+    </span>
+    <svg class="bottom-sheet__item-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="educators.html" class="bottom-sheet__item">
+    <span class="bottom-sheet__item-icon bottom-sheet__item-icon--gold">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </span>
+    <span class="bottom-sheet__item-text">
+      <span class="bottom-sheet__item-label">Educator</span>
+      <span class="bottom-sheet__item-desc">I&rsquo;m supporting a dyslexic student</span>
+    </span>
+    <svg class="bottom-sheet__item-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+</div>
+
+<!-- Sticky mobile CTA -->
+<div class="mobile-sticky-cta" id="mobileStickyCtA">
+  <a href="parents.html" class="mobile-sticky-cta__btn">Start with the Parent Guide &rarr;</a>
+  <button class="mobile-sticky-cta__dismiss" id="stickyCTADismiss" aria-label="Dismiss">&times;</button>
+</div>
 
 </body>
 </html>
