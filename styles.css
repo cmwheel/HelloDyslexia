@@ -7748,25 +7748,27 @@ html, body {
 }
 
 /* ============================================================
-   PARENTS PAGE — Compact Next Steps (mobile 2x2 grid)
+   PARENTS PAGE — Compact Next Steps (mobile stacked vertical)
    ============================================================ */
 @media (max-width: 640px) {
-  /* 2x2 grid instead of stacked full-width */
+  /* Single-column stacked layout — all 4 cards fit on 667px viewport */
   .page--parents .situation-cards--parents {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .page--parents .situation-cards--parents .situation-card {
-    padding: 14px 12px 12px;
+    padding: 12px 14px;
     border-radius: 12px;
     min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .page--parents .situation-cards--parents .situation-card__icon {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
     border-radius: 8px;
   }
 
@@ -7776,47 +7778,49 @@ html, body {
   }
 
   .page--parents .situation-cards--parents .situation-card__title {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     line-height: 1.25;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .page--parents .situation-cards--parents .situation-card__desc {
     font-size: 0.75rem;
-    line-height: 1.4;
-    margin-bottom: 8px;
+    line-height: 1.35;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .page--parents .situation-cards--parents .situation-card__link {
-    font-size: 0.78rem;
-    min-height: 36px;
-    padding: 4px 0;
+    display: none;
   }
 
   /* Tighter section padding for Next Steps */
   .page--parents .parents-path {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .page--parents .parents-path__header .section-heading {
-    font-size: 1.35rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
   }
 
   .page--parents .parents-path__header .section-subtext {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-size: 0.88rem;
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 390px) {
   .page--parents .situation-cards--parents .situation-card {
-    padding: 12px 10px 10px;
+    padding: 10px 12px;
   }
 
   .page--parents .situation-cards--parents .situation-card__title {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
   }
 
   .page--parents .situation-cards--parents .situation-card__desc {
