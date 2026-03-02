@@ -3799,6 +3799,8 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .flagged-color-card__list li {
@@ -3807,17 +3809,20 @@ ul { list-style: none; }
   color: var(--text-body);
   padding-left: 20px;
   position: relative;
+  display: flex;
+  align-items: baseline;
 }
 
 .flagged-color-card__list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 0.55em;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--text-muted);
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -7729,5 +7734,82 @@ html, body {
     padding: 16px 18px;
     font-size: 0.95rem;
     min-height: 52px;
+  }
+}
+
+/* ============================================================
+   PARENTS PAGE — Compact Next Steps (mobile 2x2 grid)
+   ============================================================ */
+@media (max-width: 640px) {
+  /* 2x2 grid instead of stacked full-width */
+  .page--parents .situation-cards--parents {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 14px 12px 12px;
+    border-radius: 12px;
+    min-height: auto;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__title {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__link {
+    font-size: 0.78rem;
+    min-height: 36px;
+    padding: 4px 0;
+  }
+
+  /* Tighter section padding for Next Steps */
+  .page--parents .parents-path {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .page--parents .parents-path__header .section-heading {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+  }
+
+  .page--parents .parents-path__header .section-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .page--parents .situation-cards--parents .situation-card {
+    padding: 12px 10px 10px;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__title {
+    font-size: 0.78rem;
+  }
+
+  .page--parents .situation-cards--parents .situation-card__desc {
+    font-size: 0.72rem;
   }
 }
