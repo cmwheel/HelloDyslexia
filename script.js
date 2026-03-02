@@ -263,6 +263,23 @@
   staggerGroup('.flagged-color-card', 150);
   staggerGroup('.deeper-checklist__item', 150);
 
+  /* ── Hero banner: crossfade auto-rotation every 4.5s ────── */
+  var heroImages = document.querySelectorAll('.hero-new__bg-img');
+  if (heroImages.length > 1) {
+    var currentHero = 0;
+    // Initialize: first image active
+    heroImages[0].classList.add('hero-active');
+    heroImages.forEach(function (img, i) {
+      if (i !== 0) img.classList.remove('hero-active');
+    });
+
+    setInterval(function () {
+      heroImages[currentHero].classList.remove('hero-active');
+      currentHero = (currentHero + 1) % heroImages.length;
+      heroImages[currentHero].classList.add('hero-active');
+    }, 4500);
+  }
+
   /* ── Hero banner: change image on entry card hover ───────── */
   var heroSection = document.querySelector('.hero-new');
   var entryCards = document.querySelector('.entry-cards');

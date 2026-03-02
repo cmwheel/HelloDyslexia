@@ -625,16 +625,7 @@ ul { list-style: none; }
   text-align: left;
 }
 
-/* Reassurance beat — warm, calm message between hero and entry cards */
-.hero-new__reassurance {
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-body);
-  max-width: 600px;
-  margin: 16px auto 28px;
-  padding: 0 16px;
-}
+/* (reassurance text removed — element deleted from HTML) */
 
 .hero-new__notch-badge {
   position: absolute;
@@ -686,19 +677,22 @@ ul { list-style: none; }
   transition: opacity 1.2s ease-in-out;
 }
 
-.hero-new__bg-img--default {
+/* Auto-rotation active state (set by JS) */
+.hero-new__bg-img.hero-active {
   opacity: 1;
 }
 
-.hero-new--banner-teens .hero-new__bg-img--default,
-.hero-new--banner-educators .hero-new__bg-img--default {
+/* Entry card hover overrides (desktop) */
+.hero-new--banner-teens .hero-new__bg-img {
   opacity: 0;
 }
-
 .hero-new--banner-teens .hero-new__bg-img--teens {
   opacity: 1;
 }
 
+.hero-new--banner-educators .hero-new__bg-img {
+  opacity: 0;
+}
 .hero-new--banner-educators .hero-new__bg-img--educators {
   opacity: 1;
 }
@@ -5121,6 +5115,13 @@ ul { list-style: none; }
   line-height: 1.6;
   color: var(--text-body);
   margin: 0;
+}
+
+/* ── Stat highlight (bold "1 in 5") ───────────────────────── */
+.stat-highlight {
+  color: var(--golden);
+  font-size: 1.05em;
+  font-weight: 700;
 }
 
 /* Hero title accent colors — brighter for contrast against dark text */
