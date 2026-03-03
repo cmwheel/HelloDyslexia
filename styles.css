@@ -292,12 +292,12 @@ ul { list-style: none; }
 .nav {
   position: fixed;
   top: 28px;
-  left: 56px;
-  right: 56px;
+  left: 110px;
+  right: 110px;
   width: auto;
   height: var(--nav-height);
   z-index: 1000;
-  transition: all 0.35s ease;
+  transition: left 0.35s ease, right 0.35s ease, box-shadow 0.35s ease, top 0.35s ease;
   background: var(--white);
   border-radius: 999px;
   box-shadow:
@@ -306,10 +306,10 @@ ul { list-style: none; }
 }
 
 .nav.scrolled {
-  left: 120px;
-  right: 120px;
+  left: 170px;
+  right: 170px;
   top: 20px;
-  height: 64px;
+  /* height intentionally NOT changed on scroll — only width compacts */
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.12),
     0 6px 24px rgba(27, 58, 92, 0.14);
@@ -590,6 +590,8 @@ ul { list-style: none; }
 
 .hero-new__top {
   margin-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .hero-new__text {
@@ -669,12 +671,14 @@ ul { list-style: none; }
 
 .hero-new__banner {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 420px;
   background: linear-gradient(135deg, var(--blue-soft) 0%, var(--cyan-soft) 50%, var(--gold-soft) 100%);
   border-radius: 40px;
   overflow: visible;
   margin-bottom: 0;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .hero-new__bg-img {
@@ -816,6 +820,10 @@ ul { list-style: none; }
   .hero-new {
     padding-bottom: 60px;
   }
+  .hero-new__top {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .hero-new__text {
     flex-direction: column;
     text-align: center;
@@ -868,6 +876,8 @@ ul { list-style: none; }
   .hero-new__banner {
     height: 280px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
     border-radius: 24px;
   }
   .search-form__btn {
@@ -2584,6 +2594,8 @@ ul { list-style: none; }
   .hero-new__banner {
     height: 210px;
     border-radius: 16px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hero-new__notch-badge {
