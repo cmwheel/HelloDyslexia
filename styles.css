@@ -33,7 +33,7 @@
 
   /* Sizing */
   --max-width:    1140px;
-  --nav-height:   80px;
+  --nav-height:   72px;
   --radius-card:  24px;
   --radius-pill:  999px;
 
@@ -317,8 +317,8 @@ ul { list-style: none; }
 }
 
 .nav.scrolled {
-  /* Slight shrink — max-width reduces by ~130px, shadow deepens */
-  max-width: 1010px;
+  /* Subtle shrink — barely perceptible tightening */
+  max-width: 1070px;
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.12),
     0 6px 24px rgba(27, 58, 92, 0.14);
@@ -326,7 +326,7 @@ ul { list-style: none; }
 
 /* On scroll: container padding tightens slightly */
 .nav.scrolled .container {
-  padding: 0 20px;
+  padding: 0 24px;
   transition: padding 0.35s ease;
 }
 
@@ -342,7 +342,7 @@ ul { list-style: none; }
 
 /* On scroll: subtle gap reduction */
 .nav.scrolled .nav__inner {
-  gap: 18px;
+  gap: 21px;
 }
 
 .nav__logo {
@@ -610,7 +610,7 @@ ul { list-style: none; }
    2. HERO (Card-view layout)
    ============================================================ */
 .hero-new {
-  padding-top: calc(var(--nav-height) + 12px);
+  padding-top: calc(var(--nav-height) + 20px);
   padding-bottom: 0;
   background: var(--offwhite);
   overflow: visible;
