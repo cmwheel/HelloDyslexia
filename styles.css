@@ -5268,16 +5268,30 @@ html, body {
     min-height: 44px;
     font-size: 1rem;
   }
+
+  /* Mobile: logo + text smaller to fit 72px nav height comfortably */
+  .nav__logo-img {
+    height: 46px;
+  }
+
+  .nav__logo-text {
+    font-size: 1.15rem;
+  }
+
+  /* Hamburger: comfortable padding inside the pill, vertically centered via parent align-items: center */
+  .nav__toggle {
+    padding: 8px 10px;
+  }
 }
 
-/* ── Nav logo: prevent overflow on small screens ──────────── */
+/* ── Nav logo: prevent overflow on very small screens ──────── */
 @media (max-width: 375px) {
   .nav__logo-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .nav__logo-img {
-    height: 52px;
+    height: 40px;
   }
 }
 
