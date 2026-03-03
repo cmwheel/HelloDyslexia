@@ -291,13 +291,13 @@ ul { list-style: none; }
    ============================================================ */
 .nav {
   position: fixed;
-  top: 11px;
-  left: 24px;
-  right: 24px;
+  top: 28px;
+  left: 56px;
+  right: 56px;
   width: auto;
   height: var(--nav-height);
   z-index: 1000;
-  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  transition: all 0.35s ease;
   background: var(--white);
   border-radius: 999px;
   box-shadow:
@@ -306,6 +306,10 @@ ul { list-style: none; }
 }
 
 .nav.scrolled {
+  left: 120px;
+  right: 120px;
+  top: 20px;
+  height: 64px;
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.12),
     0 6px 24px rgba(27, 58, 92, 0.14);
@@ -2812,6 +2816,7 @@ ul { list-style: none; }
   color: inherit;
   transition: background 0.35s ease;
   position: relative;
+  border-radius: 18px;
 }
 
 .entry-card::before {
@@ -6795,11 +6800,11 @@ html, body {
  * so it fills behind the Dynamic Island / notch — the brand color shows
  * through correctly.
  *
- * Nav sits at top:3px (below the 3px stripe). With safe area we push it
- * down by env(safe-area-inset-top) so it clears the notch.
+ * Nav floats 28px from top on desktop. On iOS with a notch/Dynamic Island,
+ * we push it down by env(safe-area-inset-top) so it clears the notch.
  */
 .nav {
-  top: calc(3px + env(safe-area-inset-top));
+  top: calc(28px + env(safe-area-inset-top));
 }
 
 /* Hero/page content: account for extra nav height from safe area */
