@@ -277,7 +277,7 @@
       heroImages[currentHero].classList.remove('hero-active');
       currentHero = (currentHero + 1) % heroImages.length;
       heroImages[currentHero].classList.add('hero-active');
-    }, 4500);
+    }, 8000);
   }
 
   /* ── Hero banner: change image on entry card hover ───────── */
