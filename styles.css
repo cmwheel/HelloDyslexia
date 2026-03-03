@@ -312,7 +312,8 @@ ul { list-style: none; }
 .nav .container {
   width: fit-content;
   max-width: none;
-  padding: 0 20px;
+  /* Generous default padding — pill is wide and airy */
+  padding: 0 48px;
   transition: padding 0.35s ease;
 }
 
@@ -323,9 +324,9 @@ ul { list-style: none; }
     0 6px 24px rgba(27, 58, 92, 0.14);
 }
 
-/* On scroll: compress internal padding → pill naturally narrows */
+/* On scroll: very subtle compression — pill still looks generous */
 .nav.scrolled .container {
-  padding: 0 12px;
+  padding: 0 36px;
 }
 
 .nav__inner {
@@ -338,9 +339,9 @@ ul { list-style: none; }
   transition: gap 0.35s ease;
 }
 
-/* On scroll: tighten gap between logo / links / donate → pill compresses */
+/* On scroll: barely noticeable gap reduction — minimal, elegant */
 .nav.scrolled .nav__inner {
-  gap: 14px;
+  gap: 20px;
 }
 
 .nav__logo {
