@@ -291,17 +291,24 @@ ul { list-style: none; }
    ============================================================ */
 .nav {
   position: fixed;
-  top: 3px;
-  left: 0;
-  width: 100%;
+  top: 11px;
+  left: 24px;
+  right: 24px;
+  width: auto;
   height: var(--nav-height);
   z-index: 1000;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
   background: var(--white);
+  border-radius: 999px;
+  box-shadow:
+    0 2px 8px rgba(27, 58, 92, 0.08),
+    0 4px 20px rgba(27, 58, 92, 0.10);
 }
 
 .nav.scrolled {
-  box-shadow: var(--shadow-nav);
+  box-shadow:
+    0 2px 8px rgba(27, 58, 92, 0.12),
+    0 6px 24px rgba(27, 58, 92, 0.14);
 }
 
 .nav__inner {
@@ -2784,11 +2791,11 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  margin-top: -100px;
+  margin-top: -60px;
   position: relative;
   z-index: 10;
   background: rgba(27, 58, 92, 0.06);
-  border-radius: 20px;
+  border-radius: 28px;
   overflow: visible;
   box-shadow:
     0 4px 6px rgba(27, 58, 92, 0.04),
@@ -7826,5 +7833,14 @@ html, body {
 
   .page--parents .situation-cards--parents .situation-card__desc {
     font-size: 0.72rem;
+  }
+}
+
+/* ── Pill nav: tighter margins on mobile ─────────────────── */
+@media (max-width: 600px) {
+  .nav {
+    left: 12px;
+    right: 12px;
+    top: 9px;
   }
 }
