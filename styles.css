@@ -294,8 +294,9 @@ ul { list-style: none; }
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  /* Width is content-driven — pill hugs logo + links + donate */
-  width: fit-content;
+  /* Match the entry cards container width — logo at left edge, donate at right */
+  width: calc(100% - 48px);
+  max-width: var(--max-width); /* 1140px */
   height: var(--nav-height);
   z-index: 1000;
   background: var(--white);
@@ -303,45 +304,45 @@ ul { list-style: none; }
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.08),
     0 4px 20px rgba(27, 58, 92, 0.10);
-  /* Smooth animation for box-shadow only; layout transitions handled on inner elements */
-  transition: box-shadow 0.35s ease;
+  /* Smooth width/max-width transition for scroll shrink */
+  transition: max-width 0.35s ease, box-shadow 0.35s ease;
   white-space: nowrap;
 }
 
-/* Override .container inside .nav: let content determine width */
+/* Inner container: full width of pill, content spread left-to-right */
 .nav .container {
-  width: fit-content;
+  width: 100%;
   max-width: none;
-  /* Generous default padding — pill is wide and airy */
-  padding: 0 48px;
-  transition: padding 0.35s ease;
+  padding: 0 28px;
 }
 
 .nav.scrolled {
-  /* Height does NOT change on scroll — only content spacing compresses */
+  /* Slight shrink — max-width reduces by ~130px, shadow deepens */
+  max-width: 1010px;
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.12),
     0 6px 24px rgba(27, 58, 92, 0.14);
 }
 
-/* On scroll: very subtle compression — pill still looks generous */
+/* On scroll: container padding tightens slightly */
 .nav.scrolled .container {
-  padding: 0 36px;
+  padding: 0 20px;
+  transition: padding 0.35s ease;
 }
 
 .nav__inner {
   display: flex;
   align-items: center;
-  /* Content-driven: items sit naturally side by side with gap */
-  justify-content: flex-start;
+  /* Logo at left, donate at right — matching card edges below */
+  justify-content: space-between;
   height: 100%;
   gap: 24px;
   transition: gap 0.35s ease;
 }
 
-/* On scroll: barely noticeable gap reduction — minimal, elegant */
+/* On scroll: subtle gap reduction */
 .nav.scrolled .nav__inner {
-  gap: 20px;
+  gap: 18px;
 }
 
 .nav__logo {
@@ -372,7 +373,7 @@ ul { list-style: none; }
 }
 
 .nav__logo-text--hello {
-  color: var(--deep-blue);
+  color: #2B6CB0; /* matches .hero-new__title-blue */
 }
 
 .nav__logo-text--dyslexia {
