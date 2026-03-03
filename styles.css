@@ -291,36 +291,56 @@ ul { list-style: none; }
    ============================================================ */
 .nav {
   position: fixed;
-  top: 28px;
-  left: 110px;
-  right: 110px;
-  width: auto;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Width is content-driven — pill hugs logo + links + donate */
+  width: fit-content;
   height: var(--nav-height);
   z-index: 1000;
-  transition: left 0.35s ease, right 0.35s ease, box-shadow 0.35s ease, top 0.35s ease;
   background: var(--white);
   border-radius: 999px;
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.08),
     0 4px 20px rgba(27, 58, 92, 0.10);
+  /* Smooth animation for box-shadow only; layout transitions handled on inner elements */
+  transition: box-shadow 0.35s ease;
+  white-space: nowrap;
+}
+
+/* Override .container inside .nav: let content determine width */
+.nav .container {
+  width: fit-content;
+  max-width: none;
+  padding: 0 20px;
+  transition: padding 0.35s ease;
 }
 
 .nav.scrolled {
-  left: 170px;
-  right: 170px;
-  top: 20px;
-  /* height intentionally NOT changed on scroll — only width compacts */
+  /* Height does NOT change on scroll — only content spacing compresses */
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.12),
     0 6px 24px rgba(27, 58, 92, 0.14);
 }
 
+/* On scroll: compress internal padding → pill naturally narrows */
+.nav.scrolled .container {
+  padding: 0 12px;
+}
+
 .nav__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* Content-driven: items sit naturally side by side with gap */
+  justify-content: flex-start;
   height: 100%;
-  gap: 32px;
+  gap: 24px;
+  transition: gap 0.35s ease;
+}
+
+/* On scroll: tighten gap between logo / links / donate → pill compresses */
+.nav.scrolled .nav__inner {
+  gap: 14px;
 }
 
 .nav__logo {
@@ -363,6 +383,12 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 24px;
+  transition: gap 0.35s ease;
+}
+
+/* On scroll: links move closer together — pill gets narrower naturally */
+.nav.scrolled .nav__links {
+  gap: 16px;
 }
 
 .nav__link {
@@ -582,7 +608,7 @@ ul { list-style: none; }
    2. HERO (Card-view layout)
    ============================================================ */
 .hero-new {
-  padding-top: calc(var(--nav-height) + 28px);
+  padding-top: calc(var(--nav-height) + 12px);
   padding-bottom: 0;
   background: var(--offwhite);
   overflow: visible;
@@ -6812,17 +6838,17 @@ html, body {
  * so it fills behind the Dynamic Island / notch — the brand color shows
  * through correctly.
  *
- * Nav floats 28px from top on desktop. On iOS with a notch/Dynamic Island,
+ * Nav floats 12px from top on desktop. On iOS with a notch/Dynamic Island,
  * we push it down by env(safe-area-inset-top) so it clears the notch.
  */
 .nav {
-  top: calc(28px + env(safe-area-inset-top));
+  top: calc(12px + env(safe-area-inset-top));
 }
 
 /* Hero/page content: account for extra nav height from safe area */
 .hero-new,
 .page-header {
-  padding-top: calc(var(--nav-height) + env(safe-area-inset-top) + 28px);
+  padding-top: calc(var(--nav-height) + env(safe-area-inset-top) + 12px);
 }
 
 /* Mobile nav drawer: account for safe area at top */
@@ -7853,11 +7879,32 @@ html, body {
   }
 }
 
-/* ── Pill nav: tighter margins on mobile ─────────────────── */
-@media (max-width: 600px) {
+/* ── Pill nav: full-width on mobile (hamburger drawer, not pill) ─── */
+@media (max-width: 960px) {
   .nav {
     left: 12px;
     right: 12px;
+    transform: none;
+    width: auto;
     top: 9px;
+    white-space: normal;
+  }
+
+  .nav .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  .nav.scrolled .container {
+    padding: 0 16px;
+  }
+
+  .nav.scrolled .nav__inner {
+    gap: 24px;
+  }
+
+  .nav.scrolled .nav__links {
+    gap: 24px;
   }
 }
