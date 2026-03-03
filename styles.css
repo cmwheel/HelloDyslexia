@@ -304,8 +304,8 @@ ul { list-style: none; }
   box-shadow:
     0 2px 8px rgba(27, 58, 92, 0.08),
     0 4px 20px rgba(27, 58, 92, 0.10);
-  /* Smooth width/max-width transition for scroll shrink */
-  transition: max-width 0.35s ease, box-shadow 0.35s ease;
+  /* Smooth width/max-width/height transition for scroll shrink */
+  transition: max-width 0.35s ease, height 0.35s ease, box-shadow 0.35s ease;
   white-space: nowrap;
 }
 
@@ -357,6 +357,7 @@ ul { list-style: none; }
   height: 68px;
   width: auto;
   display: block;
+  transition: height 0.35s ease;
 }
 
 .nav__logo-text,
@@ -370,6 +371,7 @@ ul { list-style: none; }
 
 .nav__logo-text {
   margin-left: -4px;
+  transition: font-size 0.35s ease;
 }
 
 .nav__logo-text--hello {
@@ -5279,11 +5281,16 @@ html, body {
     font-size: 1.15rem;
   }
 
-  /* Hamburger: comfortable padding, nudged to perfect vertical center in 72px pill */
+  /* Hamburger: comfortable padding, aligned to center of pill */
   .nav__toggle {
-    padding: 8px 10px;
-    margin-top: 2px;
+    padding: 0;
+    margin: 0;
     align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -7915,6 +7922,10 @@ html, body {
     padding: 0 16px;
   }
 
+  .nav.scrolled {
+    height: 58px;
+  }
+
   .nav.scrolled .container {
     padding: 0 16px;
   }
@@ -7925,5 +7936,18 @@ html, body {
 
   .nav.scrolled .nav__links {
     gap: 24px;
+  }
+
+  .nav.scrolled .nav__logo-img {
+    height: 36px;
+  }
+
+  .nav.scrolled .nav__logo-text {
+    font-size: 0.95rem;
+  }
+
+  /* Toggle stays centered at shorter height */
+  .nav.scrolled .nav__toggle {
+    align-self: center;
   }
 }
