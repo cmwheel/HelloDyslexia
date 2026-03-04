@@ -3468,6 +3468,32 @@ ul { list-style: none; }
   margin-bottom: 10px;
 }
 
+/* Donate combined layout — side-by-side on desktop */
+.donate-combined {
+  background: var(--offwhite);
+}
+
+.donate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.donate-layout__why {
+  text-align: left;
+}
+
+.donate-layout__why .section-heading,
+.donate-layout__why .section-subtext {
+  text-align: left;
+}
+
+.donate-layout__form .section-heading {
+  text-align: left;
+}
+
+/* Legacy selectors kept for reference */
 .donate-why {
   background: var(--offwhite);
 }
@@ -3479,8 +3505,6 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 480px;
-  margin: 0 auto;
 }
 
 .donate-why__item {
@@ -3507,8 +3531,6 @@ ul { list-style: none; }
   border-radius: 20px;
   padding: 28px 32px;
   border: 1px solid rgba(27, 58, 92, 0.12);
-  max-width: 520px;
-  margin: 0 auto;
 }
 
 .donate-amounts {
@@ -5569,6 +5591,10 @@ html, body {
 
 /* ── Donate page: fix amount buttons wrapping ────────────── */
 @media (max-width: 640px) {
+  .donate-layout {
+    grid-template-columns: 1fr;
+  }
+
   .donate-amounts {
     justify-content: center;
   }
