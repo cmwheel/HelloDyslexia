@@ -2140,6 +2140,115 @@ ul { list-style: none; }
 /* ============================================================
    19. CONTACT FORM
    ============================================================ */
+/* Contact page: compact hero banner */
+.hero--contact-banner {
+  padding: calc(var(--nav-height) + 16px) 0 20px;
+  background: linear-gradient(180deg, var(--blue-soft) 0%, var(--offwhite) 100%);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero__heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--deep-blue);
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.contact-hero__sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Contact page section padding — tighter than default */
+.contact-section-padding {
+  padding: 40px 0 56px;
+}
+
+/* 2-column contact layout */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-layout__info {
+  text-align: left;
+}
+
+.contact-layout__heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--deep-blue);
+  margin: 0 0 10px;
+}
+
+.contact-layout__sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+.contact-layout__info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-layout__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-layout__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--cyan);
+}
+
+.contact-layout__item-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.contact-layout__item-value {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+a.contact-layout__item-value:hover {
+  color: var(--cyan);
+}
+
+.contact-layout__form {
+  /* right column — no extra styles needed, form card handles it */
+}
+
+/* Form card title */
+.contact-form-card__title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--deep-blue);
+  margin: 0 0 20px;
+}
+
 .contact-form-section {
   background: var(--blue-soft);
 }
@@ -2148,17 +2257,16 @@ ul { list-style: none; }
   background: var(--white);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-card);
-  padding: 48px 40px;
+  padding: 32px 28px;
   box-shadow: var(--shadow-card);
-  margin-bottom: 48px;
 }
 
 .contact-form__group {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .contact-form__group:last-of-type {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .contact-form__label {
@@ -2792,11 +2900,29 @@ ul { list-style: none; }
 
   /* Contact form */
   .contact-form-card {
-    padding: 28px 20px;
+    padding: 24px 18px;
   }
 
   .contact__info--below {
     grid-template-columns: 1fr;
+  }
+
+  /* Contact 2-col layout → stack on mobile */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-layout__info {
+    order: -1; /* info on top, form below */
+  }
+
+  .hero--contact-banner {
+    padding: calc(var(--nav-height) + 12px) 0 16px;
+  }
+
+  .contact-section-padding {
+    padding: 28px 0 40px;
   }
 }
 
