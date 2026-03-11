@@ -18,7 +18,7 @@
 
   /* Neutrals */
   --white:        #FFFFFF;
-  --offwhite:     #F9F6EE;
+  --offwhite:     #FDFBF7;
   --text-primary: #1A2B3C;
   --text-body:    #2D3748;
   --text-muted:   #5F6F81;
@@ -987,14 +987,14 @@ ul { list-style: none; }
 .understand__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .understand-card {
   background: var(--white);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  padding: 40px 32px;
+  padding: 24px 24px;
   transition: border-color 0.35s ease, background 0.35s ease;
   position: relative;
 }
@@ -1011,7 +1011,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.06em;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .understand-card--blue .understand-card__num { color: var(--deep-blue); }
@@ -1022,7 +1022,7 @@ ul { list-style: none; }
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -2878,7 +2878,7 @@ a.contact-layout__item-value:hover {
 .entry-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 12px;
   margin-top: -60px;
   position: relative;
   z-index: 10;
@@ -4491,7 +4491,7 @@ a.contact-layout__item-value:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .understand-card__icon--blue { background: var(--blue-soft); color: var(--deep-blue); }
