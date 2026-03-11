@@ -986,15 +986,15 @@ ul { list-style: none; }
 
 .understand__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .understand-card {
   background: var(--white);
   border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 24px 24px;
+  border-radius: 14px;
+  padding: 16px 20px;
   transition: border-color 0.35s ease, background 0.35s ease;
   position: relative;
 }
@@ -1011,7 +1011,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.06em;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .understand-card--blue .understand-card__num { color: var(--deep-blue); }
@@ -1020,17 +1020,17 @@ ul { list-style: none; }
 
 .understand-card__title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .understand-card__body {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .understand__cta {
@@ -2890,13 +2890,13 @@ a.contact-layout__item-value:hover {
 .entry-card {
   display: flex;
   flex-direction: column;
-  padding: 18px 24px 16px;
+  padding: 12px 20px 10px;
   background: var(--white);
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
   position: relative;
-  border-radius: 20px;
+  border-radius: 14px;
   border: 1px solid rgba(27, 58, 92, 0.08);
   box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
   overflow: hidden;
@@ -2909,7 +2909,7 @@ a.contact-layout__item-value:hover {
   left: 0;
   right: 0;
   height: 3px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 14px 14px 0 0;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
@@ -2932,7 +2932,7 @@ a.contact-layout__item-value:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   display: block;
 }
 
@@ -2942,19 +2942,19 @@ a.contact-layout__item-value:hover {
 
 .entry-card__title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   letter-spacing: -0.02em;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .entry-card__desc {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 10px;
+  line-height: 1.4;
+  margin-bottom: 6px;
   flex: 1;
 }
 
@@ -2965,7 +2965,7 @@ a.contact-layout__item-value:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 5px 12px;
   border-radius: 9999px;
   border: 1px solid currentColor;
   opacity: 0.7;
@@ -4485,13 +4485,13 @@ a.contact-layout__item-value:hover {
    UNDERSTAND-CARD ICON
    ============================================================ */
 .understand-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .understand-card__icon--blue { background: var(--blue-soft); color: var(--deep-blue); }
@@ -5506,7 +5506,7 @@ html, body {
 /* ── Entry cards: improve touch targets + text on mobile ──── */
 @media (max-width: 640px) {
   .entry-card {
-    padding: 16px 20px;
+    padding: 10px 16px 8px;
   }
 
   .entry-card__title {
@@ -6710,7 +6710,7 @@ html, body {
   }
 
   .understand-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .understand-card__title {
@@ -7415,7 +7415,7 @@ html, body {
   }
 
   .page--parents .deeper-checklist__item {
-    padding: 22px 20px;
+    padding: 14px 16px;
     gap: 16px;
     border-radius: 14px;
     min-height: 44px;
@@ -7494,7 +7494,7 @@ html, body {
   }
 
   .page--parents .situation-cards--parents .situation-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .page--parents .path__number {
@@ -7868,7 +7868,7 @@ html, body {
   }
 
   .page--compact .deeper-checklist__item {
-    padding: 22px 20px;
+    padding: 14px 16px;
     gap: 16px;
     border-radius: 14px;
     min-height: 44px;
@@ -7950,7 +7950,7 @@ html, body {
   }
 
   .page--compact .situation-cards--parents .situation-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .page--compact .path__number {
