@@ -8216,3 +8216,400 @@ html, body {
     align-self: center;
   }
 }
+
+/* ============================================================
+   ABOUT PAGE — Full Redesign (2026-03-11)
+   Clean sections, proper hierarchy, warm nonprofit feel.
+   ============================================================ */
+
+/* ── About Hero ──────────────────────────────────────────── */
+.about-hero {
+  padding: calc(var(--nav-height) + 60px) 0 72px;
+  background: linear-gradient(
+    180deg,
+    var(--blue-soft) 0%,
+    rgba(224, 244, 246, 0.3) 60%,
+    var(--offwhite) 100%
+  );
+  text-align: center;
+}
+
+.about-hero__inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.about-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+
+.about-hero__title--accent {
+  color: var(--cyan);
+}
+
+.about-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── About Story ─────────────────────────────────────────── */
+.about-story {
+  background: var(--offwhite);
+}
+
+.about-story__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-story__heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-story__text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  max-width: 58ch;
+}
+
+.about-story__text + .about-story__text {
+  margin-top: 1.25em;
+}
+
+.about-story__text em {
+  font-style: italic;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about-story__pullquote {
+  position: relative;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, var(--blue-soft) 0%, var(--cyan-soft) 100%);
+  border-radius: 20px;
+  border-left: 4px solid var(--cyan);
+  margin-top: 8px;
+}
+
+.about-story__pullquote::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.3;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  line-height: 1;
+}
+
+.about-story__pullquote blockquote {
+  margin: 0;
+}
+
+.about-story__pullquote p {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.45;
+  color: var(--deep-blue);
+  margin: 0;
+  padding-left: 8px;
+}
+
+/* ── About Mission ───────────────────────────────────────── */
+.about-mission {
+  background: var(--white);
+  border-top: 1px solid var(--divider);
+}
+
+.about-mission__statement {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 72px;
+}
+
+.about-mission__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.about-mission__text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── About Values (3-col cards with icons) ───────────────── */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-value {
+  text-align: center;
+  padding: 36px 28px;
+  background: var(--offwhite);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.about-value:hover {
+  box-shadow: 0 8px 28px rgba(27, 58, 92, 0.10);
+  border-color: rgba(27, 58, 92, 0.18);
+  transform: translateY(-3px);
+}
+
+.about-value__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.about-value__icon--blue { background: var(--blue-soft); color: var(--deep-blue); }
+.about-value__icon--cyan { background: var(--cyan-soft); color: var(--cyan); }
+.about-value__icon--gold { background: var(--gold-soft); color: #C08B1A; }
+
+.about-value__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.about-value__desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 30ch;
+  margin: 0 auto;
+}
+
+/* ── About Contact ───────────────────────────────────────── */
+.about-contact {
+  background: linear-gradient(
+    135deg,
+    rgba(254, 246, 224, 0.35) 0%,
+    rgba(224, 244, 246, 0.3) 50%,
+    rgba(227, 238, 248, 0.35) 100%
+  );
+  border-top: 1px solid var(--divider);
+}
+
+.about-contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-contact__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.about-contact__desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+
+.about-contact__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-contact__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.about-contact__card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: rgba(27, 58, 92, 0.15);
+}
+
+.about-contact__card svg {
+  flex-shrink: 0;
+  color: var(--cyan);
+}
+
+.about-contact__card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.about-contact__card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── About Page Responsive ───────────────────────────────── */
+@media (max-width: 960px) {
+  .about-story__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-contact__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: calc(var(--nav-height) + 36px) 0 48px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .about-hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .about-story__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-story__heading {
+    font-size: 1.5rem;
+  }
+
+  .about-story__text {
+    font-size: 0.98rem;
+  }
+
+  .about-story__pullquote {
+    padding: 24px 22px;
+  }
+
+  .about-story__pullquote::before {
+    font-size: 3rem;
+    top: 4px;
+    left: 14px;
+  }
+
+  .about-story__pullquote p {
+    font-size: 1.05rem;
+    padding-left: 4px;
+  }
+
+  .about-mission__statement {
+    margin-bottom: 48px;
+  }
+
+  .about-mission__title {
+    font-size: 1.5rem;
+  }
+
+  .about-mission__text {
+    font-size: 0.98rem;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-value {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .about-value__icon {
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .about-value__desc {
+    max-width: none;
+    margin: 0;
+  }
+
+  .about-contact__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-contact__text {
+    text-align: center;
+  }
+
+  .about-contact__desc {
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .about-contact__card {
+    padding: 18px 20px;
+  }
+}
