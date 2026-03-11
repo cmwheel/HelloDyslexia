@@ -986,7 +986,7 @@ ul { list-style: none; }
 
 .understand__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -2584,7 +2584,7 @@ a.contact-layout__item-value:hover {
   }
 
   .impact-banner__inner {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px 24px;
   }
 
@@ -2613,7 +2613,7 @@ a.contact-layout__item-value:hover {
 
   /* Contact */
   .contact__info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
@@ -3011,7 +3011,7 @@ a.contact-layout__item-value:hover {
 
 .discovery-gap__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -3348,7 +3348,7 @@ a.contact-layout__item-value:hover {
    ============================================================ */
 .situation-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -4342,7 +4342,7 @@ a.contact-layout__item-value:hover {
 
 @media (max-width: 960px) {
   .screener-selector--guide {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 40px;
   }
 }
@@ -4571,7 +4571,7 @@ a.contact-layout__item-value:hover {
 
 @media (max-width: 768px) {
   .tab-selector--rich {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -4785,7 +4785,7 @@ a.contact-layout__item-value:hover {
   }
 
   .tab-selector {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -5088,7 +5088,7 @@ a.contact-layout__item-value:hover {
 
 .script-prep-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
