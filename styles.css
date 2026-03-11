@@ -18,7 +18,7 @@
 
   /* Neutrals */
   --white:        #FFFFFF;
-  --offwhite:     #FFFEFB;
+  --offwhite:     #FDFBF7;
   --text-primary: #1A2B3C;
   --text-body:    #2D3748;
   --text-muted:   #5F6F81;
@@ -386,13 +386,13 @@ ul { list-style: none; }
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   transition: gap 0.35s ease;
 }
 
 /* On scroll: links move closer together — pill gets narrower naturally */
 .nav.scrolled .nav__links {
-  gap: 16px;
+  gap: 14px;
 }
 
 .nav__link {
@@ -987,14 +987,14 @@ ul { list-style: none; }
 .understand__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 18px;
 }
 
 .understand-card {
   background: var(--white);
   border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 40px 32px;
+  border-radius: 14px;
+  padding: 16px 20px;
   transition: border-color 0.35s ease, background 0.35s ease;
   position: relative;
 }
@@ -1011,7 +1011,7 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.06em;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
 .understand-card--blue .understand-card__num { color: var(--deep-blue); }
@@ -1020,17 +1020,17 @@ ul { list-style: none; }
 
 .understand-card__title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .understand-card__body {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .understand__cta {
@@ -1891,99 +1891,14 @@ ul { list-style: none; }
 /* ============================================================
    WHAT WE ARE / WHAT WE'RE NOT
    ============================================================ */
-.identity {
-  background: var(--offwhite);
-}
 
-.identity__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 840px;
-  margin: 0 auto;
-}
 
-.identity__col {
-  background: var(--white);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 32px 28px;
-}
-
-.identity__col--are {
-  border-top: 3px solid var(--deep-blue);
-}
-
-.identity__col--not {
-  border-top: 3px solid #C06060;
-}
-
-.identity__col-title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
-}
-
-.identity__col-title--are {
-  color: var(--deep-blue);
-}
-
-.identity__col-title--not {
-  color: #C06060;
-}
-
-.identity__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.identity__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--text-body);
-}
-
-.identity__item svg {
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.identity__col--are .identity__item svg {
-  color: var(--deep-blue);
-}
-
-.identity__col--not .identity__item svg {
-  color: #C06060;
-}
-
-.identity__item strong {
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-@media (max-width: 640px) {
-  .identity__grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ============================================================
    15. FINAL CTA
    ============================================================ */
 .final-cta {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(227,238,248,0.45) 0%,
-      rgba(224,244,246,0.4) 45%,
-      rgba(254,246,224,0.4) 100%
-    );
+  background: var(--offwhite);
   text-align: center;
 }
 
@@ -2669,7 +2584,7 @@ a.contact-layout__item-value:hover {
   }
 
   .impact-banner__inner {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px 24px;
   }
 
@@ -2698,7 +2613,7 @@ a.contact-layout__item-value:hover {
 
   /* Contact */
   .contact__info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
@@ -2963,56 +2878,61 @@ a.contact-layout__item-value:hover {
 .entry-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
+  gap: 12px;
   margin-top: -60px;
   position: relative;
   z-index: 10;
-  background: rgba(27, 58, 92, 0.06);
-  border-radius: 28px;
+  background: transparent;
+  border-radius: 0;
   overflow: visible;
-  box-shadow:
-    0 4px 6px rgba(27, 58, 92, 0.04),
-    0 12px 28px rgba(27, 58, 92, 0.06),
-    0 24px 56px rgba(27, 58, 92, 0.08);
 }
 
 .entry-card {
   display: flex;
   flex-direction: column;
-  padding: 14px 24px 14px;
+  padding: 12px 20px 10px;
   background: var(--white);
   text-decoration: none;
   color: inherit;
-  transition: background 0.35s ease;
+  transition: all 0.3s ease;
   position: relative;
-  border-radius: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(27, 58, 92, 0.08);
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
+  overflow: hidden;
 }
 
 .entry-card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 24px;
-  right: 24px;
-  height: 2px;
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 14px 14px 0 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .entry-card--blue::before  { background: var(--deep-blue); }
 .entry-card--cyan::before  { background: var(--cyan); }
 .entry-card--gold::before  { background: var(--golden); }
 
-.entry-card:hover { background: #fafbfd; }
+.entry-card:hover {
+  background: var(--white);
+  border-color: rgba(27, 58, 92, 0.15);
+  box-shadow: 0 4px 20px rgba(27, 58, 92, 0.08);
+  transform: translateY(-2px);
+}
 .entry-card:hover::before { opacity: 1; }
 
 .entry-card__label {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: block;
 }
 
@@ -3022,34 +2942,35 @@ a.contact-layout__item-value:hover {
 
 .entry-card__title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 4px;
   letter-spacing: -0.02em;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .entry-card__desc {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.45;
-  margin-bottom: 8px;
+  line-height: 1.4;
+  margin-bottom: 6px;
   flex: 1;
 }
 
 .entry-card__link {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 9999px;
   border: 1px solid currentColor;
-  opacity: 0.85;
-  transition: gap 0.3s ease, opacity 0.25s ease;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
 .entry-card--blue .entry-card__link { color: var(--deep-blue); }
@@ -3061,22 +2982,24 @@ a.contact-layout__item-value:hover {
   display: inline-block;
 }
 .entry-card:hover .entry-card__arrow { transform: translateX(4px); }
-.entry-card:hover .entry-card__link { gap: 8px; opacity: 1; }
+.entry-card:hover .entry-card__link { gap: 8px; opacity: 1; background: rgba(27, 58, 92, 0.03); }
 
 /* Coming soon variant */
 .entry-card--coming-soon {
-  opacity: 0.85;
+  opacity: 0.7;
   pointer-events: none;
   cursor: default;
 }
 
 .entry-card--coming-soon:hover {
-  background: transparent;
+  background: var(--white);
+  transform: none;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
 }
 
 .entry-card__link--soon {
   cursor: default;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* ============================================================
@@ -3088,7 +3011,7 @@ a.contact-layout__item-value:hover {
 
 .discovery-gap__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -3425,7 +3348,7 @@ a.contact-layout__item-value:hover {
    ============================================================ */
 .situation-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -4419,7 +4342,7 @@ a.contact-layout__item-value:hover {
 
 @media (max-width: 960px) {
   .screener-selector--guide {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 40px;
   }
 }
@@ -4562,13 +4485,13 @@ a.contact-layout__item-value:hover {
    UNDERSTAND-CARD ICON
    ============================================================ */
 .understand-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .understand-card__icon--blue { background: var(--blue-soft); color: var(--deep-blue); }
@@ -4648,7 +4571,7 @@ a.contact-layout__item-value:hover {
 
 @media (max-width: 768px) {
   .tab-selector--rich {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -4862,7 +4785,7 @@ a.contact-layout__item-value:hover {
   }
 
   .tab-selector {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -5165,7 +5088,7 @@ a.contact-layout__item-value:hover {
 
 .script-prep-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -5312,6 +5235,135 @@ a.contact-layout__item-value:hover {
   color: #E8B930;
 }
 
+
+/* ============================================================
+   ABOUT PAGE — Side-by-side Story + Mission (desktop)
+   ============================================================ */
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-two-col .our-story,
+.about-two-col .mission {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.about-two-col .our-story .section-header-center,
+.about-two-col .mission .section-header-center {
+  text-align: left;
+}
+
+.about-two-col .our-story .section-header-center .section-subtext,
+.about-two-col .mission .section-header-center .section-subtext {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-two-col .our-story__content {
+  text-align: left;
+}
+
+.about-two-col .our-story__text {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.about-two-col .mission__content {
+  max-width: none;
+}
+
+.about-two-col .mission__statement {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.about-two-col .mission__text {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* ============================================================
+   ABOUT PAGE — Polished Value Cards
+   ============================================================ */
+.mission__values {
+  margin-top: 32px;
+}
+
+.mission__values-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mission__value-item {
+  text-align: center;
+  padding: 24px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.mission__value-item:hover {
+  box-shadow: 0 6px 24px rgba(27, 58, 92, 0.10);
+  border-color: rgba(27, 58, 92, 0.18);
+  transform: translateY(-2px);
+}
+
+.mission__value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 0;
+}
+
+.mission__value-display {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  margin-bottom: 8px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.mission__value-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* When inside the 2-col about layout, stack value cards vertically */
+.about-two-col .mission__values-list {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .mission__values-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .mission__value-item {
+    padding: 20px 18px;
+  }
+}
+
 /* ============================================================
    MOBILE RESPONSIVENESS AUDIT FIXES — Feb 2026
    Targets: 375px (iPhone SE), 390px (iPhone 14), 768px (iPad)
@@ -5454,7 +5506,7 @@ html, body {
 /* ── Entry cards: improve touch targets + text on mobile ──── */
 @media (max-width: 640px) {
   .entry-card {
-    padding: 16px 20px;
+    padding: 10px 16px 8px;
   }
 
   .entry-card__title {
@@ -5865,46 +5917,46 @@ html, body {
   /* Entry cards: full-width stacked with breathing room */
   .entry-cards {
     grid-template-columns: 1fr;
-    margin-top: -32px;
-    gap: 0;
-    border-radius: 16px;
-    box-shadow:
-      0 2px 4px rgba(27, 58, 92, 0.04),
-      0 8px 20px rgba(27, 58, 92, 0.06);
+    margin-top: -24px;
+    gap: 12px;
+    background: transparent;
   }
 
   .entry-card {
-    padding: 20px 20px 18px;
+    padding: 22px 20px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(27, 58, 92, 0.08);
+    box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
   }
 
   .entry-card:first-child {
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px;
   }
 
   .entry-card:last-child {
-    border-radius: 0 0 16px 16px;
+    border-radius: 16px;
   }
 
   .entry-card__label {
     font-size: 0.72rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .entry-card__title {
     font-size: 1.05rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .entry-card__desc {
     font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    line-height: 1.55;
+    margin-bottom: 12px;
   }
 
   .entry-card__link {
     font-size: 0.82rem;
-    padding: 6px 14px;
-    min-height: 40px;
+    padding: 10px 18px;
+    min-height: 44px;
   }
 }
 
@@ -5999,34 +6051,19 @@ html, body {
   }
 }
 
-/* Identity grid: single column */
+
 @media (max-width: 640px) {
-  .identity__grid {
-    gap: 20px;
-  }
+  
 
-  .identity__col {
-    padding: 24px 20px;
-  }
+  
 
-  .identity__col-title {
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
+  
 
-  .identity__item {
-    font-size: 0.88rem;
-    gap: 8px;
-  }
+  
 
-  .identity__item svg {
-    width: 16px;
-    height: 16px;
-  }
+  
 
-  .identity__list {
-    gap: 12px;
-  }
+  
 }
 
 /* Path CTA: tighter */
@@ -6142,7 +6179,8 @@ html, body {
   }
 
   .entry-card {
-    padding: 16px 16px 14px;
+    padding: 20px 18px 18px;
+    border-radius: 14px;
   }
 
   .entry-card__title {
@@ -6151,6 +6189,7 @@ html, body {
 
   .entry-card__desc {
     font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   .impact-banner__number {
@@ -6161,9 +6200,7 @@ html, body {
     font-size: 0.7rem;
   }
 
-  .identity__col {
-    padding: 20px 16px;
-  }
+  
 
   .strengths-banner__title {
     font-size: 1.25rem;
@@ -6606,16 +6643,16 @@ html, body {
   }
 
   .entry-card {
-    padding: 18px 20px 16px;
-    border-radius: 0;             /* parent overflow:hidden handles corners */
+    padding: 20px 20px 18px;
+    border-radius: 16px;
   }
 
   .entry-card:first-child {
-    border-radius: 0;             /* parent handles it */
+    border-radius: 16px;
   }
 
   .entry-card:last-child {
-    border-radius: 0;
+    border-radius: 16px;
   }
 
   .entry-card__title {
@@ -6673,7 +6710,7 @@ html, body {
   }
 
   .understand-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .understand-card__title {
@@ -6720,33 +6757,18 @@ html, body {
     line-height: 1.45;
   }
 
-  /* ── 7. IDENTITY: Single column, visual separation ─────── */
-  .identity {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
+  
+  
 
-  .identity__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+  
 
-  .identity__col {
-    padding: 22px 18px;
-  }
+  
 
-  .identity__col-title {
-    font-size: 1rem;
-    margin-bottom: 14px;
-  }
+  
 
-  .identity__item {
-    font-size: 0.88rem;
-  }
+  
 
-  .identity__list {
-    gap: 10px;
-  }
+  
 
   /* ── 8. PATH CTA: Full-width button ────────────────────── */
   .path-cta {
@@ -6960,9 +6982,7 @@ html, body {
     font-size: 0.78rem;
   }
 
-  .identity__col {
-    padding: 18px 14px;
-  }
+  
 
   .strengths-banner__title {
     font-size: 1.2rem;
@@ -7395,7 +7415,7 @@ html, body {
   }
 
   .page--parents .deeper-checklist__item {
-    padding: 22px 20px;
+    padding: 14px 16px;
     gap: 16px;
     border-radius: 14px;
     min-height: 44px;
@@ -7474,7 +7494,7 @@ html, body {
   }
 
   .page--parents .situation-cards--parents .situation-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .page--parents .path__number {
@@ -7848,7 +7868,7 @@ html, body {
   }
 
   .page--compact .deeper-checklist__item {
-    padding: 22px 20px;
+    padding: 14px 16px;
     gap: 16px;
     border-radius: 14px;
     min-height: 44px;
@@ -7930,7 +7950,7 @@ html, body {
   }
 
   .page--compact .situation-cards--parents .situation-card {
-    padding: 22px 20px;
+    padding: 14px 16px;
   }
 
   .page--compact .path__number {
@@ -8075,5 +8095,453 @@ html, body {
   /* Toggle stays centered at shorter height */
   .nav.scrolled .nav__toggle {
     align-self: center;
+  }
+}
+
+/* ============================================================
+   ABOUT PAGE — Full Redesign (2026-03-11)
+   Clean sections, proper hierarchy, warm nonprofit feel.
+   ============================================================ */
+
+/* ── About Hero ──────────────────────────────────────────── */
+.about-hero {
+  padding: calc(var(--nav-height) + 60px) 0 72px;
+  background: linear-gradient(
+    180deg,
+    var(--blue-soft) 0%,
+    rgba(224, 244, 246, 0.3) 60%,
+    var(--offwhite) 100%
+  );
+  text-align: center;
+}
+
+.about-hero__inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.about-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+
+.about-hero__title--accent {
+  color: var(--cyan);
+}
+
+.about-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── About Story ─────────────────────────────────────────── */
+.about-story {
+  background: var(--white);
+  position: relative;
+}
+
+.about-story::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--deep-blue));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-story__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-story__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.about-story__text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  max-width: 58ch;
+}
+
+.about-story__text + .about-story__text {
+  margin-top: 1.25em;
+}
+
+.about-story__text em {
+  font-style: italic;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about-story__pullquote {
+  position: relative;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, var(--blue-soft) 0%, var(--cyan-soft) 100%);
+  border-radius: 16px;
+  border-left: 4px solid var(--cyan);
+  margin-top: 8px;
+}
+
+.about-story__pullquote::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.3;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  line-height: 1;
+}
+
+.about-story__pullquote blockquote {
+  margin: 0;
+}
+
+.about-story__pullquote p {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.45;
+  color: var(--deep-blue);
+  margin: 0;
+  padding-left: 8px;
+}
+
+/* ── About Mission ───────────────────────────────────────── */
+.about-mission {
+  background: var(--offwhite);
+  position: relative;
+}
+
+.about-mission::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--deep-blue), var(--cyan));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-mission__statement {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 72px;
+}
+
+.about-mission__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.about-mission__text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── About Values (3-col cards with icons) ───────────────── */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-value {
+  text-align: center;
+  padding: 36px 28px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.about-value:hover {
+  box-shadow: 0 8px 28px rgba(27, 58, 92, 0.10);
+  border-color: rgba(27, 58, 92, 0.18);
+  transform: translateY(-3px);
+}
+
+.about-value__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.about-value__icon--blue { background: var(--blue-soft); color: var(--deep-blue); }
+.about-value__icon--cyan { background: var(--cyan-soft); color: var(--cyan); }
+.about-value__icon--gold { background: var(--gold-soft); color: #C08B1A; }
+
+.about-value__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.about-value__desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 30ch;
+  margin: 0 auto;
+}
+
+/* ── About Contact ───────────────────────────────────────── */
+.about-contact {
+  background: var(--white);
+  position: relative;
+}
+
+.about-contact::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--deep-blue));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-contact__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.about-contact__desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+
+.about-contact__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-contact__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.about-contact__card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: rgba(27, 58, 92, 0.15);
+}
+
+.about-contact__card svg {
+  flex-shrink: 0;
+  color: var(--cyan);
+}
+
+.about-contact__card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.about-contact__card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+
+/* ── About Page: Section Separation & Consistency ────────── */
+.about-story.section-padding,
+.about-mission.section-padding,
+.about-contact.section-padding {
+  padding: 96px 0 100px;
+}
+
+.about-hero + .about-story {
+  padding-top: 80px;
+}
+
+/* ── About Page Responsive ───────────────────────────────── */
+@media (max-width: 960px) {
+  .about-story__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-contact__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: calc(var(--nav-height) + 36px) 0 48px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .about-hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .about-story__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-story__heading {
+    font-size: 1.35rem;
+  }
+
+  .about-story__text {
+    font-size: 0.98rem;
+  }
+
+  .about-story__pullquote {
+    padding: 24px 22px;
+  }
+
+  .about-story__pullquote::before {
+    font-size: 3rem;
+    top: 4px;
+    left: 14px;
+  }
+
+  .about-story__pullquote p {
+    font-size: 1.05rem;
+    padding-left: 4px;
+  }
+
+  .about-mission__statement {
+    margin-bottom: 48px;
+  }
+
+  .about-mission__title {
+    font-size: 1.5rem;
+  }
+
+  .about-mission__text {
+    font-size: 0.98rem;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-value {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .about-value__icon {
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .about-value__desc {
+    max-width: none;
+    margin: 0;
+  }
+
+  .about-contact__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-contact__text {
+    text-align: center;
+  }
+
+  .about-contact__desc {
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .about-contact__card {
+    padding: 18px 20px;
   }
 }
