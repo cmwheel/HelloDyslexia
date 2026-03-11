@@ -2975,7 +2975,7 @@ a.contact-layout__item-value:hover {
 .entry-card {
   display: flex;
   flex-direction: column;
-  padding: 28px 28px 24px;
+  padding: 18px 24px 16px;
   background: var(--white);
   text-decoration: none;
   color: inherit;
@@ -2984,6 +2984,7 @@ a.contact-layout__item-value:hover {
   border-radius: 20px;
   border: 1px solid rgba(27, 58, 92, 0.08);
   box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
+  overflow: hidden;
 }
 
 .entry-card::before {
@@ -3038,7 +3039,7 @@ a.contact-layout__item-value:hover {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.55;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   flex: 1;
 }
 
@@ -5317,6 +5318,135 @@ a.contact-layout__item-value:hover {
 }
 .hero-new__title-gold {
   color: #E8B930;
+}
+
+
+/* ============================================================
+   ABOUT PAGE — Side-by-side Story + Mission (desktop)
+   ============================================================ */
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-two-col .our-story,
+.about-two-col .mission {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.about-two-col .our-story .section-header-center,
+.about-two-col .mission .section-header-center {
+  text-align: left;
+}
+
+.about-two-col .our-story .section-header-center .section-subtext,
+.about-two-col .mission .section-header-center .section-subtext {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-two-col .our-story__content {
+  text-align: left;
+}
+
+.about-two-col .our-story__text {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.about-two-col .mission__content {
+  max-width: none;
+}
+
+.about-two-col .mission__statement {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.about-two-col .mission__text {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* ============================================================
+   ABOUT PAGE — Polished Value Cards
+   ============================================================ */
+.mission__values {
+  margin-top: 32px;
+}
+
+.mission__values-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mission__value-item {
+  text-align: center;
+  padding: 24px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.mission__value-item:hover {
+  box-shadow: 0 6px 24px rgba(27, 58, 92, 0.10);
+  border-color: rgba(27, 58, 92, 0.18);
+  transform: translateY(-2px);
+}
+
+.mission__value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 0;
+}
+
+.mission__value-display {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  margin-bottom: 8px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.mission__value-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* When inside the 2-col about layout, stack value cards vertically */
+.about-two-col .mission__values-list {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .mission__values-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .mission__value-item {
+    padding: 20px 18px;
+  }
 }
 
 /* ============================================================
