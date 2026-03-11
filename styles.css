@@ -1891,99 +1891,14 @@ ul { list-style: none; }
 /* ============================================================
    WHAT WE ARE / WHAT WE'RE NOT
    ============================================================ */
-.identity {
-  background: var(--offwhite);
-}
 
-.identity__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 840px;
-  margin: 0 auto;
-}
 
-.identity__col {
-  background: var(--white);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 32px 28px;
-}
-
-.identity__col--are {
-  border-top: 3px solid var(--deep-blue);
-}
-
-.identity__col--not {
-  border-top: 3px solid #C06060;
-}
-
-.identity__col-title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
-}
-
-.identity__col-title--are {
-  color: var(--deep-blue);
-}
-
-.identity__col-title--not {
-  color: #C06060;
-}
-
-.identity__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.identity__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--text-body);
-}
-
-.identity__item svg {
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.identity__col--are .identity__item svg {
-  color: var(--deep-blue);
-}
-
-.identity__col--not .identity__item svg {
-  color: #C06060;
-}
-
-.identity__item strong {
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-@media (max-width: 640px) {
-  .identity__grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ============================================================
    15. FINAL CTA
    ============================================================ */
 .final-cta {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(227,238,248,0.45) 0%,
-      rgba(224,244,246,0.4) 45%,
-      rgba(254,246,224,0.4) 100%
-    );
+  background: var(--offwhite);
   text-align: center;
 }
 
@@ -6136,34 +6051,19 @@ html, body {
   }
 }
 
-/* Identity grid: single column */
+
 @media (max-width: 640px) {
-  .identity__grid {
-    gap: 20px;
-  }
+  
 
-  .identity__col {
-    padding: 24px 20px;
-  }
+  
 
-  .identity__col-title {
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
+  
 
-  .identity__item {
-    font-size: 0.88rem;
-    gap: 8px;
-  }
+  
 
-  .identity__item svg {
-    width: 16px;
-    height: 16px;
-  }
+  
 
-  .identity__list {
-    gap: 12px;
-  }
+  
 }
 
 /* Path CTA: tighter */
@@ -6300,9 +6200,7 @@ html, body {
     font-size: 0.7rem;
   }
 
-  .identity__col {
-    padding: 20px 16px;
-  }
+  
 
   .strengths-banner__title {
     font-size: 1.25rem;
@@ -6859,33 +6757,18 @@ html, body {
     line-height: 1.45;
   }
 
-  /* ── 7. IDENTITY: Single column, visual separation ─────── */
-  .identity {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
+  
+  
 
-  .identity__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+  
 
-  .identity__col {
-    padding: 22px 18px;
-  }
+  
 
-  .identity__col-title {
-    font-size: 1rem;
-    margin-bottom: 14px;
-  }
+  
 
-  .identity__item {
-    font-size: 0.88rem;
-  }
+  
 
-  .identity__list {
-    gap: 10px;
-  }
+  
 
   /* ── 8. PATH CTA: Full-width button ────────────────────── */
   .path-cta {
@@ -7099,9 +6982,7 @@ html, body {
     font-size: 0.78rem;
   }
 
-  .identity__col {
-    padding: 18px 14px;
-  }
+  
 
   .strengths-banner__title {
     font-size: 1.2rem;
@@ -8263,7 +8144,22 @@ html, body {
 
 /* ── About Story ─────────────────────────────────────────── */
 .about-story {
-  background: var(--offwhite);
+  background: var(--white);
+  position: relative;
+}
+
+.about-story::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--deep-blue));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-story__layout {
@@ -8275,10 +8171,10 @@ html, body {
 
 .about-story__heading {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 900;
   color: var(--text-primary);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
@@ -8303,7 +8199,7 @@ html, body {
   position: relative;
   padding: 32px 28px;
   background: linear-gradient(135deg, var(--blue-soft) 0%, var(--cyan-soft) 100%);
-  border-radius: 20px;
+  border-radius: 16px;
   border-left: 4px solid var(--cyan);
   margin-top: 8px;
 }
@@ -8337,8 +8233,22 @@ html, body {
 
 /* ── About Mission ───────────────────────────────────────── */
 .about-mission {
-  background: var(--white);
-  border-top: 1px solid var(--divider);
+  background: var(--offwhite);
+  position: relative;
+}
+
+.about-mission::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--deep-blue), var(--cyan));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-mission__statement {
@@ -8376,9 +8286,10 @@ html, body {
 .about-value {
   text-align: center;
   padding: 36px 28px;
-  background: var(--offwhite);
+  background: var(--white);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(27, 58, 92, 0.04);
   transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -8421,13 +8332,22 @@ html, body {
 
 /* ── About Contact ───────────────────────────────────────── */
 .about-contact {
-  background: linear-gradient(
-    135deg,
-    rgba(254, 246, 224, 0.35) 0%,
-    rgba(224, 244, 246, 0.3) 50%,
-    rgba(227, 238, 248, 0.35) 100%
-  );
-  border-top: 1px solid var(--divider);
+  background: var(--white);
+  position: relative;
+}
+
+.about-contact::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--deep-blue));
+  border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-contact__inner {
@@ -8497,6 +8417,18 @@ html, body {
   line-height: 1.4;
 }
 
+
+/* ── About Page: Section Separation & Consistency ────────── */
+.about-story.section-padding,
+.about-mission.section-padding,
+.about-contact.section-padding {
+  padding: 96px 0 100px;
+}
+
+.about-hero + .about-story {
+  padding-top: 80px;
+}
+
 /* ── About Page Responsive ───────────────────────────────── */
 @media (max-width: 960px) {
   .about-story__layout {
@@ -8535,7 +8467,7 @@ html, body {
   }
 
   .about-story__heading {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .about-story__text {
