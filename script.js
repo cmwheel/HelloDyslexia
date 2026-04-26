@@ -101,6 +101,29 @@
   function updateHowItWorksTimeline() {
     if (!howItWorks) return;
 
+    var isMobile = window.matchMedia('(max-width: 860px)').matches;
+    if (isMobile) {
+      var vh = window.innerHeight;
+      var sectionRect = howItWorks.getBoundingClientRect();
+      var sectionProgress = Math.min(Math.max((vh - sectionRect.top) / (vh + sectionRect.height), 0), 1);
+      var mobileEasedProgress = 1 - Math.pow(1 - sectionProgress, 2);
+
+      howItWorks.style.setProperty('--timeline-progress', sectionProgress.toFixed(3));
+      howItWorks.style.setProperty('--timeline-shift-x', '0px');
+      howItWorks.style.setProperty('--timeline-blob-left-x', (-sectionProgress * 8).toFixed(1) + 'px');
+      howItWorks.style.setProperty('--timeline-blob-right-x', (sectionProgress * 8).toFixed(1) + 'px');
+      howItWorks.style.setProperty('--timeline-decor-shift-y', (mobileEasedProgress * 5).toFixed(1) + 'px');
+      howItWorks.style.setProperty('--timeline-content-shift-y', '0px');
+      howItWorks.style.setProperty('--timeline-opacity', '1');
+
+      howItWorksSteps.forEach(function (step) {
+        var rect = step.getBoundingClientRect();
+        var midpoint = rect.top + (rect.height * 0.45);
+        step.classList.toggle('is-active', midpoint < vh * 0.82);
+      });
+      return;
+    }
+
     var sectionTop = howItWorks.offsetTop;
     var sectionHeight = howItWorks.offsetHeight;
     var sticky = howItWorks.querySelector('.how-it-works__sticky');
@@ -117,8 +140,7 @@
     var pinDuration = Math.max(sectionHeight - stickyHeight - stickyTopOffset, 1);
     var progress = Math.min(Math.max((window.scrollY - pinStart) / pinDuration, 0), 1);
 
-    var isMobile = window.matchMedia('(max-width: 860px)').matches;
-    var maxShift = isMobile ? 0 : (window.innerWidth >= 1180 ? 72 : 48);
+    var maxShift = window.innerWidth >= 1180 ? 72 : 48;
     var shift = maxShift - (progress * maxShift * 2);
     // Hit each step early so the third card is illuminated well before
     // the sticky releases, leaving a beat for the user to see all three.
