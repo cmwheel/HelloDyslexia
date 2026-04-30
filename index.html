@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lexend:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/NewHeroImage.jpg?v=3" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
@@ -51,13 +52,18 @@
      ============================================================ -->
 <section class="landing-hero">
   <span class="landing-hero__decor landing-hero__decor--top-right" aria-hidden="true">
-    <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid meet">
-      <path d="M24,120 C-2,92 10,53 45,34 C76,17 111,22 133,10 C164,-7 195,13 194,50 C218,75 198,114 159,121 C126,142 92,128 64,143 C43,153 29,138 24,120 Z" fill="var(--home-blob-mint)"/>
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <path d="M36 2 C52 0 72 0 98 0 L98 86 C78 96 52 100 34 90 C16 80 4 58 4 36 C4 22 18 8 36 2 Z" fill="var(--home-blob-mint)"/>
     </svg>
   </span>
   <span class="landing-hero__decor landing-hero__decor--teal-back" aria-hidden="true">
     <svg viewBox="0 0 220 140" preserveAspectRatio="xMidYMid meet">
       <path d="M18,90 Q-14,52 34,24 Q80,-2 126,14 Q154,0 188,28 Q224,58 198,98 Q172,136 116,128 Q70,144 36,112 Q20,108 18,90 Z" fill="var(--home-blob-mint)"/>
+    </svg>
+  </span>
+  <span class="landing-hero__decor landing-hero__decor--circle" aria-hidden="true">
+    <svg viewBox="0 0 170 130" preserveAspectRatio="xMidYMid meet">
+      <path d="M24,90 Q-8,58 28,28 Q64,-2 108,18 Q136,6 158,40 Q184,78 140,104 Q104,134 64,114 Q24,122 24,90 Z" fill="var(--home-blob-sky)"/>
     </svg>
   </span>
   <span class="landing-hero__decor landing-hero__decor--navy-splotch" aria-hidden="true">
@@ -106,19 +112,16 @@
           <path d="M50 6 L62.5 38 L96 40 L70 60 L80 94 L50 75 L20 94 L30 60 L4 40 L37.5 38 Z" fill="#F4C744" stroke="#F4C744" stroke-width="6" stroke-linejoin="round"/>
         </svg>
       </span>
-      <span class="landing-hero__decor landing-hero__decor--circle" aria-hidden="true">
-        <svg viewBox="0 0 170 130" preserveAspectRatio="xMidYMid meet">
-          <path d="M24,90 Q-8,58 28,28 Q64,-2 108,18 Q136,6 158,40 Q184,78 140,104 Q104,134 64,114 Q24,122 24,90 Z" fill="var(--home-blob-sky)"/>
-        </svg>
-      </span>
       <span class="landing-hero__decor landing-hero__decor--blob" aria-hidden="true">
         <svg viewBox="0 0 340 240" preserveAspectRatio="xMidYMid meet">
-          <path d="M28,160 Q-16,94 48,48 Q98,12 154,22 Q202,-8 264,34 Q330,62 324,132 Q354,196 284,220 Q226,250 162,224 Q100,236 58,198 Q24,190 28,160 Z" fill="var(--home-blob-mint)"/>
+          <path d="M24,166 C14,110 62,58 132,42 C180,31 216,56 252,62 C304,70 336,108 326,154 C350,198 308,228 250,224 C208,246 150,232 112,214 C72,230 34,208 24,166 Z" fill="var(--home-blob-mint)"/>
         </svg>
       </span>
 
       <div class="landing-hero__image-wrap">
-        <img src="assets/NewHeroImage.jpg" alt="A smiling child writing while a parent sits nearby" class="landing-hero__image" />
+        <div class="landing-hero__image-cutout">
+          <img src="assets/NewHeroImage.jpg?v=3" alt="A smiling child writing while a parent sits nearby" class="landing-hero__image" width="1672" height="941" fetchpriority="high" decoding="async" />
+        </div>
       </div>
     </div>
   </div>

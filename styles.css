@@ -653,6 +653,8 @@ body.page--home {
 
 .page--home .footer__script {
   color: var(--landing-ui-blue);
+  font-size: clamp(0.92rem, 1.55vw, 1.12rem);
+  margin-top: 18px;
 }
 
 .page--home .reassurance > .container,
@@ -1392,7 +1394,7 @@ body.page--home {
 
 .tools-strip__illustration {
   position: absolute;
-  right: -36px;
+  right: -46px;
   bottom: -48px;
   width: min(220px, 26vw);
   max-width: 100%;
@@ -1407,13 +1409,31 @@ body.page--home {
   filter: drop-shadow(0 14px 28px rgba(27, 58, 92, 0.14));
 }
 
+@keyframes tools-strip-boy-float {
+  0%, 100% {
+    transform: translate(12px, 0);
+  }
+  50% {
+    transform: translate(17px, -4px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  .tools-strip__boy {
+    animation: tools-strip-boy-float 7s ease-in-out infinite;
+  }
+
   .page--home .tools-strip__illustration {
     transform: translate3d(calc(var(--soft-blob-x-a, 0px) * 0.35), calc(var(--soft-blob-y-b, 0px) * 0.28), 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .tools-strip__boy {
+    animation: none;
+    transform: translateX(12px);
+  }
+
   .page--home .tools-strip__illustration {
     transform: none;
   }
@@ -1430,7 +1450,7 @@ body.page--home {
 
   .tools-strip__illustration {
     width: min(180px, 24vw);
-    right: -28px;
+    right: -36px;
     bottom: -56px;
     opacity: 0.95;
   }
@@ -8406,8 +8426,8 @@ html, body {
 .landing-hero {
   position: relative;
   background: var(--offwhite);
-  padding-top: calc(var(--nav-height) + 56px);
-  padding-bottom: 96px;
+  padding-top: calc(var(--nav-height) + 32px);
+  padding-bottom: 58px;
   overflow: hidden;
   z-index: 2;
   --hero-blob-shift-y: 0px;
@@ -8416,10 +8436,9 @@ html, body {
 .landing-hero__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
-  gap: 48px;
+  gap: 32px;
   align-items: center;
   position: relative;
-  z-index: 7;
   max-width: 1480px;
 }
 
@@ -8428,7 +8447,7 @@ html, body {
   z-index: 8;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
   max-width: 660px;
 }
 
@@ -8454,7 +8473,7 @@ html, body {
 .landing-hero__desc {
   font-family: var(--font-body);
   font-size: 1.16rem;
-  line-height: 1.55;
+  line-height: 1.48;
   color: var(--text-body);
   max-width: 560px;
   margin: 0;
@@ -8464,7 +8483,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 /* Audience pill — rounded white capsule with a colored circular icon
@@ -8544,44 +8563,84 @@ html, body {
   transform: translateX(2px);
 }
 
+@media (min-width: 1024px) {
+  .page--home .landing-hero__content {
+    margin-left: clamp(16px, 2vw, 28px);
+  }
+
+  .page--home .landing-hero .hero-pill {
+    min-height: 58px;
+    gap: 14px;
+    padding: 8px 20px 8px 8px;
+    font-size: 1rem;
+  }
+
+  .page--home .landing-hero .hero-pill__icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .page--home .landing-hero .hero-pill__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .page--home .landing-hero .hero-pill__chev {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+  }
+
+  .page--home .landing-hero .hero-pill__chev svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
 /* Right column: framed photo + decorative shapes */
 .landing-hero__visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 590px;
+  min-height: 460px;
 }
 
 .landing-hero__image-wrap {
+  --hero-photo-mask: url("assets/cutout-mask.png");
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 700px;
-  aspect-ratio: 4 / 3;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow:
-    0 4px 12px rgba(27, 58, 92, 0.08),
-    0 24px 48px rgba(27, 58, 92, 0.14);
-  background: var(--blue-soft);
+  max-width: 680px;
+  aspect-ratio: 1 / 1;
+  filter:
+    drop-shadow(0 4px 12px rgba(27, 58, 92, 0.08))
+    drop-shadow(0 24px 48px rgba(27, 58, 92, 0.14));
 }
 
-.landing-hero__image-wrap::after {
-  content: '';
+/* Mask on inner layer only: combining filter + mask on one node breaks clipping in Safari/WebKit. */
+.landing-hero__image-cutout {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: rgba(255, 198, 118, 0.28);
-  mix-blend-mode: soft-light;
+  overflow: hidden;
+  background: var(--blue-soft);
+  -webkit-mask-image: var(--hero-photo-mask);
+  mask-image: var(--hero-photo-mask);
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+  -webkit-mask-size: 104%;
+  mask-size: 104%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .landing-hero__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
+  object-position: center;
   display: block;
 }
 
@@ -8600,7 +8659,7 @@ html, body {
 }
 
 .landing-hero__decor--star {
-  top: -10px;
+  top: 6px;
   right: 12px;
   width: 86px;
   height: 86px;
@@ -8611,23 +8670,23 @@ html, body {
   will-change: transform;
 }
 
-/* Pale-blue splotch — sits in front of the navy splotch at bottom-left */
+/* Pale-blue splotch — sits behind the navy splotch at bottom-left */
 .landing-hero__decor--circle {
   bottom: -118px;
-  left: 40px;
-  width: 250px;
-  height: 185px;
-  z-index: 6;
+  left: clamp(118px, 14vw, 210px);
+  width: clamp(210px, 24vw, 300px);
+  height: clamp(156px, 18vw, 224px);
+  z-index: 4;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.7));
   will-change: transform;
 }
 
 /* Big teal splotch — overlaps the bottom-right corner of the photo */
 .landing-hero__decor--blob {
-  bottom: -220px;
-  right: -190px;
-  width: 560px;
-  height: 390px;
+  bottom: -175px;
+  right: -128px;
+  width: 448px;
+  height: 312px;
   z-index: 4;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.75));
   will-change: transform;
@@ -8636,10 +8695,10 @@ html, body {
 /* Large navy splotch — anchors the bottom-left of the hero */
 .landing-hero__decor--navy-splotch {
   position: absolute;
-  bottom: -190px;
-  left: -220px;
-  width: 620px;
-  height: 398px;
+  bottom: -156px;
+  left: -180px;
+  width: 496px;
+  height: 318px;
   z-index: 5;
   pointer-events: none;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.65));
@@ -8649,23 +8708,23 @@ html, body {
 /* Small teal blob — peeks out from BEHIND the navy splotch, just a sliver */
 .landing-hero__decor--teal-back {
   position: absolute;
-  bottom: -230px;
-  left: 30px;
-  width: 350px;
-  height: 225px;
+  bottom: -188px;
+  left: 42px;
+  width: 280px;
+  height: 180px;
   z-index: 4;
   pointer-events: none;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.7));
   will-change: transform;
 }
 
-/* Small teal blob peeking from the top-right corner of the page */
+/* Corner wedge (top-right of viewport) — diagonal inner edge, soft outer rim */
 .landing-hero__decor--top-right {
   position: absolute;
-  top: -50px;
-  right: -92px;
-  width: 235px;
-  height: 185px;
+  top: 0;
+  right: 0;
+  width: 132px;
+  height: 132px;
   z-index: 4;
   pointer-events: none;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.12));
@@ -8700,7 +8759,7 @@ html, body {
 
   .landing-hero__decor--top-right svg {
     animation: landing-hero-decor-drift-c 24s ease-in-out -6s infinite;
-    transform-origin: 55% 40%;
+    transform-origin: 100% 0%;
   }
 }
 
@@ -8717,8 +8776,8 @@ html, body {
 
 @media (max-width: 860px) {
   .landing-hero {
-    padding-top: calc(var(--nav-height) + 32px);
-    padding-bottom: 64px;
+    padding-top: calc(var(--nav-height) + 28px);
+    padding-bottom: 56px;
   }
   .landing-hero__inner {
     grid-template-columns: 1fr;
@@ -8742,15 +8801,15 @@ html, body {
     max-width: 480px;
   }
   .landing-hero__decor--top-right {
-    width: 130px;
-    height: 110px;
-    top: -30px;
-    right: -50px;
+    width: 88px;
+    height: 88px;
+    top: 0;
+    right: 0;
   }
   .landing-hero__decor--star {
     width: 90px;
     height: 90px;
-    top: -22px;
+    top: -6px;
     right: -22px;
   }
   .landing-hero__decor--circle {
@@ -8762,8 +8821,8 @@ html, body {
   .landing-hero__decor--blob {
     width: 240px;
     height: 170px;
-    bottom: -70px;
-    right: -70px;
+    bottom: -62px;
+    right: -58px;
   }
   .landing-hero__decor--navy-splotch {
     width: 260px;
@@ -8786,9 +8845,6 @@ html, body {
   .hero-pill {
     font-size: 0.85rem;
   }
-  .landing-hero__image-wrap {
-    border-radius: 22px;
-  }
 }
 
 /* ============================================================
@@ -8799,17 +8855,17 @@ html, body {
    ============================================================ */
 @media (max-width: 860px) {
   .page--home .landing-hero {
-    padding-top: calc(var(--nav-height) + 24px);
-    padding-bottom: 44px;
+    padding-top: calc(var(--nav-height) + 18px);
+    padding-bottom: 36px;
     overflow: hidden;
   }
 
   .page--home .landing-hero__inner {
-    gap: 28px;
+    gap: 24px;
   }
 
   .page--home .landing-hero__content {
-    gap: 16px;
+    gap: 14px;
   }
 
   .page--home .landing-hero__title {
@@ -8825,7 +8881,7 @@ html, body {
 
   .page--home .landing-hero__pills {
     width: min(100%, 430px);
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .page--home .hero-pill {
@@ -8842,15 +8898,14 @@ html, body {
 
   .page--home .landing-hero__visual {
     min-height: auto;
-    padding: 10px 0 28px;
+    padding: 6px 0 20px;
   }
 
   .page--home .landing-hero__image-wrap {
     width: min(100%, 480px);
-    border-radius: 24px;
-    box-shadow:
-      0 3px 10px rgba(27, 58, 92, 0.08),
-      0 18px 36px rgba(27, 58, 92, 0.14);
+    filter:
+      drop-shadow(0 3px 10px rgba(27, 58, 92, 0.08))
+      drop-shadow(0 18px 36px rgba(27, 58, 92, 0.14));
   }
 
   .page--home .landing-hero__decor {
@@ -8858,11 +8913,12 @@ html, body {
   }
 
   .page--home .landing-hero__decor--top-right {
-    right: -34px;
+    top: 0;
+    right: 0;
   }
 
   .page--home .landing-hero__decor--star {
-    top: -16px;
+    top: -4px;
     right: -10px;
   }
 
@@ -8872,8 +8928,8 @@ html, body {
   }
 
   .page--home .landing-hero__decor--blob {
-    right: -62px;
-    bottom: -58px;
+    right: -52px;
+    bottom: -50px;
   }
 
   .page--home .landing-hero__decor--navy-splotch {
@@ -9210,18 +9266,18 @@ html, body {
   }
 
   .page--home .footer__script {
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
 }
 
 @media (max-width: 560px) {
   .page--home .landing-hero {
-    padding-top: calc(var(--nav-height) + 18px);
-    padding-bottom: 34px;
+    padding-top: calc(var(--nav-height) + 14px);
+    padding-bottom: 28px;
   }
 
   .page--home .landing-hero__inner {
-    gap: 20px;
+    gap: 18px;
   }
 
   .page--home .landing-hero__pills {
@@ -9235,12 +9291,12 @@ html, body {
   }
 
   .page--home .landing-hero__visual {
-    padding-bottom: 18px;
+    padding-bottom: 14px;
   }
 
   .page--home .landing-hero__image-wrap {
     width: calc(100vw - 32px);
-    aspect-ratio: 1.18 / 1;
+    aspect-ratio: 1 / 1;
   }
 
   .page--home .landing-hero__decor--top-right {
