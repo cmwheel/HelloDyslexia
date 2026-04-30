@@ -8661,8 +8661,8 @@ html, body {
 .landing-hero__decor--star {
   top: 6px;
   right: 12px;
-  width: 86px;
-  height: 86px;
+  width: 68px;
+  height: 68px;
   z-index: 5;
   opacity: 1;
   filter: drop-shadow(0 6px 14px rgba(244, 199, 68, 0.25));
@@ -8723,8 +8723,8 @@ html, body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 132px;
-  height: 132px;
+  width: 190px;
+  height: 114px;
   z-index: 4;
   pointer-events: none;
   transform: translateY(calc(var(--hero-blob-shift-y) * 0.12));
@@ -8801,14 +8801,14 @@ html, body {
     max-width: 480px;
   }
   .landing-hero__decor--top-right {
-    width: 88px;
-    height: 88px;
+    width: 130px;
+    height: 78px;
     top: 0;
     right: 0;
   }
   .landing-hero__decor--star {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     top: -6px;
     right: -22px;
   }
@@ -8915,6 +8915,8 @@ html, body {
   .page--home .landing-hero__decor--top-right {
     top: 0;
     right: 0;
+    width: 130px;
+    height: 78px;
   }
 
   .page--home .landing-hero__decor--star {
